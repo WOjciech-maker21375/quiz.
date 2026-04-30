@@ -90,28 +90,26 @@ function start(){
     return;
   }
 
-     // --- START PODMIANY Z SUWAKIEM ---
-// 1. Definiujemy suwak na samym początku (używamy poprawnego ID z Twojego HTML)
+     // --- START PODMIANY (WERSJA NATYWNA) ---
 const slider = document.getElementById("imgRatio");
-
-// 2. Pobieramy wartość do obliczeń (dzielimy przez 100, żeby mieć ułamek)
-let currentRatio = slider ? parseInt(slider.value) / 100 : 0.5;
+let ratioValue = slider ? parseInt(slider.value) / 100 : 0.5;
 
 let poolText = filtered.filter(q => !q.image); 
 let poolImg = filtered.filter(q => q.image);
 
 // Obliczamy ile chcemy obrazków na podstawie suwaka
-let imgCountGoal = Math.floor(count * currentRatio); 
+let imgCountGoal = Math.floor(count * ratioValue); 
 
 // Wybieramy zdjęcia
 let partImg = shuffle(poolImg).slice(0, imgCountGoal);
 
-// Dobieramy tekst
+// Dobieramy tekst tak, aby suma pytań zawsze wynosiła dokładnie "count"
 let actualImgCount = partImg.length;
 let actualTextGoal = count - actualImgCount; 
+
 let partText = shuffle(poolText).slice(0, actualTextGoal);
 
-// Zabezpieczenie i wybór pytań
+// Jeśli po dobraniu tekstu wciąż brakuje pytań do limitu "count"
 if ((partImg.length + partText.length) < count) {
     let remaining = count - (partImg.length + partText.length);
     let extra = shuffle(filtered.filter(q => ![...partImg, ...partText].includes(q))).slice(0, remaining);
@@ -119,29 +117,7 @@ if ((partImg.length + partText.length) < count) {
 } else {
     questions = shuffle([...partImg, ...partText]);
 }
-
-// 3. FUNKCJA MALOWANIA SUWAKA (Zalewanie kolorem)
-function updateSliderBackground() {
-    if (slider) {
-        const val = slider.value;
-        const min = slider.min ? slider.min : 0;
-        const max = slider.max ? slider.max : 100;
-        const percentage = (val - min) / (max - min) * 100;
-        
-        // Wymuszamy niebieski kolor po lewej stronie
-        slider.style.setProperty('background', `linear-gradient(to right, #224972 ${percentage}%, #e0e0e0 ${percentage}%)`, 'important');
-    }
-}
-
-// 4. Reagowanie na ruch i start
-if (slider) {
-    slider.addEventListener('input', updateSliderBackground);
-    // Wywołujemy z lekkim opóźnieniem, żeby przeglądarka na pewno zdążyła wczytać okno
-    setTimeout(updateSliderBackground, 100);
-}
-
 // --- KONIEC PODMIANY ---
-
   i = 0;
   score = 0;
 
