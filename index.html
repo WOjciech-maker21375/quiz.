@@ -12,18 +12,19 @@
     transition: 0.35s;
     margin: 0;
     min-height: 100vh;
-    
+  }
+
+  /* Blokada - kontener domyślnie ukryty */
+  .container {
+    display: none; 
+    width: 750px;
+    margin: 30px auto;
+    padding-bottom: 40px;
   }
 
   .dark {
     background: #21212f;
     color: #f5f5ff;
-  }
-  
-  .container {
-    width: 750px;
-    margin: 30px auto;
-    padding-bottom: 40px;
   }
 
   input {
@@ -44,17 +45,11 @@
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    background: #e0e0e0;
   }
 
-  .correct {
-    background: #007900;
-    color: #ffffff;
-  }
-
-  .incorrect {
-    background: red;
-    color: #ffffff;
-  }
+  .correct { background: #007900 !important; color: #ffffff !important; }
+  .incorrect { background: red !important; color: #ffffff !important; }
 
   .top {
     display: flex;
@@ -74,9 +69,7 @@
     opacity: 0.6;
   }
 
-  #audienceBox {
-    max-width: 100%;
-  }
+  #audienceBox { max-width: 100%; }
 
   .bar {
     height: 28px;
@@ -98,7 +91,6 @@
     transition: width 1.546123s ease;
   }
 
-  /* Bardzo mały, dyskretny napis autora */
   .footer-credit {
     position: fixed;
     bottom: 8px;
@@ -110,170 +102,139 @@
     font-family: sans-serif;
   }
 
-  .dark .footer-credit {
-    color: #666;
+  .dark .footer-credit { color: #666; }
+
+  #q-img {
+    max-width: 100%;
+    width: 350px;
+    max-height: 350px;
+    margin: 20px auto;
+    display: none;
+    border-radius: 25px;
+    border: 2px solid #ddd;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    cursor: zoom-in;
+    transition: transform 0.2s ease;
   }
- /* 1. Podstawowy wygląd zdjęcia w quizie */
-#q-img {
-  max-width: 100%;       /* Pozwala zdjęciu być responsywnym */
-  width: 350px;          /* Twoja preferowana szerokość */
-  max-height: 350px;
-  margin: 20px auto;
-  display: none;
-  border-radius: 25px;   /* Twoje mocne zaokrąglenie */
-  border: 2px solid #ddd;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-  cursor: zoom-in;
-  transition: transform 0.2s ease; /* Płynne najechanie */
-}
 
-/* Lekkie uniesienie po najechaniu myszką */
-#q-img:hover {
-  transform: scale(1.02);
-}
+  #q-img.full-screen-img {
+    position: fixed;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 9999;
+    width: auto !important;
+    height: auto !important;
+    max-width: 90vw !important;
+    max-height: 90vh !important;
+    margin: 0 !important;
+    cursor: zoom-out;
+    border: 4px solid white;
+    box-shadow: 0 0 100px rgba(0,0,0,0.9);
+    border-radius: 10px;
+  }
 
-/* 2. Wygląd w trybie DARK */
-.dark #q-img {
-  border-color: #444;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
-}
+  /* PANEL GOTYCKI Z MARMUREM - NAPRAWIONY */
+  .gothic-panel {
+    display: none; 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    padding: 25px;
+    z-index: 9999;
+    background: #f0f0f0;
+    /* Tekstura marmuru */
+    background-image: linear-gradient(120deg, rgba(255,255,255,0.7) 0%, rgba(200,200,200,0.7) 100%), 
+                      url('https://transparenttextures.com'); 
+    border: 6px double #2c3e50;
+    box-shadow: 0 0 50px rgba(0,0,0,0.6);
+    text-align: center;
+    color: #2c3e50;
+  }
 
-/* 3. POWIĘKSZENIE (po kliknięciu) - NAPRAWIONE DRŻENIE */
-/* NAPRAWIONY STAN POWIĘKSZENIA */
-#q-img.full-screen-img {
-  position: fixed;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important; /* Usuwamy scale, bo użyjemy vw/vh */
-  
-  z-index: 9999;
-  
-  /* Inteligentne dopasowanie do wielkości ekranu */
-  width: auto !important;
-  height: auto !important;
-  max-width: 90vw !important;  /* Max 90% szerokości okna przeglądarki */
-  max-height: 90vh !important; /* Max 90% wysokości okna przeglądarki */
-  
-  margin: 0 !important;
-  cursor: zoom-out;
-  border: 4px solid white;
-  box-shadow: 0 0 100px rgba(0,0,0,0.9);
-  border-radius: 10px;
-}
-/* Styl panelu gotyckiego na środku */
-.gothic-panel {
-  display: none; 
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 320px;
-  padding: 25px;
-  z-index: 9999;
-  
-  /* Efekt Marmuru */
-  background: #f0f0f0;
-  background-image: linear-gradient(120deg, rgba(255,255,255,0.5) 0%, rgba(200,200,200,0.5) 100%), 
-                    url('https://transparenttextures.com'); 
-  
-  /* Obramowanie Gotyckie */
-  border: 6px double #2c3e50;
-  box-shadow: 0 0 50px rgba(0,0,0,0.5);
-  text-align: center;
-  color: #2c3e50;
-}
-
-/* Przyciemnienie tła gdy ustawienia są otwarte */
-.settings-open-bg::after {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: rgba(0,0,0,0.4);
-  z-index: 9998;
-}
-
-
+  .settings-open-bg::after {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 9998;
+  }
 </style>
 </head>
 
 <body>
-<script>
-    (function() {
-      const haslo = prompt("Podaj hasło dostępu do quizu:");
-      if (haslo !== "technikumNR1wPiasecznie!!er") {
-        // Teraz document.body na pewno istnieje
-        document.body.innerHTML = "<h1 style='text-align:center; margin-top:100px; font-family: sans-serif;'>Brak dostępu! Nie masz uprawnień do tego quizu.</h1>";
-        window.stop(); 
-      }
-    })();
-  </script>
-<div class="container"> 
 
+<script>
+  (function() {
+    const haslo = prompt("Podaj hasło dostępu do quizu:");
+    const poprawneHaslo = "technikumNR1wPiasecznie!!er";
+
+    if (haslo === poprawneHaslo) {
+      document.addEventListener("DOMContentLoaded", function() {
+        document.querySelector('.container').style.display = 'block';
+      });
+    } else {
+      document.addEventListener("DOMContentLoaded", function() {
+        document.body.innerHTML = "<div style='margin-top:100px;'><h1>❌ Brak dostępu!</h1><p>Hasło nieprawidłowe lub anulowano logowanie.</p></div>";
+      });
+      window.stop();
+    }
+  })();
+</script>
+
+<div class="container"> 
   <div class="top">
     <h1>Quiz</h1>
-    <!-- Grupa ikon sterujących w prawym górnym rogu -->
     <div style="display: flex; align-items: center; gap: 15px;">
       <span id="openSettings" onclick="toggleSettings()" style="cursor:pointer; font-size: 24px;" title="Ustawienia pytań">🖼️</span>
-      <div class="toggle" onclick="toggleTheme()" style="cursor:pointer; font-size: 22px;">🌗</div>
+      <div class="toggle" onclick="toggleTheme()">🌗</div>
     </div>
   </div>
 
   <input id="category" placeholder="IE / elektronika / fizyka / CCTV">
   <input id="count" type="number" value="10">
-
   <br>
-
-  <label>
-    <input type="checkbox" id="exam"> Tryb egzaminu (60%)
-  </label>
-
+  <label><input type="checkbox" id="exam"> Tryb egzaminu (60%)</label>
   <br><br>
 
   <button onclick="start()">Start</button>
   <button onclick="showRank()">Ranking</button>
 
   <h2 id="q"></h2>
-  
-  <img id="q-img" onclick="toggleZoom()" src="" alt="Podgląd" style="display:none;">
+  <img id="q-img" onclick="toggleZoom()" src="" alt="Podgląd">
 
   <div class="answers" id="a"></div>
   <div id="audienceBox" style="display:none; margin-top:20px;"></div>
-
   <p id="info"></p>
 
   <button id="fiftyBtn" onclick="fiftyFifty()">50/50</button>
   <button id="audienceBtn" onclick="audienceHelp()">Publiczność</button>
-
 </div>
 
-<!-- NOWY PANEL: Styl Gotycki / Marmur -->
 <div id="settingsPanel" class="gothic-panel">
-  <h3>Proporcje pytań</h3>
+  <h3>Ustawienia pytań</h3>
   <hr style="border: 1px solid #2c3e50;">
-  <p>Ile pytań ma posiadać zdjęcia?</p>
-  
+  <p>Procent pytań ze zdjęciami:</p>
   <div style="margin: 20px 0;">
     <input type="range" id="imgRatio" min="0" max="100" value="50" style="width: 100%;">
     <div style="margin-top: 10px;">
       <input type="number" id="ratioInput" min="0" max="100" value="50" style="width: 50px; text-align: center;"> %
     </div>
   </div>
-
-  <button onclick="toggleSettings()" style="background: #2c3e50; color: white; width: 100%; border-radius: 0; border: 2px solid #000;">Zapisz i zamknij</button>
+  <button onclick="toggleSettings()" style="background: #2c3e50; color: white; width: 100%; border: 2px solid #000; cursor: pointer;">Zapisz i zamknij</button>
 </div>
-
 
 <div class="footer-credit">
-  Created by Wojciech Szymczak, a student of class 1TE 2026 powodzenia w nauce ! .
+  Created by Wojciech Szymczak, a student of class 1TE 2026. Powodzenia w nauce!
 </div>
 
-<!-- Skrypty -->
 <script src="categories/fizyka.js"></script>
 <script src="categories/elektronika.js"></script>
 <script src="categories/instalacje.js"></script>
 <script src="categories/instalacje_CCTV.js"></script>
 <script src="categories/satelity.js"></script>
-
 <script src="main.js"></script>
 
 </body>
