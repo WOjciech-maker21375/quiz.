@@ -119,6 +119,17 @@ let imgRatio = parseInt(document.getElementById("ratioInput").value) / 100;
   } else {
       questions = shuffle([...partImg, ...partText]);
   }
+    const slider = document.querySelector('input[type="range"]');
+
+function updateSliderBackground() {
+  const value = (slider.value - slider.min) / (slider.max - slider.min) * 100;
+  slider.style.background = `linear-gradient(to right, #224972 ${value}%, #e0e0e0 ${value}%)`;
+}
+
+// Wywołaj przy starcie i przy każdym przesunięciu
+slider.addEventListener('input', updateSliderBackground);
+updateSliderBackground();
+
   // --- KONIEC PODMIANY ---
   i = 0;
   score = 0;
