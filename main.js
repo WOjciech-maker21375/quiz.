@@ -91,53 +91,57 @@ function start(){
   }
 
      // --- START PODMIANY Z SUWAKIEM ---
-let imgRatio = parseInt(document.getElementById("ratioInput").value) / 100;
+// 1. Definiujemy suwak na samym początku (używamy poprawnego ID z Twojego HTML)
+const slider = document.getElementById("imgRatio");
+
+// 2. Pobieramy wartość do obliczeń (dzielimy przez 100, żeby mieć ułamek)
+let currentRatio = slider ? parseInt(slider.value) / 100 : 0.5;
 
 let poolText = filtered.filter(q => !q.image); 
 let poolImg = filtered.filter(q => q.image);
 
 // Obliczamy ile chcemy obrazków na podstawie suwaka
-let imgCountGoal = Math.floor(count * imgRatio); 
+let imgCountGoal = Math.floor(count * currentRatio); 
 
-// Wybieramy zdjęcia (tyle ile chcemy, ale nie więcej niż mamy w bazie)
+// Wybieramy zdjęcia
 let partImg = shuffle(poolImg).slice(0, imgCountGoal);
 
-// Dobieramy tekst tak, aby suma pytań zawsze wynosiła dokładnie "count"
+// Dobieramy tekst
 let actualImgCount = partImg.length;
 let actualTextGoal = count - actualImgCount; 
-
-// Zabezpieczenie: jeśli w bazie jest za mało tekstu, dobieramy więcej zdjęć (i na odwrót)
 let partText = shuffle(poolText).slice(0, actualTextGoal);
 
-// Jeśli po dobraniu tekstu wciąż brakuje pytań do limitu "count"
+// Zabezpieczenie i wybór pytań
 if ((partImg.length + partText.length) < count) {
     let remaining = count - (partImg.length + partText.length);
-    // Próbujemy dobrać brakujące z dowolnej puli, której jeszcze nie zużyliśmy w całości
     let extra = shuffle(filtered.filter(q => ![...partImg, ...partText].includes(q))).slice(0, remaining);
     questions = shuffle([...partImg, ...partText, ...extra]);
 } else {
     questions = shuffle([...partImg, ...partText]);
 }
 
-// Obsługa wyglądu suwaka (Gradient)
-const slider = document.getElementById("ratioInput"); // Używamy Twojego ID: ratioInput
-
+// 3. FUNKCJA MALOWANIA SUWAKA (Zalewanie kolorem)
 function updateSliderBackground() {
     if (slider) {
-        const value = (slider.value - slider.min) / (slider.max - slider.min) * 100;
-        // Podwójne punkty procentowe (np. ${value}% ${value}%) robią ostre przejście kolorów
-        slider.style.background = `linear-gradient(to right, #224972 0%, #224972 ${value}%, #e0e0e0 ${value}%, #e0e0e0 100%)`;
+        const val = slider.value;
+        const min = slider.min ? slider.min : 0;
+        const max = slider.max ? slider.max : 100;
+        const percentage = (val - min) / (max - min) * 100;
+        
+        // Wymuszamy niebieski kolor po lewej stronie
+        slider.style.setProperty('background', `linear-gradient(to right, #224972 ${percentage}%, #e0e0e0 ${percentage}%)`, 'important');
     }
 }
 
-// Reagowanie na ruch suwakiem
+// 4. Reagowanie na ruch i start
 if (slider) {
     slider.addEventListener('input', updateSliderBackground);
-    // Wywołujemy od razu, żeby pasek był niebieski po wejściu w ustawienia
-    updateSliderBackground();
+    // Wywołujemy z lekkim opóźnieniem, żeby przeglądarka na pewno zdążyła wczytać okno
+    setTimeout(updateSliderBackground, 100);
 }
 
 // --- KONIEC PODMIANY ---
+
   i = 0;
   score = 0;
 
