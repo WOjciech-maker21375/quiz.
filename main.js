@@ -90,47 +90,54 @@ function start(){
     return;
   }
 
-      // --- START PODMIANY Z SUWAKIEM ---
+     // --- START PODMIANY Z SUWAKIEM ---
 let imgRatio = parseInt(document.getElementById("ratioInput").value) / 100;
 
-  
-  let poolText = filtered.filter(q => !q.image); 
-  let poolImg = filtered.filter(q => q.image);
+let poolText = filtered.filter(q => !q.image); 
+let poolImg = filtered.filter(q => q.image);
 
-  // Obliczamy ile chcemy obrazków na podstawie suwaka
-  let imgCountGoal = Math.floor(count * imgRatio); 
+// Obliczamy ile chcemy obrazków na podstawie suwaka
+let imgCountGoal = Math.floor(count * imgRatio); 
 
-  // Wybieramy zdjęcia (tyle ile chcemy, ale nie więcej niż mamy w bazie)
-  let partImg = shuffle(poolImg).slice(0, imgCountGoal);
+// Wybieramy zdjęcia (tyle ile chcemy, ale nie więcej niż mamy w bazie)
+let partImg = shuffle(poolImg).slice(0, imgCountGoal);
 
-  // Dobieramy tekst tak, aby suma pytań zawsze wynosiła dokładnie "count"
-  let actualImgCount = partImg.length;
-  let actualTextGoal = count - actualImgCount; 
-  
-  // Zabezpieczenie: jeśli w bazie jest za mało tekstu, dobieramy więcej zdjęć (i na odwrót)
-  let partText = shuffle(poolText).slice(0, actualTextGoal);
-  
-  // Jeśli po dobraniu tekstu wciąż brakuje pytań do limitu "count"
-  if ((partImg.length + partText.length) < count) {
-      let remaining = count - (partImg.length + partText.length);
-      // Próbujemy dobrać brakujące z dowolnej puli, której jeszcze nie zużyliśmy w całości
-      let extra = shuffle(filtered.filter(q => ![...partImg, ...partText].includes(q))).slice(0, remaining);
-      questions = shuffle([...partImg, ...partText, ...extra]);
-  } else {
-      questions = shuffle([...partImg, ...partText]);
-  }
-    const slider = document.querySelector('input[type="range"]');
+// Dobieramy tekst tak, aby suma pytań zawsze wynosiła dokładnie "count"
+let actualImgCount = partImg.length;
+let actualTextGoal = count - actualImgCount; 
 
-function updateSliderBackground() {
-  const value = (slider.value - slider.min) / (slider.max - slider.min) * 100;
-  slider.style.background = `linear-gradient(to right, #224972 ${value}%, #e0e0e0 ${value}%)`;
+// Zabezpieczenie: jeśli w bazie jest za mało tekstu, dobieramy więcej zdjęć (i na odwrót)
+let partText = shuffle(poolText).slice(0, actualTextGoal);
+
+// Jeśli po dobraniu tekstu wciąż brakuje pytań do limitu "count"
+if ((partImg.length + partText.length) < count) {
+    let remaining = count - (partImg.length + partText.length);
+    // Próbujemy dobrać brakujące z dowolnej puli, której jeszcze nie zużyliśmy w całości
+    let extra = shuffle(filtered.filter(q => ![...partImg, ...partText].includes(q))).slice(0, remaining);
+    questions = shuffle([...partImg, ...partText, ...extra]);
+} else {
+    questions = shuffle([...partImg, ...partText]);
 }
 
-// Wywołaj przy starcie i przy każdym przesunięciu
-slider.addEventListener('input', updateSliderBackground);
-updateSliderBackground();
+// Obsługa wyglądu suwaka (Gradient)
+const slider = document.getElementById("ratioInput"); // Używamy Twojego ID: ratioInput
 
-  // --- KONIEC PODMIANY ---
+function updateSliderBackground() {
+    if (slider) {
+        const value = (slider.value - slider.min) / (slider.max - slider.min) * 100;
+        // Podwójne punkty procentowe (np. ${value}% ${value}%) robią ostre przejście kolorów
+        slider.style.background = `linear-gradient(to right, #224972 0%, #224972 ${value}%, #e0e0e0 ${value}%, #e0e0e0 100%)`;
+    }
+}
+
+// Reagowanie na ruch suwakiem
+if (slider) {
+    slider.addEventListener('input', updateSliderBackground);
+    // Wywołujemy od razu, żeby pasek był niebieski po wejściu w ustawienia
+    updateSliderBackground();
+}
+
+// --- KONIEC PODMIANY ---
   i = 0;
   score = 0;
 
