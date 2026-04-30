@@ -8179,7 +8179,7 @@ correct:"Współpracę elementów systemu."
   question: "Na rysunku przedstawiono:",
   image: "img/CCTV/obiektyw_o_stalej_ogniskowej.png", // Tutaj podajesz link lub nazwę pliku
   answers: ["obiektyw o regulowanej ogniskowej", "obiektyw o stałej ogniskowej", "obiektyw bez ogniskowej", "regulowany wzmacniacz obrazu"],
-  correct: "obiektyw o stłej ogniskowej"
+  correct: "obiektyw o stałej ogniskowej"
 },
 
 {
@@ -8187,7 +8187,7 @@ correct:"Współpracę elementów systemu."
   question: "Na rysunku przedstawiono:",
   image: "img/CCTV/obiektyw_o_stalej_ogniskowej.png", // Tutaj podajesz link lub nazwę pliku
   answers: ["obiektyw o regulowanej ogniskowej", "obiektyw o stałej ogniskowej", "obiektyw bez ogniskowej", "regulowany wzmacniacz obrazu"],
-  correct: "obiektyw o stłej ogniskowej"
+  correct: "obiektyw o stałej ogniskowej"
 }
 
 ];
