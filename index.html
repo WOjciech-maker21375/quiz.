@@ -170,11 +170,35 @@
 }
 
 /* Szary pasek (tło) */
-input[type=range]::-webkit-slider-runnable-track {
+input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
   width: 100%;
-  height: 4px;
-  background: #e0e0e0; /* Jasnoszary dla części prawej */
+  height: 4px; /* Musi być taka sama jak wysokość tracka */
+  background: #e0e0e0; /* Domyślny szary */
   border-radius: 2px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Usuwamy tło stąd, żeby nie zasłaniało gradientu z JS */
+input[type=range]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  background: transparent; 
+  height: 4px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: #6c757d;
+  border: 2px solid #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  margin-top: -7px; /* Wyśrodkowanie */
+}
+
 }
 
 /* Kółko */
