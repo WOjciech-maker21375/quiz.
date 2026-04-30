@@ -8178,7 +8178,7 @@ correct:"Współpracę elementów systemu."
 {
   category: "CCTV",
   question: "Na rysunku przedstawiono:",
-  image: "img/CCTV/obiektyw_o_stalej_ogniskowej.png", // Tutaj podajesz link lub nazwę pliku
+  image: "/img/CCTV/obiektyw_o_stalej_ogniskowej.PNG", // Tutaj podajesz link lub nazwę pliku
   answers: ["obiektyw o regulowanej ogniskowej", "obiektyw o stłej ogniskowej", "obiektyw bez ogniskowej", "regulowany wzmacniacz obrazu"],
   correct: "obiektyw o stłej ogniskowej"
 }
