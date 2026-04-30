@@ -8173,14 +8173,6 @@ correct:"Współpracę elementów systemu."
     "Odłączenie zasilania od rejestratora, odłączenie przewodu sygnałowego od kamery, zdemontowanie uszkodzonej kamery i zamontowanie nowej, podłączenie przewodu sygnałowego do kamery, podłączenie zasilania do rejestratora.  dodaj mi to pytanie w tym stylu."
   ],
   correct: "Odłączenie zasilania od kamery, odłączenie przewodu sygnałowego od kamery, zdemontowanie uszkodzonej kamery i zamontowanie nowej, podłączenie przewodu sygnałowego do kamery, podłączenie zasilania do kamery."
-},
-
-{
-  category: "CCTV",
-  question: "Na rysunku przedstawiono:",
-  image: "/img/CCTV/obiektyw_o_stalej_ogniskowej.PNG", // Tutaj podajesz link lub nazwę pliku
-  answers: ["obiektyw o regulowanej ogniskowej", "obiektyw o stłej ogniskowej", "obiektyw bez ogniskowej", "regulowany wzmacniacz obrazu"],
-  correct: "obiektyw o stłej ogniskowej"
 }
 
 ];
