@@ -161,63 +161,60 @@
     background: rgba(0,0,0,0.4);
     z-index: 9998;
   }
-  input[type=range] {
-  width: 100%;
+input[type=range] {
   appearance: none;
-  -webkit-appearance: none; /* Wymagane dla Chrome/Safari */
+  -webkit-appearance: none;
+  width: 100%;
   background: transparent;
-  overflow: hidden;         /* Przycina cień suwaka do krawędzi paska */
+  height: 24px; /* Wysokość całkowita dla kółka */
   cursor: pointer;
 }
 
-/* --- STYL DLA CHROME, EDGE, SAFARI --- */
+/* --- CHROME, OPERA GX, EDGE (Webkit) --- */
 
 /* Pasek */
 input[type=range]::-webkit-slider-runnable-track {
-  height: 8px;
-  background: #e0e0e0;      /* Kolor tła paska (jasnoszary) */
+  height: 8px; /* Twoja pożądana grubość paska */
+  background: #e0e0e0;
   border-radius: 4px;
+  border: 1px solid #b0b0b0; /* Obwódka paska */
 }
 
-/* Kółko i efekt niebieskiego postępu */
+/* Kółko */
 input[type=range]::-webkit-slider-thumb {
   appearance: none;
   -webkit-appearance: none;
-  height: 18px;
-  width: 18px;
-  background: #666666;      /* Kolor środka kółka */
+  height: 20px;
+  width: 20px;
+  background: #555555;
   border: 2px solid #ffffff;
   border-radius: 50%;
-  margin-top: -5px;         /* Centrowanie kółka względem paska */
-  /* Trik z cieniem tworzy niebieski pasek po lewej stronie: */
-  box-shadow: -407px 0 0 400px #0066ff; 
+  margin-top: -7px; /* Idealne wycentrowanie kółka na pasku */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
-/* --- STYL DLA FIREFOX --- */
+/* --- FIREFOX (Moz) --- */
 
-/* Pasek */
 input[type=range]::-moz-range-track {
   height: 8px;
   background: #e0e0e0;
   border-radius: 4px;
+  border: 1px solid #b0b0b0;
 }
 
-/* Niebieski postęp */
 input[type=range]::-moz-range-progress {
-  background: #0066ff;
+  background: #2f5287; /* Niebieski postęp w Firefox */
   height: 8px;
   border-radius: 4px;
 }
 
-/* Kółko */
 input[type=range]::-moz-range-thumb {
-  height: 16px;
-  width: 16px;
-  background: #666666;
+  height: 18px;
+  width: 18px;
+  background: #555555;
   border: 2px solid #ffffff;
   border-radius: 50%;
 }
-
 </style>
 </head>
 
