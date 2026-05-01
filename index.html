@@ -161,6 +161,63 @@
     background: rgba(0,0,0,0.4);
     z-index: 9998;
   }
+  input[type=range] {
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none; /* Wymagane dla Chrome/Safari */
+  background: transparent;
+  overflow: hidden;         /* Przycina cień suwaka do krawędzi paska */
+  cursor: pointer;
+}
+
+/* --- STYL DLA CHROME, EDGE, SAFARI --- */
+
+/* Pasek */
+input[type=range]::-webkit-slider-runnable-track {
+  height: 8px;
+  background: #e0e0e0;      /* Kolor tła paska (jasnoszary) */
+  border-radius: 4px;
+}
+
+/* Kółko i efekt niebieskiego postępu */
+input[type=range]::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 18px;
+  width: 18px;
+  background: #666666;      /* Kolor środka kółka */
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  margin-top: -5px;         /* Centrowanie kółka względem paska */
+  /* Trik z cieniem tworzy niebieski pasek po lewej stronie: */
+  box-shadow: -407px 0 0 400px #0066ff; 
+}
+
+/* --- STYL DLA FIREFOX --- */
+
+/* Pasek */
+input[type=range]::-moz-range-track {
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+}
+
+/* Niebieski postęp */
+input[type=range]::-moz-range-progress {
+  background: #0066ff;
+  height: 8px;
+  border-radius: 4px;
+}
+
+/* Kółko */
+input[type=range]::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  background: #666666;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
 </style>
 </head>
 
