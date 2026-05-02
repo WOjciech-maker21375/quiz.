@@ -1,14 +1,14 @@
 document.getElementById("imgRatio").addEventListener("input", function() {
     document.getElementById("ratioVal").textContent = this.value + "%";
 });
-
 /////////////////////// BAZA ///////////////////////
 const database = [
 ...fizyka,
 ...elektronika,
 ...instalacje,
 ...instalacje_CCTV,
-...satelity
+...satelity,
+...matematyka
 ];
 
 /////////////////////// ALIASY ///////////////////////
@@ -17,7 +17,8 @@ const categoryMap = {
 "elektronika":["elektronika","el","elektronika","elektronik","uklady","układy","el","elektrony"],
 "fizyka":["fiz","fizyka","fizunia"],
 "CCTV":["CCTV","instlacje dozorowe","monitoring"],
-"SAT": ["sat", "satelita", "tvsat", "anteny", "telewizja satelitarna"]
+"SAT": ["sat", "satelita", "tvsat", "anteny", "telewizja satelitarna"],
+"Matematyka":["matematyka", "matematusia", "mat", "Mat", "Matma"]
 };
 
 /////////////////////// STATE ///////////////////////
@@ -90,34 +91,36 @@ function start(){
     return;
   }
 
-     // --- START PODMIANY (WERSJA NATYWNA) ---
-const slider = document.getElementById("imgRatio");
-let ratioValue = slider ? parseInt(slider.value) / 100 : 0.5;
+      // --- START PODMIANY Z SUWAKIEM ---
+let imgRatio = parseInt(document.getElementById("ratioInput").value) / 100;
 
-let poolText = filtered.filter(q => !q.image); 
-let poolImg = filtered.filter(q => q.image);
+  
+  let poolText = filtered.filter(q => !q.image); 
+  let poolImg = filtered.filter(q => q.image);
 
-// Obliczamy ile chcemy obrazków na podstawie suwaka
-let imgCountGoal = Math.floor(count * ratioValue); 
+  // Obliczamy ile chcemy obrazków na podstawie suwaka
+  let imgCountGoal = Math.floor(count * imgRatio); 
 
-// Wybieramy zdjęcia
-let partImg = shuffle(poolImg).slice(0, imgCountGoal);
+  // Wybieramy zdjęcia (tyle ile chcemy, ale nie więcej niż mamy w bazie)
+  let partImg = shuffle(poolImg).slice(0, imgCountGoal);
 
-// Dobieramy tekst tak, aby suma pytań zawsze wynosiła dokładnie "count"
-let actualImgCount = partImg.length;
-let actualTextGoal = count - actualImgCount; 
-
-let partText = shuffle(poolText).slice(0, actualTextGoal);
-
-// Jeśli po dobraniu tekstu wciąż brakuje pytań do limitu "count"
-if ((partImg.length + partText.length) < count) {
-    let remaining = count - (partImg.length + partText.length);
-    let extra = shuffle(filtered.filter(q => ![...partImg, ...partText].includes(q))).slice(0, remaining);
-    questions = shuffle([...partImg, ...partText, ...extra]);
-} else {
-    questions = shuffle([...partImg, ...partText]);
-}
-// --- KONIEC PODMIANY ---
+  // Dobieramy tekst tak, aby suma pytań zawsze wynosiła dokładnie "count"
+  let actualImgCount = partImg.length;
+  let actualTextGoal = count - actualImgCount; 
+  
+  // Zabezpieczenie: jeśli w bazie jest za mało tekstu, dobieramy więcej zdjęć (i na odwrót)
+  let partText = shuffle(poolText).slice(0, actualTextGoal);
+  
+  // Jeśli po dobraniu tekstu wciąż brakuje pytań do limitu "count"
+  if ((partImg.length + partText.length) < count) {
+      let remaining = count - (partImg.length + partText.length);
+      // Próbujemy dobrać brakujące z dowolnej puli, której jeszcze nie zużyliśmy w całości
+      let extra = shuffle(filtered.filter(q => ![...partImg, ...partText].includes(q))).slice(0, remaining);
+      questions = shuffle([...partImg, ...partText, ...extra]);
+  } else {
+      questions = shuffle([...partImg, ...partText]);
+  }
+  // --- KONIEC PODMIANY ---
   i = 0;
   score = 0;
 
@@ -391,5 +394,43 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   }
 });
+function toggleCategoryList() {
+  const panel = document.getElementById("categoryPanel");
+  const container = document.getElementById("categoryListContainer");
+  const isOpen = panel.style.display === "block";
 
+  if (!isOpen) {
+    container.innerHTML = "";
+    
+    // 1. Liczenie pytań w kategoriach
+    const counts = {};
+    database.forEach(q => {
+      counts[q.category] = (counts[q.category] || 0) + 1;
+    });
 
+    // 2. Pobranie nazw kategorii i posortowanie ich alfabetycznie
+    // Używamy localeCompare, aby poprawnie sortować polskie znaki (Ą, Ć, Ę itp.)
+    const sortedCategories = Object.keys(counts).sort((a, b) => a.localeCompare(b));
+
+    // 3. Budowanie listy w nowej kolejności
+    sortedCategories.forEach(cat => {
+      const item = document.createElement("div");
+      item.className = "category-item";
+      item.innerHTML = `<span>${cat}</span> <span class="q-badge">${counts[cat]} pytań</span>`;
+      
+      item.onclick = () => {
+        document.getElementById("category").value = cat;
+        document.getElementById("count").value = counts[cat];
+        panel.style.display = "none";
+        document.body.classList.remove("settings-open-bg");
+      };
+      container.appendChild(item);
+    });
+
+    panel.style.display = "block";
+    document.body.classList.add("settings-open-bg");
+  } else {
+    panel.style.display = "none";
+    document.body.classList.remove("settings-open-bg");
+  }
+}
