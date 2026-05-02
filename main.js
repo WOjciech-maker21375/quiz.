@@ -442,3 +442,70 @@ function reportQuestion() {
   
   window.open(finalUrl, "_blank"); // Otwiera w nowej karcie
 }
+
+
+
+function generatePDFs() {
+    let cat = document.getElementById("category").value;
+    let filtered = database.filter(q => q.category.toLowerCase().includes(cat.toLowerCase()));
+    
+    if (filtered.length < 10) {
+        alert("Za mało pytań w kategorii (min. 10), by stworzyć sprawdziany!");
+        return;
+    }
+
+    console.log("Generowanie PDF dla kategorii:", cat);
+
+    let content = `<div style="font-family: Arial; padding: 20px; color: black; background: white;">`;
+
+    for (let set = 1; set <= 3; set++) {
+        let setQuestions = shuffle([...filtered]).slice(0, 10);
+        let grupa = String.fromCharCode(64 + set); // A, B, C
+
+        // Arkusz sprawdzianu
+        content += `<div style="page-break-after: always; border: 1px solid #fff; padding: 10px;">
+            <h1 style="text-align:center;">Sprawdzian - ${cat}</h1>
+            <p><strong>GRUPA ${grupa}</strong> <span style="float:right;">Imię i nazwisko: ............................................</span></p>
+            <hr><br>`;
+        
+        setQuestions.forEach((q, idx) => {
+            // Mieszamy kopie odpowiedzi dla każdego zestawu osobno
+            let ans = shuffle([...q.answers]); 
+            
+            content += `<div style="margin-bottom: 15px;">
+                <p><strong>${idx + 1}. ${q.question}</strong></p>
+                <div style="margin-left: 20px;">
+                    A) [ ] ${ans[0]} <br>
+                    B) [ ] ${ans[1]} <br>
+                    C) [ ] ${ans[2]} <br>
+                    D) [ ] ${ans[3] || ""}
+                </div>
+            </div>`;
+        });
+
+        // Klucz odpowiedzi
+        content += `</div><div style="page-break-after: always; padding: 20px;">
+            <h2 style="text-align:center;">KLUCZ ODPOWIEDZI - GRUPA ${grupa}</h2>
+            <hr>
+            <div style="margin-top:20px;">`;
+        
+        setQuestions.forEach((q, idx) => {
+            content += `<p><strong>${idx + 1}:</strong> ${q.correct}</p>`;
+        });
+        content += `</div></div>`;
+    }
+    content += `</div>`;
+
+    const opt = {
+        margin: 10,
+        filename: `Sprawdziany_${cat}.pdf`,
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    };
+
+    // Wykonanie i otwarcie
+    html2pdf().from(content).set(opt).toPdf().get('pdf').then(function (pdf) {
+        window.open(pdf.output('bloburl'), '_blank');
+    });
+}
+
