@@ -1,5 +1,5 @@
 const instalacje_CCTV = [
-
+  
 {
 category:"CCTV",
 question:"Co oznacza skrót CCTV w polskiej terminologii technicznej?",
@@ -14,89 +14,9 @@ correct:"Telewizja dozorowa (telewizja w obwodzie zamkniętym)."
 
 {
   category: "CCTV",
-  question: "Na rysunku przedstawiono:",
-  image: "img/CCTV/obiektyw_o_regulowanej_ogniskowej.png", // Tutaj podajesz link lub nazwę pliku
-  answers: ["obiektyw o regulowanej ogniskowej", "obiektyw o stłej ogniskowej", "obiektyw bez ogniskowej", "regulowany wzmacniacz obrazu"],
-  correct: "obiektyw o regulowanej ogniskowej"
-},
-
-{
-  category: "CCTV",
-  question: "literą (A) zaznaczono ",
-  image: "img/CCTV/OGNISKOWA_SCHEMAT.png", // Tutaj podajesz link lub nazwę pliku
-  answers: ["Przetwornik", "Obiektyw", "Kąt widzenia", "Ogniskową"],
-  correct: "Obiektyw"
-},
-
-{
-  category: "CCTV",
-  question: "literą (B) zaznaczono ",
-  image: "img/CCTV/OGNISKOWA_SCHEMAT.png", // Tutaj podajesz link lub nazwę pliku
-  answers: ["Przetwornik", "Obiektyw", "Kąt widzenia", "Ogniskową"],
-  correct: "Przetwornik"
-},
-
-{
-  category: "CCTV",
-  question: "literą (C) zaznaczono ",
-  image: "img/CCTV/OGNISKOWA_SCHEMAT.png", // Tutaj podajesz link lub nazwę pliku
-  answers: ["Przetwornik", "Obiektyw", "Kąt widzenia", "Ogniskową"],
-  correct: "Ogniskową"
-},
-
-{
-  category: "CCTV",
-  question: "literą (D) zaznaczono ",
-  image: "img/CCTV/OGNISKOWA_SCHEMAT.png", // Tutaj podajesz link lub nazwę pliku
-  answers: ["Przetwornik", "Obiektyw", "Kąt widzenia", "dystans od obiektywu do obiektu."],
-  correct: "dystans od obiektywu do obiektu."
-},
-
-{
-  category: "CCTV",
-  question: "literą (E) zaznaczono ",
-  image: "img/CCTV/OGNISKOWA_SCHEMAT.png", // Tutaj podajesz link lub nazwę pliku
-  answers: ["Przetwornik", "Obiektyw", "Kąt widzenia", "dystans od obiektywu do obiektu."],
-  correct: "Kąt widzenia"
-},
-
-{
-  category: "CCTV",
-  question: "literą (A) zaznaczono ",
-  image: "img/CCTV/ogniskowa_schemat2.png", // Tutaj podajesz link lub nazwę pliku
-  answers: ["Przetwornik", "Obiektyw", "Kąt widzenia", "Ogniskową"],
-  correct: "Kąt widzenia"
-},
-
-{
-  category: "CCTV",
-  question: "literą (B) zaznaczono ",
-  image: "img/CCTV/ogniskowa_schemat2.png", // Tutaj podajesz link lub nazwę pliku
-  answers: ["Przetwornik", "dystans od obiektywu do obiektu", "Kąt widzenia", "Ogniskową"],
-  correct: "dystans od obiektywu do obiektu"
-},
-
-{
-  category: "CCTV",
-  question: "literą (C) zaznaczono ",
-  image: "img/CCTV/ogniskowa_schemat2.png", // Tutaj podajesz link lub nazwę pliku
-  answers: ["Przetwornik", "Obiektyw", "Kąt widzenia", "Ogniskową"],
-  correct: "Ogniskową"
-},
-
-{
-  category: "CCTV",
-  question: "literą (D) zaznaczono ",
-  image: "img/CCTV/ogniskowa_schemat2.png", // Tutaj podajesz link lub nazwę pliku
-  answers: ["Przetwornik", "Obiektyw", "Kąt widzenia", "przetwornicę"],
-  correct: "Przetwornik"
-},
-
-{
-  category: "CCTV",
   question: "literą (E) zaznaczono ",
   image: "img/CCTV/ogniskowa_schemat2.png", // Tutaj podajesz link lub nazwę pliku
-  answers: ["Przetwornik", "Obiektyw", "Kąt widzenia", "dystans od obiektywu do obiektu."],
+  answers: ["Przetwornik", "Obiektyw", "obiektywową", "osłonę bi polarną transpordera"],
   correct: "Obiektyw"
 },
 
@@ -104,7 +24,7 @@ correct:"Telewizja dozorowa (telewizja w obwodzie zamkniętym)."
   category: "CCTV",
   question: "literą (A) zaznaczono ",
   image: "img/CCTV/ogniskowa_schemat3.png", // Tutaj podajesz link lub nazwę pliku
-  answers: ["Przetwornik", "dystans od obiektywu do obiektu", "Kąt widzenia", "Ogniskową"],
+  answers: ["Przetwornik", "dystans od obiektywu do obiektu", "dystans od obiektywu do Przetwornika", "Ogniskową"],
   correct: "dystans od obiektywu do obiektu"
 },
 
@@ -112,7 +32,7 @@ correct:"Telewizja dozorowa (telewizja w obwodzie zamkniętym)."
   category: "CCTV",
   question: "literą (B) zaznaczono ",
   image: "img/CCTV/ogniskowa_schemat3.png", // Tutaj podajesz link lub nazwę pliku
-  answers: ["Przetwornik", "Obiektyw", "Kąt widzenia", "Ogniskową"],
+  answers: ["Przetwornik", "Obiektyw", "Przetwornicę", "Ogniskową"],
   correct: "Przetwornik"
 },
 
@@ -120,7 +40,7 @@ correct:"Telewizja dozorowa (telewizja w obwodzie zamkniętym)."
   category: "CCTV",
   question: "literą (C) zaznaczono ",
   image: "img/CCTV/ogniskowa_schemat3.png", // Tutaj podajesz link lub nazwę pliku
-  answers: ["Przetwornik", "Obiektyw", "Kąt widzenia", "Ogniskową"],
+  answers: ["Przetwornik", "Obiektyw", "Kąt widzenia", "kąt padania światła"],
   correct: "Kąt widzenia"
 },
 
@@ -128,7 +48,7 @@ correct:"Telewizja dozorowa (telewizja w obwodzie zamkniętym)."
   category: "CCTV",
   question: "literą (D) zaznaczono ",
   image: "img/CCTV/ogniskowa_schemat3.png", // Tutaj podajesz link lub nazwę pliku
-  answers: ["Przetwornik", "Obiektyw", "Kąt widzenia", "dystans od obiektywu do obiektu."],
+  answers: ["Przetwornik", "Obiektyw", "wyświetlacz", "dystans od obiektywu do obiektu."],
   correct: "Obiektyw"
 },
 
@@ -136,7 +56,7 @@ correct:"Telewizja dozorowa (telewizja w obwodzie zamkniętym)."
   category: "CCTV",
   question: "literą (E) zaznaczono ",
   image: "img/CCTV/ogniskowa_schemat3.png", // Tutaj podajesz link lub nazwę pliku
-  answers: ["Ogniskową", "Obiektyw", "Kąt widzenia", "dystans od obiektywu do obiektu."],
+  answers: ["Ogniskową", "Obiektyw", "ognisko", "dystans od obiektywu do obiektu."],
   correct: "Ogniskową"
 },
 
@@ -1678,18 +1598,6 @@ correct:"224.0.0.0 - 239.255.255.255."
 
 {
 category:"CCTV",
-question:"Standard IK09 w specyfikacji obudowy kamery oznacza odporność na uderzenie:",
-answers:[
-"Młotkiem o wadze 5 kg z wysokości 20 cm.",
-"Ciężarem 10 kg z wysokości 40 cm.",
-"Energii 10 dżuli (J).",
-"Pociskiem kalibru 9 mm."
-],
-correct:"Energii 10 dżuli (J)."
-},
-
-{
-category:"CCTV",
 question:"W rejestratorach NVR, funkcja 'RAID 5' wymaga do działania minimum:",
 answers:[
 "1 dysku twardego.",
@@ -3206,7 +3114,7 @@ correct:"Dostosować do predefiniowanych ustawień dla światła sztucznego."
 category:"CCTV",
 question:"Funkcja 'uczenia' kamery balansu bieli polega na:",
 answers:[
-"Mówieniu do kamery.",
+"Podkręceniu odpowiednio potencjometru.",
 "Pokazaniu kamerze koloru białego i zapamiętaniu tego ustawienia.",
 "Wgraniu nowego systemu operacyjnego.",
 "Wymianie matrycy na nową."
@@ -5711,17 +5619,6 @@ answers:[
 correct:"Kilka-kilkanaście metrów (zależnie od obiektywu)."
 },
 
-{
-category:"CCTV",
-question:"Oblicz wymaganą pojemność dysku dla kamery pracującej z bitrate 4 Mbps przez 24 godziny (Wzór: Pojemność [GB] = (bitrate [Mbps] * 3600 * h) / 8000).",
-answers:[
-"12 GB.",
-"43,2 GB.",
-"86,4 GB.",
-"172,8 GB."
-],
-correct:"43,2 GB."
-},
 
 {
 category:"CCTV",
@@ -5745,18 +5642,6 @@ answers:[
 "20 kamer."
 ],
 correct:"13 kamer."
-},
-
-{
-category:"CCTV",
-question:"Oblicz kąt widzenia kamery (h) z przetwornikiem 1/3 cala (szerokość 4.8mm) i obiektywem 6mm, korzystając z uproszczonego wzoru: alfa = 2 * arctg(d / (2*f)).",
-answers:[
-"Około 30 stopni.",
-"Około 44 stopnie.",
-"Około 60 stopni.",
-"Około 90 stopni."
-],
-correct:"Około 44 stopnie."
 },
 
 {
@@ -5877,18 +5762,6 @@ answers:[
 "254."
 ],
 correct:"14."
-},
-
-{
-category:"CCTV",
-question:"Oblicz odległość, z jakiej kamera o obiektywie 12mm i matrycy 1/3' (szer. 4.8mm) 'zobaczy' obiekt o szerokości 2 metrów na całym ekranie. (Wzór: L = (f * S_obiektu) / d).",
-answers:[
-"2 metry.",
-"5 metrów.",
-"10 metrów.",
-"50 metrów."
-],
-correct:"50 metrów."
 },
 
 {
@@ -6069,18 +5942,6 @@ answers:[
 "FTP."
 ],
 correct:"UDP."
-},
-
-{
-category:"CCTV",
-question:"Oblicz pole widzenia (szerokość) na dystansie 10m dla kamery z obiektywem 2.8mm i matrycą 1/2.8' (szer. 5.3mm). (Wzór: S = (L * d) / f).",
-answers:[
-"5.3 m.",
-"10 m.",
-"18.9 m.",
-"28 m."
-],
-correct:"18.9 m."
 },
 
 {
@@ -6321,18 +6182,6 @@ answers:[
 "Zasięg w kilometrach."
 ],
 correct:"Czułość termiczną (różnicę temperatur, jaką wykryje kamera)."
-},
-
-{
-category:"CCTV",
-question:"Oblicz bitrate dla strumienia MJPEG: klatka 50 KB, 25 kl/s. (Wzór: Bitrate [kbps] = Rozmiar [KB] * fps * 8).",
-answers:[
-"400 kbps.",
-"1000 kbps.",
-"10 000 kbps (10 Mbps).",
-"20 000 kbps."
-],
-correct:"10 000 kbps (10 Mbps)."
 },
 
 {
@@ -8174,20 +8023,1534 @@ correct:"Współpracę elementów systemu."
   ],
   correct: "Odłączenie zasilania od kamery, odłączenie przewodu sygnałowego od kamery, zdemontowanie uszkodzonej kamery i zamontowanie nowej, podłączenie przewodu sygnałowego do kamery, podłączenie zasilania do kamery."
 },
-  {
+
+{
   category: "CCTV",
   question: "Na rysunku przedstawiono:",
   image: "img/CCTV/obiektyw_o_stalej_ogniskowej.png", // Tutaj podajesz link lub nazwę pliku
-  answers: ["obiektyw o regulowanej ogniskowej", "obiektyw o stałej ogniskowej", "obiektyw bez ogniskowej", "regulowany wzmacniacz obrazu"],
-  correct: "obiektyw o stałej ogniskowej"
+  answers: ["obiektyw o regulowanej ogniskowej", "obiektyw o stłej ogniskowej", "obiektyw bez ogniskowej", "regulowany wzmacniacz obrazu"],
+  correct: "obiektyw o stłej ogniskowej"
 },
 
 {
   category: "CCTV",
   question: "Na rysunku przedstawiono:",
   image: "img/CCTV/obiektyw_o_stalej_ogniskowej.png", // Tutaj podajesz link lub nazwę pliku
-  answers: ["obiektyw o regulowanej ogniskowej", "obiektyw o stałej ogniskowej", "obiektyw bez ogniskowej", "regulowany wzmacniacz obrazu"],
-  correct: "obiektyw o stałej ogniskowej"
-}
+  answers: ["obiektyw o regulowanej ogniskowej", "obiektyw o stłej ogniskowej", "obiektyw bez ogniskowej", "regulowany wzmacniacz obrazu"],
+  correct: "obiektyw o stłej ogniskowej"
+},
 
+// SEKCJA: PRZYSLONA (PODSTAWY)
+
+{
+  category: "CCTV",
+  question: "W jakiej postaci występuje przysłona w obiektywie kamery?",
+  answers: ["Elektronicznego układu scalonego", "Stałego filtra szklanego", "Regulowanego otworu na drodze światła", "Warstwy napylonej na soczewkę"],
+  correct: "Regulowanego otworu na drodze światła"
+},
+
+{
+  category: "CCTV",
+  question: "Za co odpowiada przysłona w systemach telewizji dozorowej?",
+  answers: ["Za regulację ogniskowej", "Za zmianę ilości światła padającego na przetwornik", "Za cyfrowe odszumianie obrazu", "Za prędkość zapisu na dysku"],
+  correct: "Za zmianę ilości światła padającego na przetwornik"
+},
+
+{
+  category: "CCTV",
+  question: "Gdzie w strukturze kamery pada światło bezpośrednio po przejściu przez obiektyw z przysłoną?",
+  answers: ["Na powierzchnię światłoczułą przetwornika", "Na procesor sygnałowy DSP", "Na moduł komunikacji sieciowej", "Na diody doświetlacza IR"],
+  correct: "Na powierzchnię światłoczułą przetwornika"
+},
+
+{
+  category: "CCTV",
+  question: "Jakie są dwa podstawowe rodzaje regulacji przysłony w obiektywach?",
+  answers: ["Cienka i gruba", "Automatyczna i ręczna", "Cyfrowa i mechaniczna", "Stała i zmiennoogniskowa"],
+  correct: "Automatyczna i ręczna"
+},
+
+{
+  category: "CCTV",
+  question: "Dlaczego w kamerach zewnętrznych zaleca się stosowanie przysłony automatycznej?",
+  answers: ["Zapewnia lepszą szczelność obudowy", "Niweluje skutki oślepienia kamery przez słońce", "Zwiększa zasięg zoomu optycznego", "Przyspiesza przesyłanie obrazu do sieci"],
+  correct: "Niweluje skutki oślepienia kamery przez słońce"
+},
+
+// SEKCJA: LICZBA APERTUROWA F
+{
+  category: "CCTV",
+  question: "Jak inaczej określa się jasność obiektywu w specyfikacji technicznej?",
+  answers: ["Liczba transmisyjna", "Liczba aperturowa F", "Czułość ISO", "Wartość luksów"],
+  correct: "Liczba aperturowa F"
+},
+
+{
+  category: "CCTV",
+  question: "Która skala służy do określania zdolności obiektywu do przepuszczania światła?",
+  answers: ["Skala T", "Skala F", "Skala Lux", "Skala dB"],
+  correct: "Skala F"
+},
+
+{
+  category: "CCTV",
+  question: "Jaka zależność zachodzi między wzrostem liczby F a ilością światła?",
+  answers: ["Ilość światła rośnie proporcjonalnie", "Ilość światła maleje", "Ilość światła nie ulega zmianie", "Zmienia się tylko barwa światła"],
+  correct: "Ilość światła maleje"
+},
+
+{
+  category: "CCTV",
+  question: "Co oznaczają dwie wartości liczby F (np. F1.4 - 360) podawane w specyfikacji obiektywu?",
+  answers: ["Jasność dla różnych rozdzielczości", "Maksymalne i minimalne otwarcie przysłony", "Jasność w centrum i na brzegach obrazu", "Wartości dla dnia i nocy"],
+  correct: "Maksymalne i minimalne otwarcie przysłony"
+},
+
+
+// SEKCJA: LICZBA TRANSMISYJNA T
+{
+  category: "CCTV",
+  question: "Który wskaźnik określa rzeczywistą (uwzględniającą straty) zdolność obiektywu do przepuszczania światła?",
+  answers: ["Liczba aperturowa F", "Liczba transmisyjna T", "Głębia ostrości", "Szybkość migawki"],
+  correct: "Liczba transmisyjna T"
+},
+
+{
+  category: "CCTV",
+  question: "Co jest brane pod uwagę przy określaniu jakości obiektywu w skali T?",
+  answers: ["Materiał soczewek i rodzaj światła", "Waga obiektywu i jego rozmiar", "Marka kamery i jej oprogramowanie", "Rodzaj zasilania kamery"],
+  correct: "Materiał soczewek i rodzaj światła"
+},
+
+{
+  category: "CCTV",
+  question: "Która skala pozwala na najbardziej bezwzględną i precyzyjną ocenę jasności obiektywu?",
+  answers: ["Skala F", "Skala T", "Skala Kelvina", "Skala decybeli"],
+  correct: "Skala T"
+},
+
+// SEKCJA: WARTOSCI TECHNICZNE (TABELA)
+{
+  category: "CCTV",
+  question: "Przy jakiej wartości liczby F obiektyw przepuszcza 100% strumienia światła?",
+  answers: ["F = 0,8", "F = 1,0", "F = 1,4", "F = 2,0"],
+  correct: "F = 1,0"
+},
+
+{
+  category: "CCTV",
+  question: "Jaką ilość światła przepuszcza obiektyw o jasności F = 2,0?",
+  answers: ["50,0%", "25,0%", "12,5%", "6,3%"],
+  correct: "25,0%"
+},
+
+{
+  category: "CCTV",
+  question: "Wartość przysłony F = 4,0 oznacza, że do przetwornika dociera:",
+  answers: ["12,5% światła", "6,3% światła", "3,1% światła", "1,6% światła"],
+  correct: "6,3%"
+},
+
+{
+  category: "CCTV",
+  question: "Przy ustawieniu przysłony na wartość F = 8,0 przepuszczalność światła wynosi:",
+  answers: ["3,1%", "1,6%", "0,8%", "5,0%"],
+  correct: "1,6%"
+},
+
+{
+  category: "CCTV",
+  question: "Wartość przysłony F = 16 charakteryzuje się przepuszczalnością światła na poziomie:",
+  answers: ["1,6%", "0,8%", "0,4%", "2,0%"],
+  correct: "0,8%"
+},
+
+{
+  category: "CCTV",
+  question: "O ile spadnie ilość światła przy zmianie wartości przysłony z F = 1,0 na F = 1,4?",
+  answers: ["O 10%", "O 25%", "O 50%", "O 75%"],
+  correct: "O 50%"
+},
+
+{
+  category: "CCTV",
+  question: "Która z wymienionych wartości F oznacza najjaśniejszy obiektyw?",
+  answers: ["F = 1,4", "F = 2,8", "F = 4,0", "F = 8,0"],
+  correct: "F = 1,4"
+},
+
+{
+  category: "CCTV",
+  question: "Co charakteryzuje obiektyw o małej wartości liczby F?",
+  answers: ["Jest to obiektyw jasny", "Jest to obiektyw ciemny", "Jest to obiektyw o małym kącie widzenia", "Jest to obiektyw wyłącznie ręczny"],
+  correct: "Jest to obiektyw jasny"
+},
+// SEKCJA: głębia ostrości 
+{
+  category: "CCTV",
+  question: "Czym jest głębia ostrości w systemach kamer?",
+  answers: [
+    "Zakresem odległości, w którym obserwowane obiekty sprawiają wrażenie ostrych",
+    "Szybkością z jaką kamera ustawia ostrość na poruszający się obiekt",
+    "Maksymalnym dystansem, na jaki kamera może przesłać sygnał",
+    "Rozdzielczością cyfrową krawędzi obiektów"
+  ],
+  correct: "Zakresem odległości, w którym obserwowane obiekty sprawiają wrażenie ostrych"
+},
+
+{
+  category: "CCTV",
+  question: "W jaki sposób przymykanie przysłony wpływa na głębię ostrości?",
+  answers: [
+    "Zmniejsza głębię ostrości",
+    "Zwiększa wartość parametru głębi ostrości",
+    "Nie ma wpływu na ostrość obrazu",
+    "Powoduje całkowite rozmycie tła"
+  ],
+  correct: "Zwiększa wartość parametru głębi ostrości"
+},
+
+{
+  category: "CCTV",
+  question: "Jak zmiana ogniskowej wpływa na głębię ostrości?",
+  answers: [
+    "Skracanie ogniskowej zwiększa głębię ostrości",
+    "Wydłużanie ogniskowej zwiększa głębię ostrości",
+    "Ogniskowa wpływa tylko na kąt widzenia, nie na głębię",
+    "Skracanie ogniskowej powoduje powstanie wąskiej głębi ostrości"
+  ],
+  correct: "Skracanie ogniskowej zwiększa głębię ostrości"
+},
+
+{
+  category: "CCTV",
+  question: "Co oznacza dążenie głębi ostrości do nieskończoności?",
+  answers: [
+    "Obraz jest ostry tylko w jednym, bardzo bliskim punkcie",
+    "Obiekty leżące dalej niż pewna minimalna odległość są widziane ostro",
+    "Kamera nigdy nie może złapać poprawnej ostrości",
+    "Przetwornik obrazu uległ uszkodzeniu przez nadmiar światła"
+  ],
+  correct: "Obiekty leżące dalej niż pewna minimalna odległość są widziane ostro"
+},
+
+{
+  category: "CCTV",
+  question: "Kiedy w monitoringu pożądana jest duża głębia ostrości?",
+  answers: [
+    "Gdy chcemy widzieć ostro większość elementów na całym obrazie",
+    "Gdy chcemy wydzielić jeden konkretny obiekt od tła",
+    "Tylko podczas pracy kamery w całkowitej ciemności",
+    "Gdy używamy wyłącznie zoomu cyfrowego"
+  ],
+  correct: "Gdy chcemy widzieć ostro większość elementów na całym obrazie"
+},
+
+{
+  category: "CCTV",
+  question: "W jakiej sytuacji stosuje się małą (wąską) głębię ostrości?",
+  answers: [
+    "Aby uzyskać ostrość na horyzoncie",
+    "Gdy chcemy wyodrębnić obserwowany obiekt od tła otoczenia",
+    "Gdy chcemy monitorować szeroki parking jednym obiektywem",
+    "Przy stosowaniu obiektywów szerokokątnych typu rybie oko"
+  ],
+  correct: "Gdy chcemy wyodrębnić obserwowany obiekt od tła otoczenia"
+},
+
+{
+  category: "CCTV",
+  question: "Które połączenie ustawień zapewni najszerszą głębię ostrości?",
+  answers: [
+    "Otwarta przysłona i długa ogniskowa",
+    "Przymknięta przysłona i krótka ogniskowa",
+    "Otwarta przysłona i krótka ogniskowa",
+    "Przymknięta przysłona i długa ogniskowa"
+  ],
+  correct: "Przymknięta przysłona i krótka ogniskowa"
+},
+
+{
+  category: "CCTV",
+  question: "Na czym polega różnica między szeroką a wąską głębią ostrości?",
+  answers: [
+    "Szeroka głębia ostrości to większy obszar pola widzenia, który pozostaje ostry",
+    "Wąska głębia ostrości pozwala widzieć wszystko od kamery do horyzontu",
+    "Szeroka głębia ostrości dotyczy tylko szerokości geograficznej montażu",
+    "Nie ma żadnej różnicy, to dwa określenia tego samego parametru"
+  ],
+  correct: "Szeroka głębia ostrości to większy obszar pola widzenia, który pozostaje ostry"
+},
+
+{
+  category: "CCTV",
+  question: "Jak parametr 'odległość ostrzenia' wiąże się z głębią ostrości?",
+  answers: [
+    "Jest to punkt, wokół którego rozciąga się zakres głębi ostrości",
+    "Jest to maksymalna długość kabla sygnałowego",
+    "To parametr określający jasność obiektywu (liczba F)",
+    "Określa ona tylko fizyczną długość obudowy obiektywu"
+  ],
+  correct: "Jest to punkt, wokół którego rozciąga się zakres głębi ostrości"
+},
+
+{
+  category: "CCTV",
+  question: "Jeżeli chcemy monitorować długi korytarz tak, aby osoby blisko i daleko były ostre, powinniśmy dążyć do:",
+  answers: [
+    "Jak najmniejszej głębi ostrości",
+    "Jak największej głębi ostrości",
+    "Całkowitego otwarcia przysłony",
+    "Maksymalnego wydłużenia ogniskowej"
+  ],
+  correct: "Jak największej głębi ostrości"
+},
+
+{
+  category: "CCTV",
+  question: "literą (A) zaznaczono ",
+  image: "img/CCTV/szeroka_glembia_ostrosci.png", // Tutaj podajesz link lub nazwę pliku
+  answers: ["odległość ostrzenia", "odległość eliminacji złego oświetlenia", "odległość widzenia", "długość martwego punktu"],
+  correct: "odległość ostrzenia"
+},
+
+{
+  category: "CCTV",
+  question: "literą (A) zaznaczono ",
+  image: "img/CCTV/szeroka_glembia_ostrosci.png", // Tutaj podajesz link lub nazwę pliku
+  answers: ["odległość ostrzenia", "głębię ostrości", "odległość widzenia", "długość martwego punktu"],
+  correct: "odległość ostrzenia"
+},
+
+{
+  category: "CCTV",
+  question: "literą (B) zaznaczono ",
+  image: "img/CCTV/szeroka_glembia_ostrosci.png", // Tutaj podajesz link lub nazwę pliku
+  answers: ["odległość ostrzenia", "głębię ostrości", "odległość widzenia", "długość martwego punktu"],
+  correct: "głębię ostrości"
+},
+
+{
+  category: "CCTV",
+  question: "Jaka została przedstawiona głębia ostrości ? ",
+  image: "img/CCTV/szeroka_glembia_ostrosci.png", // Tutaj podajesz link lub nazwę pliku
+  answers: ["szeroka", "wąska", "długa", "mieszana"],
+  correct: "szeroka"
+},
+
+{
+  category: "CCTV",
+  question: "literą (B) zaznaczono ",
+  image: "img/CCTV/szeroka_glembia_ostrosci2.png", // Tutaj podajesz link lub nazwę pliku
+  answers: ["odległość ostrzenia", "głębię ostrości", "odległość widzenia", "długość martwego punktu"],
+  correct: "odległość ostrzenia"
+},
+
+{
+  category: "CCTV",
+  question: "literą (A) zaznaczono ",
+  image: "img/CCTV/szeroka_glembia_ostrosci2.png", // Tutaj podajesz link lub nazwę pliku
+  answers: ["odległość ostrzenia", "głębię ostrości", "odległość widzenia", "długość martwego punktu"],
+  correct: "głębię ostrości"
+},
+
+//podział obiektywów 
+{
+  category: "CCTV",
+  question: "Kiedy obiektyw klasyfikujemy jako szerokokątny?",
+  answers: [
+    "Gdy jego ogniskowa jest znacznie większa od przekątnej przetwornika",
+    "Gdy wartość ogniskowej jest znacznie mniejsza od przekątnej przetwornika",
+    "Gdy nie posiada on przysłony (no-IRIS)",
+    "Gdy jest wyposażony w funkcję moto-zoom"
+  ],
+  correct: "Gdy wartość ogniskowej jest znacznie mniejsza od przekątnej przetwornika"
+},
+
+{
+  category: "CCTV",
+  question: "Obiektyw standardowy charakteryzuje się tym, że:",
+  answers: [
+    "Ma ogniskową podobną do przekątnej przetwornika",
+    "Posiada zawsze stałą ogniskową 3,6mm",
+    "Jest przeznaczony wyłącznie do kamer dzień/noc",
+    "Ma kąt widzenia powyżej 180 stopni"
+  ],
+  correct: "Ma ogniskową podobną do przekątnej przetwornika"
+},
+
+{
+  category: "CCTV",
+  question: "Obiektyw wąskokątny stosujemy, gdy:",
+  answers: [
+    "Ogniskowa obiektywu jest mniejsza od przekątnej przetwornika",
+    "Ogniskowa obiektywu jest większa od przekątnej przetwornika",
+    "Chcemy uzyskać bardzo szeroki plan widzenia",
+    "Kamera pracuje w małym pomieszczeniu"
+  ],
+  correct: "Ogniskowa obiektywu jest większa od przekątnej przetwornika"
+},
+
+{
+  category: "CCTV",
+  question: "Do jakich zastosowań dedykowane są obiektywy bez przysłony (no-IRIS)?",
+  answers: [
+    "Do najbardziej wymagających systemów bankowych",
+    "Do zastosowania w prostych kamerach",
+    "Do kamer pracujących w zmiennych warunkach oświetleniowych",
+    "Do obiektywów typu moto-zoom"
+  ],
+  correct: "Do zastosowania w prostych kamerach"
+},
+
+{
+  category: "CCTV",
+  question: "W jakich kamerach najczęściej stosuje się automatyczną przysłonę Auto-IRIS?",
+  answers: [
+    "W prostych kamerach wewnętrznych",
+    "W kamerach typu dzień/noc",
+    "Wyłącznie w kamerach z obiektywem stałoogniskowym",
+    "W kamerach bez przetwornika obrazu"
+  ],
+  correct: "W kamerach typu dzień/noc"
+},
+
+{
+  category: "CCTV",
+  question: "Które z wymienionych długości ogniskowych są typowe dla obiektywów stałoogniskowych?",
+  answers: [
+    "3,5-8mm",
+    "3,6mm, 4,0mm, 6,0mm, 12,0mm",
+    "2,8-12mm",
+    "Dowolna wartość regulowana zdalnie"
+  ],
+  correct: "3,6mm, 4,0mm, 6,0mm, 12,0mm"
+},
+
+{
+  category: "CCTV",
+  question: "Jak nazywamy obiektywy o zmiennej ogniskowej regulowanej ręcznie?",
+  answers: [
+    "Moto-zoom",
+    "Varifocal (Waryfokalne)",
+    "No-IRIS",
+    "Stałoogniskowe"
+  ],
+  correct: "Varifocal (Waryfokalne)"
+},
+
+{
+  category: "CCTV",
+  question: "Jaki jest najczęściej spotykany zakres regulacji dla obiektywów o zmiennej ogniskowej?",
+  answers: [
+    "1,0-2,0mm",
+    "3,5-8,0mm",
+    "12,0-36,0mm",
+    "50,0-100,0mm"
+  ],
+  correct: "3,5-8,0mm"
+},
+
+{
+  category: "CCTV",
+  question: "Obiektywy typu moto-zoom charakteryzują się:",
+  answers: [
+    "Brakiem możliwości zmiany ogniskowej",
+    "Zdalną regulacją ogniskowej",
+    "Koniecznością ręcznego ustawiania przysłony",
+    "Tym, że są przeznaczone tylko do najprostszych kamer"
+  ],
+  correct: "Zdalną regulacją ogniskowej"
+},
+
+{
+  category: "CCTV",
+  question: "Podział obiektywów ze względu na rodzaj przysłony obejmuje:",
+  answers: [
+    "No-IRIS, ręczna, Auto-IRIS",
+    "Stała, zmienna, zdalna",
+    "Wąskokątna, standardowa, szerokokątna",
+    "Mała, średnia, duża"
+  ],
+  correct: "No-IRIS, ręczna, Auto-IRIS"
+},
+
+{
+  category: "CCTV",
+  question: "Który rodzaj obiektywu jest przeznaczony do najbardziej wymagających zastosowań?",
+  answers: [
+    "Obiektyw ze stałą ogniskową",
+    "Obiektyw o ogniskowej regulowanej zdalnie (moto-zoom)",
+    "Obiektyw bez przysłony (no-IRIS)",
+    "Obiektyw standardowy"
+  ],
+  correct: "Obiektyw o ogniskowej regulowanej zdalnie (moto-zoom)"
+},
+
+{
+  category: "CCTV",
+  question: "Na jakie trzy główne kryteria dzieli się obiektywy do kamer?",
+  answers: [
+    "Cena, marka, kolor",
+    "Kąt widzenia, rodzaj przysłony, rodzaj ogniskowej",
+    "Waga, rozmiar soczewki, typ gwintu",
+    "Rozdzielczość, zasięg IR, typ obudowy"
+  ],
+  correct: "Kąt widzenia, rodzaj przysłony, rodzaj ogniskowej"
+},
+
+{
+  category: "CCTV",
+  question: "Jakie określenie stosuje się dla obiektywów o zmiennej ogniskowej?",
+  answers: [
+    "Fixed Focal",
+    "Varifocal lub Zoom",
+    "Auto-focus",
+    "Digital Zoom"
+  ],
+  correct: "Varifocal lub Zoom"
+},
+
+{
+  category: "CCTV",
+  question: "Do czego porównujemy ogniskową obiektywu, aby określić jego kąt widzenia?",
+  answers: [
+    "Do szerokości obudowy kamery",
+    "Do przekątnej przetwornika obrazu",
+    "Do rozdzielczości sensora",
+    "Do jasności obiektywu (liczby F)"
+  ],
+  correct: "Do przekątnej przetwornika obrazu"
+},
+
+{
+  category: "CCTV",
+  question: "Który z wymienionych obiektywów stałoogniskowych jest najczęściej spotykany?",
+  answers: [
+    "1,2mm",
+    "3,6mm",
+    "24,0mm",
+    "50,0mm"
+  ],
+  correct: "3,6mm"
+},
+
+{
+  category: "CCTV",
+  question: "Ile głównych kryteriów podziału obiektywów wyróżniono na slajdzie?",
+  answers: [
+    "Dwa",
+    "Trzy",
+    "Cztery",
+    "Pięć"
+  ],
+  correct: "Trzy"
+},
+
+{
+  category: "CCTV",
+  question: "Jak nazywa się obiektyw, który nie posiada mechanizmu przysłony?",
+  answers: [
+    "No-Focus",
+    "No-IRIS",
+    "Manual-IRIS",
+    "Zero-IRIS"
+  ],
+  correct: "No-IRIS"
+},
+
+{
+  category: "CCTV",
+  question: "Obiektyw typu moto-zoom charakteryzuje się tym, że jego ogniskowa jest:",
+  answers: [
+    "Stała i nieregulowana",
+    "Regulowana zdalnie",
+    "Regulowana tylko ręcznie przez instalatora",
+    "Zależna od warunków oświetleniowych"
+  ],
+  correct: "Regulowana zdalnie"
+},
+
+{
+  category: "CCTV",
+  question: "W jakich miejscach stosuje się obiektywy o zmiennej ogniskowej (Varifocal)?",
+  answers: [
+    "Tylko w małych pomieszczeniach",
+    "Tam, gdzie liczy się swoboda w wyborze długości ogniskowej",
+    "Tylko w kamerach pracujących w nocy",
+    "W miejscach, gdzie zabronione jest używanie zoomu"
+  ],
+  correct: "Tam, gdzie liczy się swoboda w wyborze długości ogniskowej"
+},
+
+{
+  category: "CCTV",
+  question: "Która wartość ogniskowej NIE została wymieniona na slajdzie jako typowa dla obiektywu stałego?",
+  answers: [
+    "4,0mm",
+    "6,0mm",
+    "8,0mm",
+    "12,0mm"
+  ],
+  correct: "8,0mm"
+},
+
+{
+  category: "CCTV",
+  question: "Co pozwala na swobodę wyboru pola widzenia bez konieczności wymiany obiektywu?",
+  answers: [
+    "Przetwornik o większej przekątnej",
+    "Obiektyw o zmiennej ogniskowej (Varifocal)",
+    "Zastosowanie przysłony Auto-IRIS",
+    "Wymiana kamery na model dzień/noc"
+  ],
+  correct: "Obiektyw o zmiennej ogniskowej (Varifocal)"
+},
+
+{
+  category: "CCTV",
+  question: "Jaki rodzaj przysłony jest przeznaczony do kamer typu dzień/noc?",
+  answers: [
+    "Ręczna",
+    "Automatyczna Auto-IRIS",
+    "Brak przysłony (no-IRIS)",
+    "Stała mechaniczna"
+  ],
+  correct: "Automatyczna Auto-IRIS"
+},
+
+{
+  category: "CCTV",
+  question: "Jeśli ogniskowa obiektywu wynosi 12,0mm, a przekątna przetwornika jest znacznie mniejsza, to obiektyw jest:",
+  answers: [
+    "Szerokokątny",
+    "Standardowy",
+    "Wąskokątny",
+    "Waryfokalny"
+  ],
+  correct: "Wąskokątny"
+},
+
+{
+  category: "CCTV",
+  question: "Podział ze względu na rodzaj ogniskowej obejmuje obiektywy:",
+  answers: [
+    "Wąskie, średnie i szerokie",
+    "Stałe, zmienne i regulowane zdalnie",
+    "Automatyczne i ręczne",
+    "Standardowe i profesjonalne"
+  ],
+  correct: "Stałe, zmienne i regulowane zdalnie"
+},
+
+//rejestratory 
+
+{
+  category: "CCTV",
+  question: "Jakie trzy główne typy urządzeń rejestrujących wyróżnia się w systemach telewizji dozorowej?",
+  answers: [
+    "Kamery, monitory, zasilacze",
+    "Magnetowidy, karty VCR, rejestratory cyfrowe",
+    "Dyski HDD, karty SD, chmura obliczeniowa",
+    "Multipleksery, switche, routery"
+  ],
+  correct: "Magnetowidy, karty VCR, rejestratory cyfrowe"
+},
+
+{
+  category: "CCTV",
+  question: "Które z rozwiązań technicznych do rejestracji obrazu jest najstarsze i obecnie już niebudowane?",
+  answers: [
+    "Rejestratory cyfrowe",
+    "Karty VCR",
+    "Magnetowidy",
+    "Serwery NAS"
+  ],
+  correct: "Magnetowidy"
+},
+
+{
+  category: "CCTV",
+  question: "Na jakim nośniku zapisywany jest obraz w przypadku magnetowidów?",
+  answers: [
+    "Na dysku twardym",
+    "Na kasecie",
+    "Na karcie pamięci",
+    "W pamięci RAM"
+  ],
+  correct: "Na kasecie"
+},
+
+{
+  category: "CCTV",
+  question: "Jaki jest zakres czasu nagrywania oferowany przez magnetowidy?",
+  answers: [
+    "Od 1 do 12 godzin",
+    "Od 24 do 960 godzin",
+    "Od 100 do 2000 godzin",
+    "Nieograniczony"
+  ],
+  correct: "Od 24 do 960 godzin"
+},
+
+{
+  category: "CCTV",
+  question: "Gdzie rejestrowany jest obraz przy użyciu karty VCR?",
+  answers: [
+    "Na wbudowanej pamięci kamery",
+    "Na twardym dysku komputera",
+    "Na taśmie magnetycznej",
+    "Na zewnętrznym serwerze FTP"
+  ],
+  correct: "Na twardym dysku komputera"
+},
+
+{
+  category: "CCTV",
+  question: "Od czego zależy długość zarejestrowanego materiału przy użyciu karty VCR?",
+  answers: [
+    "Tylko od pojemności dysku",
+    "Od szybkości procesora",
+    "Od rodzaju systemu operacyjnego",
+    "Od długości kabla kamery"
+  ],
+  correct: "Tylko od pojemności dysku"
+},
+
+{
+  category: "CCTV",
+  question: "Jakie ryzyko wiąże się ze stosowaniem zwykłej karty VCR w komputerze?",
+  answers: [
+    "Ryzyko sabotażu (dostęp osób trzecich) lub niestabilność systemu",
+    "Zbyt wysoki koszt zakupu komputera",
+    "Konieczność częstej wymiany kaset",
+    "Brak możliwości podłączenia więcej niż jednej kamery"
+  ],
+  correct: "Ryzyko sabotażu (dostęp osób trzecich) lub niestabilność systemu"
+},
+
+{
+  category: "CCTV",
+  question: "Czym charakteryzuje się profesjonalna odmiana urządzenia do zapisu cyfrowego?",
+  answers: [
+    "Jest to magnetowid z cyfrowym licznikiem",
+    "Jest to rejestrator cyfrowy",
+    "Jest to zwykły komputer z kartą sieciową",
+    "Jest to kamera z wbudowanym dyskiem"
+  ],
+  correct: "Jest to rejestrator cyfrowy"
+},
+
+{
+  category: "CCTV",
+  question: "Z połączenia jakich elementów składa się rejestrator cyfrowy?",
+  answers: [
+    "Kamery i monitora",
+    "Wielokanałowego multipleksera i dysku twardego",
+    "Modemu i zasilacza awaryjnego",
+    "Karty VCR i magnetowidu"
+  ],
+  correct: "Wielokanałowego multipleksera i dysku twardego"
+},
+
+{
+  category: "CCTV",
+  question: "Jaka jest główna zaleta rejestratora cyfrowego w porównaniu do kart VCR?",
+  answers: [
+    "Jest znacznie mniejszy",
+    "Mała możliwość dostępu osób niepowołanych",
+    "Nie wymaga zasilania elektrycznego",
+    "Zapisuje obraz w kolorze"
+  ],
+  correct: "Mała możliwość dostępu osób niepowołanych"
+},
+
+{
+  category: "CCTV",
+  question: "W jaki sposób rejestratory cyfrowe są zabezpieczane przed nieautoryzowanym dostępem?",
+  answers: [
+    "Przez kody dostępu i obudowy zabezpieczone mechanicznie",
+    "Przez ukrywanie ich w trudno dostępnych miejscach",
+    "Przez odłączanie od prądu na noc",
+    "Nie posiadają żadnych zabezpieczeń"
+  ],
+  correct: "Przez kody dostępu i obudowy zabezpieczone mechanicznie"
+},
+
+{
+  category: "CCTV",
+  question: "W jakich systemach stosuje się na ogół rejestratory cyfrowe?",
+  answers: [
+    "Tylko w domach prywatnych",
+    "Tam, gdzie zastosowanie karty VCR byłoby ryzykowne",
+    "Tylko w systemach z jedną kamerą",
+    "W systemach niekorzystających z dysków twardych"
+  ],
+  correct: "Tam, gdzie zastosowanie karty VCR byłoby ryzykowne"
+},
+
+{
+  category: "CCTV",
+  question: "Jak określamy dyski w rejestratorach cyfrowych, które można łatwo zastąpić nowymi?",
+  answers: [
+    "Dyski stałe",
+    "Dyski na ogół wymienne",
+    "Karty VCR",
+    "Kasety magnetyczne"
+  ],
+  correct: "Dyski na ogół wymienne"
+},
+
+{
+  category: "CCTV",
+  question: "Co może być przyczyną utraty danych w systemach opartych na kartach VCR?",
+  answers: [
+    "Niestabilne systemy operacyjne",
+    "Zbyt duża ilość światła w pomieszczeniu",
+    "Brak multipleksera",
+    "Użycie dysku o zbyt dużej pojemności"
+  ],
+  correct: "Niestabilne systemy operacyjne"
+},
+
+{
+  category: "CCTV",
+  question: "Do czego służy rejestrator w systemie telewizji dozorowej?",
+  answers: [
+    "Do wyświetlania obrazu na żywo",
+    "Do zapisu obrazu z kamer na nośniku danych",
+    "Do zasilania kamer",
+    "Do ustawiania ostrości w obiektywach"
+  ],
+  correct: "Do zapisu obrazu z kamer na nośniku danych"
+},
+
+{
+  category: "CCTV",
+  question: "Jakie trzy główne typy urządzeń rejestrujących wyróżnia się w systemach telewizji dozorowej?",
+  answers: [
+    "Kamery, monitory, zasilacze",
+    "Magnetowidy, karty VCR, rejestratory cyfrowe",
+    "Dyski HDD, karty SD, chmura obliczeniowa",
+    "Multipleksery, switche, routery"
+  ],
+  correct: "Magnetowidy, karty VCR, rejestratory cyfrowe"
+},
+
+{
+  category: "CCTV",
+  question: "Które z rozwiązań technicznych do rejestracji obrazu jest najstarsze i obecnie już niebudowane?",
+  answers: [
+    "Rejestratory cyfrowe",
+    "Karty VCR",
+    "Magnetowidy",
+    "Serwery NAS"
+  ],
+  correct: "Magnetowidy"
+},
+
+{
+  category: "CCTV",
+  question: "Na jakim nośniku zapisywany jest obraz w przypadku magnetowidów?",
+  answers: [
+    "Na dysku twardym",
+    "Na kasecie",
+    "Na karcie pamięci",
+    "W pamięci RAM"
+  ],
+  correct: "Na kasecie"
+},
+
+{
+  category: "CCTV",
+  question: "Jaki jest zakres czasu nagrywania oferowany przez magnetowidy?",
+  answers: [
+    "Od 1 do 12 godzin",
+    "Od 24 do 960 godzin",
+    "Od 100 do 2000 godzin",
+    "Nieograniczony"
+  ],
+  correct: "Od 24 do 960 godzin"
+},
+
+{
+  category: "CCTV",
+  question: "Gdzie rejestrowany jest obraz przy użyciu karty VCR?",
+  answers: [
+    "Na wbudowanej pamięci kamery",
+    "Na twardym dysku komputera",
+    "Na taśmie magnetycznej",
+    "Na zewnętrznym serwerze FTP"
+  ],
+  correct: "Na twardym dysku komputera"
+},
+
+{
+  category: "CCTV",
+  question: "Od czego zależy długość zarejestrowanego materiału przy użyciu karty VCR?",
+  answers: [
+    "Tylko od pojemności dysku",
+    "Od szybkości procesora",
+    "Od rodzaju systemu operacyjnego",
+    "Od długości kabla kamery"
+  ],
+  correct: "Tylko od pojemności dysku"
+},
+
+{
+  category: "CCTV",
+  question: "Jakie ryzyko wiąże się ze stosowaniem zwykłej karty VCR w komputerze?",
+  answers: [
+    "Ryzyko sabotażu (dostęp osób trzecich) lub niestabilność systemu",
+    "Zbyt wysoki koszt zakupu komputera",
+    "Konieczność częstej wymiany kaset",
+    "Brak możliwości podłączenia więcej niż jednej kamery"
+  ],
+  correct: "Ryzyko sabotażu (dostęp osób trzecich) lub niestabilność systemu"
+},
+
+{
+  category: "CCTV",
+  question: "Czym charakteryzuje się profesjonalna odmiana urządzenia do zapisu cyfrowego?",
+  answers: [
+    "Jest to magnetowid z cyfrowym licznikiem",
+    "Jest to rejestrator cyfrowy",
+    "Jest to zwykły komputer z kartą sieciową",
+    "Jest to kamera z wbudowanym dyskiem"
+  ],
+  correct: "Jest to rejestrator cyfrowy"
+},
+
+{
+  category: "CCTV",
+  question: "Z połączenia jakich elementów składa się rejestrator cyfrowy?",
+  answers: [
+    "Kamery i monitora",
+    "Wielokanałowego multipleksera i dysku twardego",
+    "Modemu i zasilacza awaryjnego",
+    "Karty VCR i magnetowidu"
+  ],
+  correct: "Wielokanałowego multipleksera i dysku twardego"
+},
+
+{
+  category: "CCTV",
+  question: "Jaka jest główna zaleta rejestratora cyfrowego w porównaniu do kart VCR?",
+  answers: [
+    "Jest znacznie mniejszy",
+    "Mała możliwość dostępu osób niepowołanych",
+    "Nie wymaga zasilania elektrycznego",
+    "Zapisuje obraz w kolorze"
+  ],
+  correct: "Mała możliwość dostępu osób niepowołanych"
+},
+
+{
+  category: "CCTV",
+  question: "W jaki sposób rejestratory cyfrowe są zabezpieczane przed nieautoryzowanym dostępem?",
+  answers: [
+    "Przez kody dostępu i obudowy zabezpieczone mechanicznie",
+    "Przez ukrywanie ich w trudno dostępnych miejscach",
+    "Przez odłączanie od prądu na noc",
+    "Nie posiadają żadnych zabezpieczeń"
+  ],
+  correct: "Przez kody dostępu i obudowy zabezpieczone mechanicznie"
+},
+
+{
+  category: "CCTV",
+  question: "W jakich systemach stosuje się na ogół rejestratory cyfrowe?",
+  answers: [
+    "Tylko w domach prywatnych",
+    "Tam, gdzie zastosowanie karty VCR byłoby ryzykowne",
+    "Tylko w systemach z jedną kamerą",
+    "W systemach niekorzystających z dysków twardych"
+  ],
+  correct: "Tam, gdzie zastosowanie karty VCR byłoby ryzykowne"
+},
+
+{
+  category: "CCTV",
+  question: "Jak określamy dyski w rejestratorach cyfrowych, które można łatwo zastąpić nowymi?",
+  answers: [
+    "Dyski stałe",
+    "Dyski na ogół wymienne",
+    "Karty VCR",
+    "Kasety magnetyczne"
+  ],
+  correct: "Dyski na ogół wymienne"
+},
+
+{
+  category: "CCTV",
+  question: "Co może być przyczyną utraty danych w systemach opartych na kartach VCR?",
+  answers: [
+    "Niestabilne systemy operacyjne",
+    "Zbyt duża ilość światła w pomieszczeniu",
+    "Brak multipleksera",
+    "Użycie dysku o zbyt dużej pojemności"
+  ],
+  correct: "Niestabilne systemy operacyjne"
+},
+
+{
+  category: "CCTV",
+  question: "Do czego służy rejestrator w systemie telewizji dozorowej?",
+  answers: [
+    "Do wyświetlania obrazu na żywo",
+    "Do zapisu obrazu z kamer na nośniku danych",
+    "Do zasilania kamer",
+    "Do ustawiania ostrości w obiektywach"
+  ],
+  correct: "Do zapisu obrazu z kamer na nośniku danych"
+},
+
+{
+  category: "CCTV",
+  question: "Co oznacza skrót PoE w kontekście zasilania kamer IP?",
+  answers: ["Power over Ethernet", "Point of Entry", "Power on Energy", "Position of Element"],
+  correct: "Power over Ethernet"
+},
+
+{
+  category: "CCTV",
+  question: "Od czego zależy wybór typu urządzenia rejestrującego w systemie dozorowym?",
+  answers: [
+    "Od aktualnej ceny rynkowej",
+    "Od indywidualnych potrzeb systemu",
+    "Od wielkości monitora",
+    "Od koloru obudowy kamer"
+  ],
+  correct: "Od indywidualnych potrzeb systemu"
+},
+
+{
+  category: "CCTV",
+  question: "Które urządzenie jest określane jako 'najmniej skomplikowane' pod względem technicznym?",
+  answers: [
+    "Karta VCR",
+    "Magnetowid",
+    "Rejestrator cyfrowy",
+    "Serwer sieciowy"
+  ],
+  correct: "Magnetowid"
+},
+
+{
+  category: "CCTV",
+  question: "Z jakiego powodu karta VCR jest narażona na sabotaż poprzez internet?",
+  answers: [
+    "Przez brak wbudowanego antywirusa w kamerze",
+    "Przez konieczność dostępu do komputera przez różnych użytkowników lub sieć",
+    "Przez zbyt wolne połączenie kablowe",
+    "Karty VCR nie łączą się z internetem"
+  ],
+  correct: "Przez konieczność dostępu do komputera przez różnych użytkowników lub sieć"
+},
+
+{
+  category: "CCTV",
+  question: "Które z wymienionych urządzeń jest nazywane 'profesjonalną odmianą' sprzętu do zapisu?",
+  answers: [
+    "Magnetowid poklatkowy",
+    "Rejestrator cyfrowy",
+    "Komputer z systemem Windows",
+    "Karta VCR klasy Premium"
+  ],
+  correct: "Rejestrator cyfrowy"
+},
+
+{
+  category: "CCTV",
+  question: "Jaki element rejestratora cyfrowego odpowiada za obsługę wielu kanałów wideo jednocześnie?",
+  answers: [
+    "Dysk twardy",
+    "Wielokanałowy multiplekser",
+    "Obudowa mechaniczna",
+    "Karta VCR"
+  ],
+  correct: "Wielokanałowy multiplekser"
+},
+
+{
+  category: "CCTV",
+  question: "W jakim przypadku karta VCR staje się rozwiązaniem ryzykownym?",
+  answers: [
+    "Gdy chcemy nagrywać w kolorze",
+    "Gdy istnieje ryzyko sabotażu lub niestabilności systemu operacyjnego",
+    "Gdy używamy dysku o pojemności mniejszej niż 1TB",
+    "Gdy podłączamy tylko jedną kamerę"
+  ],
+  correct: "Gdy istnieje ryzyko sabotażu lub niestabilności systemu operacyjnego"
+},
+
+{
+  category: "CCTV",
+  question: "Co zapewnia możliwość rejestracji dużej ilości materiału w rejestratorach cyfrowych?",
+  answers: [
+    "Szybki procesor",
+    "Zastosowanie zespołu dysków (często wymiennych)",
+    "Użycie kaset o dużej gęstości",
+    "Podłączenie do stabilnego internetu"
+  ],
+  correct: "Zastosowanie zespołu dysków (często wymiennych)"
+},
+
+{
+  category: "CCTV",
+  question: "Zabezpieczenie mechaniczne obudowy to cecha charakterystyczna dla:",
+  answers: [
+    "Magnetowidów domowych",
+    "Rejestratorów cyfrowych",
+    "Kart VCR montowanych w PC",
+    "Wszystkich typów rejestratorów"
+  ],
+  correct: "Rejestratorów cyfrowych"
+},
+
+{
+  category: "CCTV",
+  question: "Dlaczego magnetowidy są obecnie uważane za rozwiązanie przestarzałe?",
+  answers: [
+    "Bo są zbyt drogie w eksploatacji",
+    "Są najstarszym rozwiązaniem i nie są już budowane",
+    "Zajmują zbyt dużo miejsca na biurku",
+    "Nagrywają tylko przez 24 godziny"
+  ],
+  correct: "Są najstarszym rozwiązaniem i nie są już budowane"
+},
+
+{
+  category: "CCTV",
+  question: "Jaki rodzaj dostępu do danych w rejestratorach cyfrowych jest ograniczany przez kody dostępu?",
+  answers: [
+    "Dostęp fizyczny do obudowy",
+    "Dostęp osób niepowołanych",
+    "Dostęp serwisu technicznego",
+    "Dostęp kamer do prądu"
+  ],
+  correct: "Dostęp osób niepowołanych"
+},
+
+{
+  category: "CCTV",
+  question: "Co nośnikiem danych dla karty VCR?",
+  answers: [
+    "Taśma magnetyczna",
+    "Twardy dysk komputera",
+    "Pamięć flash",
+    "Chmura cyfrowa"
+  ],
+  correct: "Twardy dysk komputera"
+},
+
+{
+  category: "CCTV",
+  question: "Na jakie cztery główne rodzaje można podzielić rejestratory cyfrowe?",
+  answers: [
+    "Małe, średnie, duże i profesjonalne",
+    "Analogowe, cyfrowe, internetowe i domowe",
+    "DVR, hybrydowe, mobilne oraz sieciowe (NVR)",
+    "Przewodowe, bezprzewodowe, radiowe i optyczne"
+  ],
+  correct: "DVR, hybrydowe, mobilne oraz sieciowe (NVR)"
+},
+
+{
+  category: "CCTV",
+  question: "Co oznacza skrót NVR w klasyfikacji rejestratorów?",
+  answers: [
+    "Cyfrowy rejestrator wideo",
+    "Mobilny rejestrator wideo",
+    "Hybrydowy rejestrator wideo",
+    "Sieciowy rejestrator wideo"
+  ],
+  correct: "Sieciowy rejestrator wideo"
+},
+
+{
+  category: "CCTV",
+  question: "Od czego zależy podział rejestratorów na 4-, 8- czy 16-kanałowe?",
+  answers: [
+    "Od pojemności zamontowanego dysku",
+    "Od liczby wejść rejestratora",
+    "Od rozdzielczości podłączonych kamer",
+    "Od długości kabli sygnałowych"
+  ],
+  correct: "Od liczby wejść rejestratora"
+},
+
+{
+  category: "CCTV",
+  question: "Jakimi cechami charakteryzują się rejestratory cyfrowe DVR?",
+  answers: [
+    "Są tanie i przeznaczone do prostych instalacji",
+    "Są wyjątkowo niezawodne i stabilne",
+    "Wymagają stałego połączenia z internetem",
+    "Są przeznaczone wyłącznie do użytku domowego"
+  ],
+  correct: "Są wyjątkowo niezawodne i stabilne"
+},
+
+{
+  category: "CCTV",
+  question: "W jakich systemach wykorzystywane są rejestratory cyfrowe DVR?",
+  answers: [
+    "W amatorskich systemach alarmowych",
+    "W profesjonalnych systemach telewizji przemysłowej",
+    "Tylko w monitoringu mobilnym w pojazdach",
+    "Wyłącznie w sieciach lokalnych LAN"
+  ],
+  correct: "W profesjonalnych systemach telewizji przemysłowej"
+},
+
+{
+  category: "CCTV",
+  question: "Co jest podstawową i najważniejszą funkcją rejestratora DVR?",
+  answers: [
+    "Wysokiej jakości rejestracja obrazów z kamer cyfrowych",
+    "Szyfrowanie połączeń sieciowych",
+    "Zasilanie kamer bezpośrednio z portów wideo",
+    "Tworzenie kopii zapasowych w chmurze"
+  ],
+  correct: "Wysokiej jakości rejestracja obrazów z kamer cyfrowych"
+},
+
+{
+  category: "CCTV",
+  question: "Za co, oprócz rejestracji, odpowiedzialne są rejestratory cyfrowe?",
+  answers: [
+    "Za czyszczenie obiektywów kamer",
+    "Za wyświetlanie obrazu z kamer na monitorach CCTV",
+    "Za regulację ogniskowej w obiektywach",
+    "Za wykrywanie pożaru w serwerowni"
+  ],
+  correct: "Za wyświetlanie obrazu z kamer na monitorach CCTV"
+},
+
+{
+  category: "CCTV",
+  question: "Z jakich kamer rejestruje obraz urządzenie typu DVR według opisu?",
+  answers: [
+    "Z kamer analogowych",
+    "Z kamer cyfrowych",
+    "Z kamer termowizyjnych",
+    "Z kamer atrapy"
+  ],
+  correct: "Z kamer cyfrowych"
+},
+
+{
+  category: "CCTV",
+  question: "Skrót DVR odnosi się do rejestratora:",
+  answers: [
+    "Sieciowego",
+    "Hybrydowego",
+    "Cyfrowego",
+    "Mobilnego"
+  ],
+  correct: "Cyfrowego"
+},
+
+{
+  category: "CCTV",
+  question: "Która z wymienionych konfiguracji kanałów jest najniższą wymienioną na slajdzie?",
+  answers: [
+    "1-kanałowe",
+    "2-kanałowe",
+    "4-kanałowe",
+    "6-kanałowe"
+  ],
+  correct: "4-kanałowe"
+},
+
+{
+  category: "CCTV",
+  question: "Ile różnych typów rejestratorów cyfrowych wymieniono w podziale?",
+  answers: [
+    "3",
+    "4",
+    "5",
+    "6"
+  ],
+  correct: "4"
+},
+
+{
+  category: "CCTV",
+  question: "Jakie urządzenia rejestrujące są dedykowane do pracy w ruchu (np. w transporcie)?",
+  answers: [
+    "Sieciowe rejestratory wideo (NVR)",
+    "Mobilne rejestratory wideo",
+    "Cyfrowe rejestratory wideo (DVR)",
+    "Hybrydowe rejestratory wideo"
+  ],
+  correct: "Mobilne rejestratory wideo"
+},
+
+{
+  category: "CCTV",
+  question: "Gdzie wyświetlany jest obraz z kamer obsługiwanych przez rejestrator DVR?",
+  answers: [
+    "Na smartfonach użytkowników",
+    "Na monitorach CCTV",
+    "Na dyskach twardych",
+    "W przeglądarkach internetowych"
+  ],
+  correct: "Na monitorach CCTV"
+},
+
+{
+  category: "CCTV",
+  question: "Który typ rejestratora łączy w sobie cechy różnych systemów (zgodnie z nazwą)?",
+  answers: [
+    "Cyfrowy rejestrator wideo",
+    "Hybrydowy rejestrator wideo",
+    "Sieciowy rejestrator wideo",
+    "Mobilny rejestrator wideo"
+  ],
+  correct: "Hybrydowy rejestrator wideo"
+},
+
+{
+  category: "CCTV",
+  question: "Jak nazywa się typ rejestratora cyfrowego oznaczany skrótem NVR?",
+  answers: [
+    "Cyfrowy rejestrator wideo",
+    "Hybrydowy rejestrator wideo",
+    "Mobilny rejestrator wideo",
+    "Sieciowy rejestrator wideo"
+  ],
+  correct: "Sieciowy rejestrator wideo"
+},
+
+{
+  category: "CCTV",
+  question: "Co decyduje o klasyfikacji rejestratora jako urządzenie 4-, 8- lub 16-kanałowe?",
+  answers: [
+    "Pojemność zainstalowanych dysków twardych",
+    "Liczba wejść umożliwiających podłączenie kamer",
+    "Maksymalna rozdzielczość obsługiwanych obrazów",
+    "Liczba monitorów, które można podłączyć do urządzenia"
+  ],
+  correct: "Liczba wejść umożliwiających podłączenie kamer"
+},
+
+{
+  category: "CCTV",
+  question: "Który typ rejestratora jest dedykowany do pracy w profesjonalnych systemach telewizji przemysłowej ze względu na wysoką niezawodność?",
+  answers: [
+    "Komputerowa karta VCR",
+    "Cyfrowy rejestrator wideo (DVR)",
+    "Magnetowid poklatkowy",
+    "Domowy serwer plików"
+  ],
+  correct: "Cyfrowy rejestrator wideo (DVR)"
+},
+
+{
+  category: "CCTV",
+  question: "Jakie jest główne zadanie rejestratora cyfrowego DVR w systemie monitoringu?",
+  answers: [
+    "Wyłącznie zasilanie podłączonych kamer",
+    "Wysokiej jakości rejestracja obrazów z kamer",
+    "Automatyczne czyszczenie obiektywów",
+    "Szyfrowanie połączeń internetowych"
+  ],
+  correct: "Wysokiej jakości rejestracja obrazów z kamer"
+},
+
+{
+  category: "CCTV",
+  question: "Oprócz zapisu obrazu, rejestrator cyfrowy odpowiada w systemie za:",
+  answers: [
+    "Produkcję energii dla kamer",
+    "Wyświetlanie obrazu na monitorach CCTV",
+    "Regulację kątów widzenia obiektywów",
+    "Wykrywanie pożaru w budynku"
+  ],
+  correct: "Wyświetlanie obrazu na monitorach CCTV"
+},
+
+{
+  category: "CCTV",
+  question: "Do jakich zastosowań przeznaczone są mobilne rejestratory wideo?",
+  answers: [
+    "Do dużych centrów handlowych",
+    "Do pracy w systemach zamontowanych w ruchu (np. transport)",
+    "Do monitoringu stacjonarnych parkingów podziemnych",
+    "Wyłącznie do domowych systemów bezprzewodowych"
+  ],
+  correct: "Do pracy w systemach zamontowanych w ruchu (np. transport)"
+},
+
+{
+  category: "CCTV",
+  question: "Który rodzaj rejestratora pozwala na łączenie różnych technologii zapisu w jednym urządzeniu?",
+  answers: [
+    "Cyfrowy rejestrator wideo (DVR)",
+    "Hybrydowy rejestrator wideo",
+    "Sieciowy rejestrator wideo (NVR)",
+    "Mobilny rejestrator wideo"
+  ],
+  correct: "Hybrydowy rejestrator wideo"
+},
+
+{
+  category: "CCTV",
+  question: "Jakie rodzaje kamer może jednocześnie obsługiwać rejestrator hybrydowy?",
+  answers: [
+    "Wyłącznie stare kamery analogowe",
+    "Tylko nowoczesne kamery IP",
+    "Zarówno kamery analogowe, jak i kamery IP",
+    "Wyłącznie kamery bezprzewodowe Wi-Fi"
+  ],
+  correct: "Zarówno kamery analogowe, jak i kamery IP"
+},
+
+{
+  category: "CCTV",
+  question: "W jakie wyjścia wideo najczęściej wyposażone są rejestratory hybrydowe?",
+  answers: [
+    "Tylko wyjścia antenowe RF",
+    "Wyjścia VGA oraz HDMI",
+    "Wyłącznie porty USB",
+    "Tylko wejścia typu Eurozłącze (SCART)"
+  ],
+  correct: "Wyjścia VGA oraz HDMI"
+},
+
+{
+  category: "CCTV",
+  question: "Użycie którego złącza pozwala na śledzenie pracy kamer na nowoczesnym telewizorze?",
+  answers: [
+    "Złącza RS-485",
+    "Złącza LAN",
+    "Złącza HDMI",
+    "Złącza Audio In"
+  ],
+  correct: "Złącza HDMI"
+},
+
+{
+  category: "CCTV",
+  question: "Ile wejść wideo typu BNC (VIDEO IN) posiada rejestrator przedstawiony na zdjęciu?",
+   image: "img/CCTV/wideo_rejestrator.png", // Tutaj podajesz link lub nazwę pliku
+  answers: [
+    "1 wejście",
+    "2 wejścia",
+    "4 wejścia",
+    "8 wejść"
+  ],
+  correct: "1 wejście"
+},
+
+{
+  category: "CCTV",
+  question: "Do czego służy złącze LAN widoczne na panelu tylnym rejestratora?",
+  answers: [
+    "Do podłączenia zasilania 12V",
+    "Do podłączenia kamer IP lub sieci komputerowej",
+    "Do przesyłania dźwięku do głośników",
+    "Do podłączenia myszki komputerowej"
+  ],
+  correct: "Do podłączenia kamer IP lub sieci komputerowej"
+},
+
+{
+  category: "CCTV",
+  question: "Które złącze na panelu służy do sterowania kamerami obrotowymi (PTZ)?",
+  answers: [
+    "VGA",
+    "RS-485",
+    "HDMI",
+    "AUDIO OUT"
+  ],
+  correct: "RS-485"
+},
+
+{
+  category: "CCTV",
+  question: "Jakie dwa główne typy mocowań obiektywów spotyka się obecnie w kamerach?",
+  answers: [
+    "Typ A i Typ B",
+    "Typ C i Typ CS",
+    "Typ S i Typ L",
+    "Typ X i Typ Z"
+  ],
+  correct: "Typ C i Typ CS"
+},
+
+
+{
+  category: "CCTV",
+  question: "Jaka jest odległość obiektywu od powierzchni przetwornika w mocowaniu typu CS?",
+  answers: [
+    "10,0 mm",
+    "12,5 mm",
+    "15,0 mm",
+    "17,526 mm"
+  ],
+  correct: "12,5 mm"
+},
+
+{
+  category: "CCTV",
+  question: "Odległość obiektywu od przetwornika dla mocowania typu C wynosi:",
+  answers: [
+    "12,5 mm",
+    "17,526 mm",
+    "19,0 mm",
+    "25,4 mm"
+  ],
+  correct: "17,526 mm"
+},
+
+{
+  category: "CCTV",
+  question: "Który typ mocowania obiektywu jest obecnie częściej spotykany w monitoringu?",
+  answers: [
+    "Mocowanie typu C",
+    "Mocowanie typu CS",
+    "Mocowanie bagnetowe",
+    "Mocowanie gwintowe M12"
+  ],
+  correct: "Mocowanie typu CS"
+},
+
+{
+  category: "CCTV",
+  question: "Z czego wynika większa uniwersalność mocowania typu CS?",
+  answers: [
+    "Z możliwości montażu większych soczewek",
+    "Z możliwości zmiany na mocowanie C poprzez zastosowanie pierścienia",
+    "Z mniejszej wagi obiektywów",
+    "Z braku konieczności ustawiania ostrości"
+  ],
+  correct: "Z możliwości zmiany na mocowanie C poprzez zastosowanie pierścienia"
+},
+
+{
+  category: "CCTV",
+  question: "Czym różnią się od siebie standardy mocowań C i CS?",
+  answers: [
+    "Średnicą gwintu obiektywu",
+    "Odległością obiektywu od powierzchni przetwornika obrazu",
+    "Rodzajem użytego materiału (metal/plastik)",
+    "Sposobem zasilania przysłony"
+  ],
+  correct: "Odległością obiektywu od powierzchni przetwornika obrazu"
+},
+
+{
+  category: "CCTV",
+  question: "Czy możliwe jest przekształcenie mocowania typu C na mocowanie CS?",
+  answers: [
+    "Tak, za pomocą pierścienia",
+    "Tak, po wymianie przetwornika",
+    "Nie, taka relacja nie zachodzi",
+    "Tak, ale tylko w kamerach analogowych"
+  ],
+  correct: "Nie, taka relacja nie zachodzi"
+}
 ];
