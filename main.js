@@ -129,6 +129,7 @@ let imgRatio = parseInt(document.getElementById("ratioInput").value) / 100;
 document.getElementById("audienceBox").innerHTML = "";
 }
 /////////////////////// LOAD ///////////////////////
+document.getElementById("reportBtn").style.display = "block";
 function load(){
   clearZoom(); 
   // reset wykresu publiczności
@@ -433,4 +434,11 @@ function toggleCategoryList() {
     panel.style.display = "none";
     document.body.classList.remove("settings-open-bg");
   }
+}
+function reportQuestion() {
+  const currentQ = questions[i].question;
+  const baseUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdiFERRik1ruie77zsyXoIP08XVB0T5A__tsY6OHUvVsLZgew/viewform?usp=dialog";
+  const finalUrl = `${baseUrl}?usp=pp_url&entry.1378385011=${encodeURIComponent(currentQ)}`;
+  
+  window.open(finalUrl, "_blank"); // Otwiera w nowej karcie
 }
