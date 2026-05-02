@@ -1,5 +1,5 @@
 const instalacje_CCTV = [
-  
+
 {
 category:"CCTV",
 question:"Co oznacza skrót CCTV w polskiej terminologii technicznej?",
@@ -9552,5 +9552,383 @@ correct:"Współpracę elementów systemu."
     "Tak, ale tylko w kamerach analogowych"
   ],
   correct: "Nie, taka relacja nie zachodzi"
-}
+},
+
+{
+  category: "CCTV",
+  question: "Ile wejść wideo typu BNC (VIDEO IN) posiada rejestrator przedstawiony na zdjęciu ? ",
+  image: "img/CCTV/wideo_rejestrator_hybrydowy.png", // Tutaj podajesz link lub nazwę pliku
+  answers: ["8", "9", "10", "18"],
+  correct: "8"
+},
+
+{
+  category: "CCTV",
+  question: "Złączem oznaczonym numerem 3 na zdjęciu panelu tylnego rejestratora jest:",
+  image: "img/CCTV/wideo_rejestrator_hybrydowy2.png",
+  answers: ["Złącze VGA", "Złącze HDMI", "Złącze USB", "Złącze BNC"],
+  correct: "Złącze HDMI"
+},
+
+{
+  category: "CCTV",
+  question: "Co zostało zaznaczone liczbą 4 na zdjęciu panelu tylnego rejestratora?",
+  image: "img/CCTV/wideo_rejestrator_hybrydowy2.png",
+  answers: ["Wyjście wideo VGA", "Port szeregowy RS-232", "Wejście Audio", "Gniazdo zasilania"],
+  correct: "Wyjście wideo VGA"
+},
+
+{
+  category: "CCTV",
+  question: "Liczba 7 na zdjęciu wskazuje na:",
+  image: "img/CCTV/wideo_rejestrator_hybrydowy2.png",
+  answers: ["Złącze USB", "Gniazdo sieciowe LAN (RJ45)", "Wejście mikrofonowe", "Złącze alarmowe"],
+  correct: "Gniazdo sieciowe LAN (RJ45)"
+},
+
+{
+  category: "CCTV",
+  question: "Złącza oznaczone numerami 5 i 6 służą do obsługi:",
+  image: "img/CCTV/wideo_rejestrator_hybrydowy2.png",
+  answers: ["Sygnału wideo", "Zasilania kamer", "Sygnału audio (wejście/wyjście)", "Sterowania kamerami PTZ"],
+  correct: "Sygnału audio (wejście/wyjście)"
+},
+
+{
+  category: "CCTV",
+  question: "Zielone złącze zaciskowe oznaczone liczbą 8 na zdjęciu to zazwyczaj:",
+  image: "img/CCTV/wideo_rejestrator_hybrydowy2.png",
+  answers: ["Złącze RS-485 do sterowania kamerami", "Dodatkowe wyjście HDMI", "Port USB 3.0", "Główne złącze zasilania"],
+  correct: "Złącze RS-485 do sterowania kamerami"
+},
+
+{
+  category: "CCTV",
+  question: "Co zostało wskazane numerem 2 na panelu tylnym?",
+  image: "img/CCTV/wideo_rejestrator_hybrydowy2.png",
+  answers: ["Port eSATA", "Złącze HDMI", "Port USB", "Wyjście monitorowe BNC"],
+  correct: "Port USB"
+},
+
+{
+  category: "CCTV",
+  question: "Długa listwa zaciskowa oznaczona numerem 10 służy do podłączenia:",
+  image: "img/CCTV/wideo_rejestrator_hybrydowy2.png",
+  answers: ["Wielu monitorów VGA", "Wejść i wyjść alarmowych", "Dodatkowych dysków twardych", "Zasilania dla wszystkich kamer"],
+  correct: "Wejść i wyjść alarmowych"
+},
+
+{
+  category: "CCTV",
+  question: "Ile wejść wideo typu BNC posiada ten rejestrator?",
+  image: "img/CCTV/wideo_rejestrator_hybrydowy2.png",
+  answers: ["4 wejścia", "8 wejść", "16 wejść", "32 wejścia"],
+  correct: "8 wejść"
+},
+
+{
+  category: "CCTV",
+  question: "Złącze oznaczone numerem 9 na zdjęciu służy do podłączenia:",
+  image: "img/CCTV/wideo_rejestrator_hybrydowy2.png",
+  answers: ["Zasilania rejestratora", "Klawiatury sterującej", "Myszki komputerowej", "Drugiego monitora"],
+  correct: "Zasilania rejestratora"
+},
+
+{
+  category: "CCTV",
+  question: "Którym numerem na zdjęciu oznaczono wyjście wideo HDMI?",
+  image: "img/CCTV/wideo_rejestrator_hybrydowy2.png",
+  answers: ["Numerem 2", "Numerem 3", "Numerem 4", "Numerem 7"],
+  correct: "Numerem 3"
+},
+
+{
+  category: "CCTV",
+  question: "Złącze oznaczone numerem 5 to :",
+  image: "img/CCTV/wideo_rejestrator_hybrydowy2.png",
+  answers: ["Wejście wideo", "Wejście audio", "Złącze zasilania", "wyjście audio"],
+  correct: "Wejście audio"
+},
+
+{
+  category: "CCTV",
+  question: "Numer 6 na zdjęciu wskazuje białe gniazdo RCA, które służy jako:",
+  image: "img/CCTV/wideo_rejestrator_hybrydowy2.png",
+  answers: ["Wyjście wideo", "Wyjście audio", "Port LAN", "Złącze RS-485"],
+  correct: "Wyjście audio"
+},
+
+{
+  category: "CCTV",
+  question: "Którym numerem oznaczono port LAN służący do połączenia rejestratora z internetem lub kamerami IP?",
+  image: "img/CCTV/wideo_rejestrator_hybrydowy2.png",
+  answers: ["Numerem 4", "Numerem 7", "Numerem 9", "Numerem 10"],
+  correct: "Numerem 7"
+},
+
+{
+  category: "CCTV",
+  question: "Liczba 10 na zdjęciu wskazuje blok wejść/wyjść alarmowych. Służą one do:",
+  image: "img/CCTV/wideo_rejestrator_hybrydowy2.png",
+  answers: [
+    "Zasilania rejestratora w trybie awaryjnym",
+    "Podłączenia czujek zewnętrznych lub sygnalizatorów",
+    "Przesyłania obrazu na bardzo duże odległości",
+    "Podłączenia dodatkowych dysków zewnętrznych"
+  ],
+  correct: "Podłączenia czujek zewnętrznych lub sygnalizatorów"
+},
+
+{
+  category: "CCTV",
+  question: "Złącze numer 4  służy do podłączenia monitora w standardzie:",
+  image: "img/CCTV/wideo_rejestrator_hybrydowy2.png",
+  answers: ["HDMI", "BNC", "VGA", "LAN"],
+  correct: "VGA"
+},
+
+{
+  category: "CCTV",
+  question: "Złącze numer 4  to ",
+  image: "img/CCTV/wideo_rejestrator_hybrydowy2.png",
+  answers: ["D-Sub", "O-Sub", "T-Sub", "B-Sub"],
+  correct: "D-Sub"
+},
+
+{
+  category: "CCTV",
+  question: "Gdzie najczęściej montowane są rejestratory mobilne?",
+  answers: [
+    "W serwerowniach budynków biurowych",
+    "W pojazdach mechanicznych",
+    "Wyłącznie w domach jednorodzinnych",
+    "W szafach RACK na zewnątrz obiektów"
+  ],
+  correct: "W pojazdach mechanicznych"
+},
+
+{
+  category: "CCTV",
+  question: "Jaki element rejestratora mobilnego umożliwia uzyskanie wysokiej jakości obrazu przy wąskim strumieniu transmisji?",
+  answers: [
+    "Duża liczba wejść sygnałowych",
+    "Nowoczesny system kompresji plików wideo i audio",
+    "Zastosowanie dysków o dużej prędkości obrotowej",
+    "Wbudowany wzmacniacz sygnału analogowego"
+  ],
+  correct: "Nowoczesny system kompresji plików wideo i audio"
+},
+
+{
+  category: "CCTV",
+  question: "Jakie procesy może jednocześnie realizować wielofunkcyjny rejestrator mobilny?",
+  answers: [
+    "Tylko zapis i podgląd na żywo",
+    "Podgląd w czasie rzeczywistym, zapis oraz odtwarzanie",
+    "Wyłącznie archiwizację danych na nośnikach zewnętrznych",
+    "Transmisję obrazu bez możliwości jego zapisu"
+  ],
+  correct: "Podgląd w czasie rzeczywistym, zapis oraz odtwarzanie"
+},
+
+{
+  category: "CCTV",
+  question: "Zastosowanie nowoczesnego rejestratora mobilnego w systemie CCTV gwarantuje:",
+  answers: [
+    "Brak konieczności zasilania kamer",
+    "Pełną synchronizację ścieżki audio i wideo",
+    "Zastosowanie wyłącznie kamer bezprzewodowych",
+    "Ograniczenie zasięgu transmisji danych"
+  ],
+  correct: "Pełną synchronizację ścieżki audio i wideo"
+},
+
+{
+  category: "CCTV",
+  question: "Która z wymienionych funkcji jest standardem w nowoczesnych rejestratorach mobilnych?",
+  answers: [
+    "Pełna transmisja danych w sieci",
+    "Ręczne ustawianie ostrości w kamerach",
+    "Brak kompresji plików wideo",
+    "Możliwość zapisu wyłącznie obrazu bez dźwięku"
+  ],
+  correct: "Pełna transmisja danych w sieci"
+},
+
+{
+  category: "CCTV",
+  question: "jak nazwya sie rejestrator przedstawiony na zdjęciu ?",
+  image: "img/CCTV/wideo_rejestrator_mobilny.png",
+  answers: ["mobilny", "sieciowy", "hybrydowy", "DVR"],
+  correct: "mobilny"
+},
+
+{
+  category: "CCTV",
+  question: "Jak nazywa się niezależne urządzenie służące do zarządzania kamerami IP?",
+  answers: [
+    "Rejestrator DVR",
+    "Rejestrator sieciowy NVR",
+    "Magnetowid poklatkowy",
+    "Multiplekser analogowy"
+  ],
+  correct: "Rejestrator sieciowy NVR"
+},
+
+{
+  category: "CCTV",
+  question: "Jaki parametr należy skonfigurować w kamerach IP po ich podłączeniu do sieci?",
+  answers: [
+    "Numer seryjny obiektywu",
+    "Odpowiednie adresy IP",
+    "Długość kabla koncentrycznego",
+    "Częstotliwość odświeżania monitora"
+  ],
+  correct: "Odpowiednie adresy IP"
+},
+
+{
+  category: "CCTV",
+  question: "Jaka jest maksymalna rozdzielczość rejestracji dla standardowych systemów DVR?",
+  answers: [
+    "CIF (352 x 288)",
+    "D1 (720 x 576)",
+    "Full HD (1920 x 1080)",
+    "4K (3840 x 2160)"
+  ],
+  correct: "D1 (720 x 576)"
+},
+
+{
+  category: "CCTV",
+  question: "Który typ rejestratora umożliwia zapis obrazu z kamer megapikselowych?",
+  answers: [
+    "Standardowy rejestrator DVR",
+    "Rejestrator sieciowy NVR",
+    "Magnetowid VCR",
+    "Karta VCR montowana w komputerze"
+  ],
+  correct: "Rejestrator sieciowy NVR"
+},
+
+{
+  category: "CCTV",
+  question: "Główną różnicą w architekturze systemów analogowych i IP jest:",
+  answers: [
+    "Rodzaj obudowy rejestratora",
+    "Elastyczność połączeń między kamerami a rejestratorem",
+    "Liczba przycisków na panelu przednim",
+    "Kolor diod sygnalizacyjnych"
+  ],
+  correct: "Elastyczność połączeń między kamerami a rejestratorem"
+},
+
+{
+  category: "CCTV",
+  question: "Jakiego okablowania wymaga każda kamera w tradycyjnym systemie analogowym?",
+  answers: [
+    "Kabla światłowodowego",
+    "Kabla koncentrycznego",
+    "Kabla telefonicznego",
+    "Wyłącznie zasilania bezprzewodowego"
+  ],
+  correct: "Kabla koncentrycznego"
+},
+
+{
+  category: "CCTV",
+  question: "Budowanie systemu opartego na urządzeniach w dowolnej odległości jest możliwe w przypadku:",
+  answers: [
+    "Kamer analogowych",
+    "Kamer IP",
+    "Magnetowidów poklatkowych",
+    "Kart VCR"
+  ],
+  correct: "Kamer IP"
+},
+
+{
+  category: "CCTV",
+  question: "Rozdzielczość D1 (720 x 576) jest charakterystyczna dla standardu:",
+  answers: [
+    "NTSC",
+    "PAL",
+    "IP",
+    "Megapikselowego"
+  ],
+  correct: "PAL"
+},
+
+{
+  category: "CCTV",
+  question: "Dlaczego standardowy rejestrator DVR nie nadaje się do kamer megapikselowych?",
+  answers: [
+    "Ma zbyt mały dysk twardy",
+    "Nie obsługuje wymaganej rozdzielczości rejestracji",
+    "Nie posiada wejść BNC",
+    "Nagrywa obraz tylko na kasetach"
+  ],
+  correct: "Nie obsługuje wymaganej rozdzielczości rejestracji"
+},
+
+{
+  category: "CCTV",
+  question: "Zarządzanie kamerami IP odbywa się za pomocą:",
+  answers: [
+    "Rejestratora NVR",
+    "Rejestratora DVR",
+    "Zwykłego magnetowidu",
+    "Wyłącznie monitora CCTV"
+  ],
+  correct: "Rejestratora NVR"
+},
+
+{
+  category: "CCTV",
+  question: "Które stwierdzenie dotyczące odległości urządzeń w systemach IP jest prawdziwe?",
+  answers: [
+    "Kamery muszą być blisko rejestratora",
+    "System można budować w oparciu o urządzenia w dowolnej odległości",
+    "Odległość zależy tylko od typu obiektywu",
+    "Maksymalna odległość to zawsze 10 metrów"
+  ],
+  correct: "System można budować w oparciu o urządzenia w dowolnej odległości"
+},
+
+{
+  category: "CCTV",
+  question: "Skrót NVR oznacza:",
+  answers: [
+    "Native Video Recorder",
+    "Network Video Recorder",
+    "Node Video Register",
+    "New Visual Record"
+  ],
+  correct: "Network Video Recorder"
+},
+
+{
+  category: "CCTV",
+  question: "literą (A) zaznaczono ",
+  image: "img/CCTV/waska_glembia_ostrosci.png", // Tutaj podajesz link lub nazwę pliku
+  answers: ["odległość ostrzenia", "odległość eliminacji złego oświetlenia", "głębie ostości", "długość martwego punktu"],
+  correct: "odległość ostrzenia"
+},
+
+{
+  category: "CCTV",
+  question: "literą (B) zaznaczono ",
+  image: "img/CCTV/waska_glembia_ostrosci.png", // Tutaj podajesz link lub nazwę pliku
+  answers: ["odległość ostrzenia", "odległość eliminacji złego oświetlenia", "głębie ostrości", "długość martwego punktu"],
+  correct: "głębie ostrości"
+},
+
+{
+  category: "CCTV",
+  question: "jaką głębie ostrości przedstawia obraz ? ",
+  image: "img/CCTV/waska_glembia_ostrosci.png", // Tutaj podajesz link lub nazwę pliku
+  answers: ["wąską", "szeroką", "zmienną", "krótką"],
+  correct: "wąską"
+},
+
 ];
