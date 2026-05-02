@@ -222,16 +222,20 @@ input[type=range]::-moz-range-thumb {
 
 <script>
   (function() {
-    const haslo = prompt("Podaj hasło dostępu do quizu:");
-    const poprawneHaslo = "technikumNR1wPiasecznie!!er";
-
-    if (haslo === poprawneHaslo) {
+    const wpisane = prompt("Podaj hasło dostępu do quizu:");
+    const klucz = "dGVjaG5pa3VtTlIxd1BpYXNlY3puaWUhIWVy"; 
+    if (wpisane && btoa(wpisane) === klucz) {
       document.addEventListener("DOMContentLoaded", function() {
         document.querySelector('.container').style.display = 'block';
       });
     } else {
       document.addEventListener("DOMContentLoaded", function() {
-        document.body.innerHTML = "<div style='margin-top:100px;'><h1>❌ Brak dostępu!</h1><p>Hasło nieprawidłowe lub anulowano logowanie.</p></div>";
+        document.body.innerHTML = `
+          <div style="margin-top:100px; font-family: Garamond, serif;">
+            <h1>❌ Brak dostępu!</h1>
+            <p>Hasło nieprawidłowe lub anulowano logowanie.</p>
+            <button onclick="location.reload()" style="padding:10px; cursor:pointer;">Spróbuj ponownie</button>
+          </div>`;
       });
       window.stop();
     }
