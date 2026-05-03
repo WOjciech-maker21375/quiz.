@@ -84,8 +84,8 @@ function start(){
   let cat = document.getElementById("category").value;
   let count = parseInt(document.getElementById("count").value);
 
-  let filtered = database.filter(q => matchCategory(cat, q.category));
-
+  // Filtrujemy po kategorii ORAZ sprawdzamy, czy pytanie ma odpowiedzi (jest zamknięte)
+let filtered = database.filter(q => matchCategory(cat, q.category) && q.answers && q.answers.length > 0);
   if(filtered.length === 0){
     alert("Brak pytań");
     return;
@@ -514,12 +514,14 @@ function generatePDFs() {
 
         @media print { .no-print { display: none; } * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; } }
     </style></head><body>
+
     <div class="no-print" style="background:#ffeb3b; padding:20px; text-align:center; border-bottom:3px solid black; margin-bottom:20px;">
         <button onclick="window.print()" style="padding: 15px 30px; font-size: 20px; font-weight: bold; cursor: pointer; border: 2px solid black; border-radius: 8px; background: white;">
             🖨️ DRUKUJ
         </button>
         <p style="margin: 10px 0 0 0; font-weight: bold;">Panel tylko dla nauczyciela (nie będzie go na sprawdzianie)</p>
     </div>
+
     `;
 
     for (let set = 1; set <= numGroups; set++) {
