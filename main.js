@@ -367,7 +367,6 @@ numInput.addEventListener("input", function() {
     
     slider.value = this.value;
 });
-// --- DODAJ TO NA SAMYM DOLE PLIKU main.js ---
 
 function toggleSettings() {
   const panel = document.getElementById("settingsPanel");
@@ -441,4 +440,180 @@ function reportQuestion() {
   const finalUrl = `${baseUrl}?usp=pp_url&entry.1378385011=${encodeURIComponent(currentQ)}`;
   
   window.open(finalUrl, "_blank"); // Otwiera w nowej karcie
+}
+
+
+////////////////////////////////////////////// GENEROWANIE PDF ////////////////////////////////////////////////////////
+
+function generatePDFs() {
+    // 1. Pobieranie parametrów z interfejsu
+    const cat = document.getElementById("category").value;
+    const totalTarget = parseInt(document.getElementById("count").value) || 10;
+    const openTarget = parseInt(document.getElementById("openCount")?.value) || 0;
+    const closedTarget = totalTarget - openTarget;
+    const imgRatio = parseInt(document.getElementById("imgRatio").value) || 50;
+    let numGroups = parseInt(document.getElementById("pdfGroups")?.value) || 1;
+
+    if (numGroups > 17) numGroups = 17;
+
+    // 2. Filtrowanie bazy na typy (zamknięte vs otwarte)
+    let catFiltered = database.filter(q => q.category.toLowerCase().includes(cat.toLowerCase()));
+    let openPool = catFiltered.filter(q => !q.answers || q.answers.length === 0);
+    let closedPool = catFiltered.filter(q => q.answers && q.answers.length > 0);
+
+    if (openPool.length < openTarget || closedPool.length < closedTarget) {
+        alert(`Za mało pytań w bazie! Potrzeba ${openTarget} otwartych (masz ${openPool.length}) i ${closedTarget} zamkniętych (masz ${closedPool.length}).`);
+        return;
+    }
+
+    let printWindow = window.open('', '_blank');
+    let html = `<html><head><style>
+        @page { margin: 1cm; }
+        body { font-family: Arial, sans-serif; padding: 0; margin: 0; color: black; line-height: 1.2; }
+        
+        .page { 
+            page-break-after: always; 
+            position: relative; 
+            padding: 15px; 
+            box-sizing: border-box; 
+        }
+        .page:last-child { page-break-after: auto !important; }
+
+        .header-content { width: 100%; margin-bottom: 10px; }
+        .user-data { font-size: 14px; margin-bottom: 5px; }
+
+        /* TABELA - ROZMIAR KOMÓRKI 27.37px */
+        .ans-sheet { border-collapse: collapse !important; margin-top: 10px; table-layout: fixed; background: white !important; }
+        .ans-sheet td { 
+            border: 2px solid black !important; 
+            width: 27.37px !important; 
+            height: 27.37px !important; 
+            text-align: center; 
+            font-size: 11px; 
+            padding: 0;
+        }
+        .label-row { background-color: #dddddd !important; font-weight: bold; -webkit-print-color-adjust: exact; }
+        .black-cell { background-color: black !important; color: white !important; -webkit-print-color-adjust: exact; }
+
+        /* ZDJĘCIA (+39%) */
+        .q-img { display: block; max-width: 222px; max-height: 180px; margin: 10px 0; border: 1px solid #ccc; }
+        /* PRZERYWANA LINIA MIĘDZY PYTANIAMI */
+        .question { 
+            margin-bottom: 20px; 
+            page-break-inside: avoid; 
+            border-top: 2px dashed #0f186094 !important;  //<----------zmiana koloru linni przerywanej //////////
+            padding-top: 15px; 
+            clear: both; 
+        }
+
+        .options { width: 100%; margin-top: 5px; }
+        .options td { width: 50%; padding: 2px 0; font-size: 12px; vertical-align: top; }
+        
+        /* LINIE DLA PYTAŃ OTWARTYCH */
+        .open-line { margin-top: 8px; border-bottom: 1px solid #777; height: 22px; width: 100%; }
+
+        @media print { .no-print { display: none; } * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; } }
+    </style></head><body>`;
+
+    for (let set = 1; set <= numGroups; set++) {
+        
+        // Funkcja wyboru pytań z uwzględnieniem proporcji obrazków
+        const pickQuestions = (pool, target) => {
+            let withImg = pool.filter(q => q.image && q.image !== "");
+            let noImg = pool.filter(q => !q.image || q.image === "");
+            
+            let targetImgCount = Math.round(target * (imgRatio / 100));
+            let selectedWithImg = shuffle([...withImg]).slice(0, targetImgCount);
+            let neededMore = target - selectedWithImg.length;
+            let selectedNoImg = shuffle([...noImg]).slice(0, neededMore);
+            
+            let result = [...selectedWithImg, ...selectedNoImg];
+            if (result.length < target) {
+                let remaining = pool.filter(q => !result.includes(q));
+                result = [...result, ...shuffle(remaining).slice(0, target - result.length)];
+            }
+            return result;
+        };
+
+        let selOpen = pickQuestions(openPool, openTarget);
+        let selClosed = pickQuestions(closedPool, closedTarget);
+        let questions = shuffle([...selOpen, ...selClosed]);
+        let groupID = String.fromCharCode(64 + set);
+
+        // Funkcja generująca tabelę poziomą ABCD
+        const createTable = (qs, isKey) => {
+            let rowNr = `<tr class="label-row"><td style="width:40px !important;">Nr</td>`;
+            let rows = {A: `<tr><td class="label-row">A</td>`, B: `<tr><td class="label-row">B</td>`, C: `<tr><td class="label-row">C</td>`, D: `<tr><td class="label-row">D</td>`};
+            
+            qs.forEach((q, i) => {
+                rowNr += `<td>${i+1}</td>`;
+                let isClosed = q.answers && q.answers.length > 0;
+                let corrIdx = (isKey && isClosed) ? q.savedOrder.indexOf(q.correct) : -1;
+                
+                ['A','B','C','D'].forEach((L, idx) => {
+                    let fill = isKey && corrIdx === idx;
+                    let content = '';
+                    if (!isClosed) {
+                        content = '-'; 
+                    } else if (isKey && fill) {
+                        content = L; 
+                    }
+                    rows[L] += `<td class="${fill ? 'black-cell' : ''}">${content}</td>`;
+                });
+            });
+            return `<table class="ans-sheet">${rowNr}</tr>${rows.A}</tr>${rows.B}</tr>${rows.C}</tr>${rows.D}</tr></table>`;
+        };
+
+        // --- STRONA UCZNIA ---
+        html += `<div class="page">
+            <div class="header-content">
+                <div class="user-data">
+                    <h1 style="margin:0; font-size:22px;">Sprawdzian: ${cat}</h1>
+                    <p><strong>GRUPA ${groupID}</strong> | Uczeń: ________________________________ Klasa: _______NR:____</p>
+                </div>
+                ${createTable(questions, false)}
+            </div>
+            <hr style="border: 1px solid black; margin: 15px 0;">
+            ${questions.map((q, idx) => {
+                let res = `<div class="question"><strong>${idx + 1}. ${q.question}</strong>`;
+                if (q.image) res += `<img src="${q.image}" class="q-img">`;
+                
+                if (q.answers && q.answers.length > 0) {
+                    let ans = shuffle([...q.answers]);
+                    q.savedOrder = ans;
+                    res += `<table class="options">
+                        <tr><td>A) [ ] ${ans[0]}</td><td>B) [ ] ${ans[1]}</td></tr>
+                        <tr><td>C) [ ] ${ans[2]}</td><td>D) [ ] ${ans[3] || "---"}</td></tr>
+                    </table>`;
+                } else {
+                    res += `<div class="open-line"></div><div class="open-line"></div><div class="open-line"></div>`;
+                }
+                return res + `</div>`;
+            }).join('')}
+        </div>`;
+
+        // --- STRONA KLUCZA ---
+        html += `<div class="page" style="background:#fcfcfc;">
+            <div class="header-content">
+                <h2>KLUCZ ODPOWIEDZI - GRUPA ${groupID}</h2>
+                ${createTable(questions, true)}
+            </div>
+            <hr style="border: 1px solid black; margin: 15px 0;">
+            <div style="font-size: 11px;">
+                ${questions.map((q, idx) => `<p style="margin:3px 0;"><strong>${idx+1}:</strong> ${q.correct}</p>`).join('')}
+            </div>
+        </div>`;
+    }
+
+    html += `</body></html>`;
+    printWindow.document.write(html);
+    printWindow.document.close();
+}
+
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
 }
