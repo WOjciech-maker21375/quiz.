@@ -9931,4 +9931,18 @@ correct:"Współpracę elementów systemu."
   correct: "wąską"
 },
 
+{
+    category: "CCTV",
+    question: "Wyjaśnij, czym różni się kamera stałoogniskowa od kamery z obiektywem typu moto-zoom.",
+    correct: "Kamera stałoogniskowa ma stały kąt widzenia. Moto-zoom pozwala na zdalną regulację ogniskowej (zoom) i ostrości.",
+},
+
+{
+    category: "CCTV",
+    question: "Podaj trzy najważniejsze różnice między standardem zapisu H.264 a H.265 (HEVC).",
+    correct: "1. H.265 oferuje do 50% lepszą kompresję. 2. H.265 wymaga większej mocy obliczeniowej. 3. H.265 lepiej radzi sobie z rozdzielczościami 4K i 8K.",
+    image: "" 
+},
+
+
 ];
