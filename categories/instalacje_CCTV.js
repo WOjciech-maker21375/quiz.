@@ -10249,7 +10249,7 @@ image:""
 
 {
   category: "CCTV",
-  question: "Czy magnetowidy są nadal powszechnie budowane i instalowane w nowych systemach CCTV? Uzasadnij odpowiedź na podstawie tekstu.",
+  question: "Czy magnetowidy są nadal powszechnie budowane i instalowane w nowych systemach CCTV? Uzasadnij odpowiedź.",
   correct: "Nie, są to rozwiązania najstarsze i obecnie już niebudowane ze względu na niską wydajność w porównaniu do technologii cyfrowej.",
   image: ""
 },
