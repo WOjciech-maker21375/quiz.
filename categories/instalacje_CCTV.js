@@ -7891,7 +7891,6 @@ answers:[
 correct:"Współpracę elementów systemu."
 },
 
-
 {
   category: "CCTV",
   question: "literą (A) zaznaczono ",
@@ -8034,13 +8033,30 @@ correct:"Współpracę elementów systemu."
 
 {
   category: "CCTV",
+  question: "Na rysunku przedstawiono kamerę typu:",
+  image: "img/CCTV/kamera_kopulowa.png",
+  answers: ["Tubowa (bullet)", "Kopułkowa (dome)", "Obrotowa (PTZ)", "Kompaktowa"],
+  correct: "Kopułkowa (dome)"
+},
+
+{
+  category: "CCTV",
+  question: "Co oznaczają małe, okrągłe elementy widoczne wokół obiektywu kamery na zdjęciu?",
+  image: "img/CCTV/kamera_kopulowa.png",
+  answers: ["Dodatkowe mikrofony", "Diody oświetlacza podczerwieni (IR)", "Czujniki ruchu PIR", "Śruby montażowe"],
+  correct: "Diody oświetlacza podczerwieni (IR)"
+},
+
+
+{
+  category: "CCTV",
   question: "Na rysunku przedstawiono:",
   image: "img/CCTV/obiektyw_o_stalej_ogniskowej.png", // Tutaj podajesz link lub nazwę pliku
   answers: ["obiektyw o regulowanej ogniskowej", "obiektyw o stłej ogniskowej", "obiektyw bez ogniskowej", "regulowany wzmacniacz obrazu"],
   correct: "obiektyw o stłej ogniskowej"
 },
 
-// SEKCJA: PRZYSLONA (PODSTAWY)
+// SEKCJA: PRZYSLONA
 
 {
   category: "CCTV",
@@ -9931,6 +9947,7 @@ correct:"Współpracę elementów systemu."
   correct: "wąską"
 },
 
+////////////////////////////////////////////////////////////////////////////////////pytania otwarte///////////////////////////////////////////////////
 {
     category: "CCTV",
     question: "Wyjaśnij, czym różni się kamera stałoogniskowa od kamery z obiektywem typu moto-zoom.",
@@ -9943,6 +9960,327 @@ correct:"Współpracę elementów systemu."
     correct: "1. H.265 oferuje do 50% lepszą kompresję. 2. H.265 wymaga większej mocy obliczeniowej. 3. H.265 lepiej radzi sobie z rozdzielczościami 4K i 8K.",
     image: "" 
 },
+
+{
+category:"CCTV",
+question:"Wymień dwie główne zalety przetworników CMOS w porównaniu do starszych przetworników CCD.",
+correct:"Główne zalety to szybszy odczyt danych (co pozwala na wyższe klatkaże) oraz znacznie niższa cena produkcji przy zachowaniu dobrych parametrów obrazu.",
+image:""
+},
+
+{
+category:"CCTV",
+question:"Wyjaśnij rolę zasilacza awaryjnego UPS w profesjonalnym systemie monitoringu wizyjnego.",
+correct:"UPS (Uninterruptible Power Supply) ma za zadanie podtrzymać zasilanie rejestratora i kamer w przypadku zaniku napięcia w sieci oraz chronić urządzenia przed skokami napięcia.",
+image:""
+},
+
+{
+category:"CCTV",
+question:"Podaj maksymalną dopuszczalną odległość transmisji sygnału PoE na standardowej skrętce komputerowej (kat. 5e/6) bez stosowania regeneratorów.",
+correct:"Maksymalna odległość wynosi 100 metrów.",
+image:""
+},
+
+{
+category:"CCTV",
+question:"Wyjaśnij znaczenie i cel stosowania standardu ONVIF w nowoczesnych systemach CCTV IP.",
+correct:"Standard ONVIF (Open Network Video Interface Forum) zapewnia kompatybilność i współpracę urządzeń (kamer, rejestratorów) od różnych producentów w ramach jednego systemu.",
+image:""
+},
+
+{
+category:"CCTV",
+question:"Opisz, na czym polega działanie funkcji 'Starlight' w nowoczesnych kamerach monitoringu.",
+correct:"Funkcja Starlight polega na zastosowaniu przetworników o podwyższonej czułości, co pozwala na uzyskanie wyraźnego, kolorowego obrazu przy bardzo słabym oświetleniu nocnym.",
+image:""
+},
+
+{
+category:"CCTV",
+question:"Wyjaśnij, co oznacza stopień ochrony IP67 w kontekście obudowy kamery zewnętrznej.",
+correct:"IP67 oznacza całkowitą pyłoszczelność oraz odporność na krótkotrwałe zanurzenie w wodzie (pełna ochrona przed deszczem i trudnymi warunkami atmosferycznymi).",
+image:""
+},
+
+{
+category:"CCTV",
+question:"Jaka jest podstawowa różnica między rejestratorem NVR a DVR pod kątem obsługiwanych typów kamer?",
+correct:"Rejestrator NVR (Network Video Recorder) obsługuje kamery sieciowe IP, natomiast DVR (Digital Video Recorder) obsługuje głównie kamery analogowe.",
+image:""
+},
+
+{
+category:"CCTV",
+question:"W jaki sposób działa funkcja automatycznej przysłony (Auto Iris) i przed czym chroni przetwornik?",
+correct:"Elektronika kamery automatycznie steruje otwarciem przysłony w zależności od natężenia światła. Chroni to przetwornik przed prześwietleniem przy silnym słońcu i pozwala na pracę w zmiennych warunkach oświetleniowych.",
+image:""
+},
+
+{
+category:"CCTV",
+question:"Wyjaśnij działanie technologii P2P w kontekście zdalnego podglądu obrazu z kamer na telefonie.",
+correct:"Technologia P2P pozwala na nawiązanie bezpośredniego połączenia z rejestratorem przez serwer producenta (za pomocą kodu QR/SN), bez konieczności posiadania publicznego adresu IP i konfigurowania przekierowań na routerze.",
+image:""
+},
+
+{
+category:"CCTV",
+question:"Do czego służy funkcja balansu bieli (White Balance) w kamerze?",
+correct:"Służy do prawidłowego odwzorowania barw, tak aby białe obiekty były faktycznie białe, niezależnie od temperatury barwowej światła (np. słońce vs. świetlówki).",
+image:""
+},
+
+{
+category:"CCTV",
+question:"Na czym polega różnica techniczna między mocowaniem obiektywu typu C a typu CS?",
+correct:"Różnica polega na odległości płaszczyzny oporowej obiektywu od przetwornika. Typ C wymaga dodatkowego pierścienia dystansowego (5mm), aby współpracować z kamerami CS.",
+image:""
+},
+
+{
+category:"CCTV",
+question:"Czym jest 'Brama domyślna' (Gateway) w ustawieniach sieciowych kamery IP i na jakie urządzenie zazwyczaj wskazuje?",
+correct:"Brama domyślna to adres urządzenia, przez które kamera komunikuje się z siecią zewnętrzną (Internetem). Zazwyczaj jest to adres IP routera.",
+image:""
+},
+
+{
+category:"CCTV",
+question:"Podaj dwa przykłady zdarzeń, które mogą być wykrywane przez funkcję analityki obrazu (IVA).",
+correct:"Przykłady to: przekroczenie wirtualnej linii, wykrycie intruza w strefie, pozostawienie/zniknięcie obiektu lub detekcja twarzy.",
+image:""
+},
+
+{
+category:"CCTV",
+question:"Wyjaśnij, w jakich jednostkach podaje się zasięg oświetlacza IR i od czego zależy jego skuteczność w nocy.",
+correct:"Zasięg podaje się w metrach. Skuteczność zależy od mocy diod, czułości przetwornika oraz współczynnika odbicia światła od obserwowanych obiektów.",
+image:""
+},
+
+{
+  category: "CCTV",
+  question: "Wyjaśnij, na czym polega główna różnica w elastyczności połączeń między systemem analogowym a systemem IP.",
+  correct: "W systemie analogowym każda kamera musi być połączona bezpośrednio z rejestratorem (gwiazda). W systemie IP kamery mogą być rozproszone i łączone do najbliższych switchy, a obraz przesyłany jest przez istniejącą infrastrukturę sieciową.",
+  image: ""
+},
+
+{
+  category: "CCTV",
+  question: "Jakiego konkretnego rodzaju okablowania wymaga każda kamera w tradycyjnym (starszym) systemie analogowym do przesyłu sygnału wizyjnego?",
+  correct: "Wymaga kabla koncentrycznego (zazwyczaj o impedancji 75 Ohm).",
+  image: ""
+},
+
+{
+  category: "CCTV",
+  question: "W jakim typie systemu (analogowym czy IP) możliwe jest budowanie instalacji w oparciu o urządzenia znajdujące się w dowolnej odległości od siebie (wykorzystując Internet)? Uzasadnij odpowiedź.",
+  correct: "W systemie IP. Dane z kamer są przesyłane jako pakiety danych, co pozwala na przesyłanie obrazu przez sieć lokalną, światłowody lub Internet na dowolną odległość do rejestratora NVR.",
+  image: ""
+},
+
+{
+  category: "CCTV",
+  question: "Podaj rozdzielczość w pikselach dla standardu D1 oraz określ, dla jakiego systemu nadawczego (PAL czy NTSC) jest ona charakterystyczna w Europie.",
+  correct: "Rozdzielczość D1 to 720 x 576 pikseli. Jest charakterystyczna dla standardu PAL.",
+  image: ""
+},
+
+{
+  category: "CCTV",
+  question: "Z jakiego głównego powodu standardowy, stary rejestrator DVR nie nadaje się do obsługi kamer megapikselowych?",
+  correct: "Standardowe rejestratory DVR nie posiadają układów scalonych zdolnych do przetwarzania i zapisu obrazu w tak wysokich rozdzielczościach (obsługują zazwyczaj max. D1 lub WD1).",
+  image: ""
+},
+
+{
+  category: "CCTV",
+  question: "Podaj pełną nazwę urządzenia służącego do zarządzania i zapisu obrazu z kamer w systemach sieciowych IP.",
+  correct: "NVR - Network Video Recorder (Sieciowy Rejestrator Wideo).",
+  image: ""
+},
+
+{
+  category: "CCTV",
+  question: "Przeanalizuj rysunek i podaj nazwę parametru zaznaczonego literą (A).",
+  image: "img/CCTV/waska_glembia_ostrosci.png",
+  correct: "Literą (A) zaznaczono odległość ostrzenia (odległość przedmiotu od obiektywu).",
+},
+
+{
+  category: "CCTV",
+  question: "Przeanalizuj rysunek i podaj nazwę parametru zaznaczonego literą (B).",
+  image: "img/CCTV/waska_glembia_ostrosci.png",
+  correct: "Literą (B) zaznaczono głębię ostrości.",
+},
+
+{
+  category: "CCTV",
+  question: "Spójrz na schemat. Jakiego rodzaju głębię ostrości (wąską czy szeroką) przedstawia ten obraz? Wymień jeden przypadek, w którym taka głębia jest pożądana.",
+  image: "img/CCTV/waska_glembia_ostrosci.png",
+  correct: "Obraz przedstawia wąską głębię ostrości. Jest ona pożądana np. przy identyfikacji konkretnej twarzy lub tablicy rejestracyjnej, gdy chcemy odizolować obiekt od tła.",
+},
+
+{
+  category: "CCTV",
+  question: "Przeanalizuj pierwszy schemat. Wyjaśnij zależność między parametrem (C) a parametrem (E). Co się stanie z (E), jeśli zwiększymy wartość (C)?",
+  image: "img/CCTV/OGNISKOWA_SCHEMAT.png",
+  correct: "Zwiększenie ogniskowej (C) spowoduje zmniejszenie kąta widzenia (E). Jest to zależność odwrotnie proporcjonalna.",
+},
+
+{
+  category: "CCTV",
+  question: "Na podstawie pierwszego schematu opisz, jaką rolę w procesie powstawania obrazu pełnią elementy (A) oraz (B).",
+  image: "img/CCTV/OGNISKOWA_SCHEMAT.png",
+  correct: "(A) to obiektyw, który skupia światło na (B) przetworniku, który zamienia fotony na sygnał elektryczny.",
+},
+
+{
+  category: "CCTV",
+  question: "Spójrz na drugi schemat. Jak zmieni się kąt widzenia (A), jeżeli skróceniu ulegnie parametr (C)? Uzasadnij odpowiedź.",
+  image: "img/CCTV/ogniskowa_schemat2.png",
+  correct: "Kąt widzenia (A) zwiększy się. Skrócenie ogniskowej (C) sprawia, że kamera widzi szerszy obszar terenu.",
+},
+
+{
+  category: "CCTV",
+  question: "Na drugim schemacie odległość między elementem (E) a (D) oznaczono jako (C). Podaj fachową nazwę tego parametru i wyjaśnij jego znaczenie.",
+  image: "img/CCTV/ogniskowa_schemat2.png",
+  correct: "(C) to ogniskowa. Jest to odległość od środka optycznego obiektywu (E) do płaszczyzny przetwornika (D), w której skupia się światło.",
+},
+
+{
+  category: "CCTV",
+  question: "Na trzecim schemacie literą (E) oznaczono ogniskową. Opisz, jak zmiana tego parametru wpłynie na parametr (C).",
+  image: "img/CCTV/ogniskowa_schemat3.png",
+  correct: "Zmiana ogniskowej (E) bezpośrednio zmienia kąt widzenia (C). Im dłuższa jest ogniskowa (E), tym mniejszy staje się kąt widzenia (C).",
+},
+
+{
+  category: "CCTV",
+  question: "Przeanalizuj trzeci schemat. Nazwij elementy (D) i (B) oraz wyjaśnij, dlaczego ich wzajemne położenie względem siebie jest kluczowe dla jakości obrazu.",
+  image: "img/CCTV/ogniskowa_schemat3.png",
+  correct: "(D) to obiektyw, a (B) to przetwornik. Ich odległość (E) decyduje o ostrości obrazu - przetwornik musi znajdować się w ognisku soczewki.",
+},
+
+{
+  category: "CCTV",
+  question: "Opisz krok po kroku prawidłową procedurę wymiany uszkodzonej kamery w systemie monitoringu, zachowując zasady bezpieczeństwa i kolejność odłączania przewodów.",
+  correct: "1. Odłączenie zasilania. 2. Odłączenie sygnału. 3. Demontaż starej i montaż nowej kamery. 4. Podłączenie sygnału. 5. Podłączenie zasilania.",
+},
+
+{
+  category: "CCTV",
+  question: "Przeanalizuj rysunek obiektywu. Określ jego typ pod kątem możliwości regulacji ogniskowej i uzasadnij, dlaczego nie można w nim uzyskać optycznego zbliżenia (zoom).",
+  image: "img/CCTV/obiektyw_o_stalej_ogniskowej.png",
+  correct: "Jest to obiektyw o stałej ogniskowej. Nie można w nim uzyskać zoomu, ponieważ konstrukcja nie posiada ruchomych soczewek zmieniających dystans do przetwornika.",
+},
+
+{
+  category: "CCTV",
+  question: "Podaj ogólną definicję rejestratora w systemach telewizji dozorowej oraz określ jego podstawową funkcję.",
+  correct: "Rejestrator to urządzenie służące do zapisu obrazu z kamer na wybranym nośniku danych w celu jego późniejszej archiwizacji i wglądu.",
+  image: ""
+},
+
+{
+  category: "CCTV",
+  question: "Wymień trzy główne typy urządzeń rejestrujących, które historycznie i współcześnie były stosowane w systemach dozorowych.",
+  correct: "Są to: magnetowidy, karty VCR (komputerowe) oraz rejestratory cyfrowe.",
+  image: ""
+},
+
+{
+  category: "CCTV",
+  question: "Opisz charakterystykę zapisu obrazu w magnetowidach. Na jakim nośniku lądował obraz i jaki był maksymalny czas nagrania?",
+  correct: "Obraz rejestrowany był na kasecie (taśmie magnetycznej). Magnetowidy umożliwiały zapis od 24 do maksymalnie 960 godzin materiału.",
+  image: ""
+},
+
+{
+  category: "CCTV",
+  question: "Na czym polega działanie kart VCR i co jest w ich przypadku głównym czynnikiem decydującym o długości zapisanego materiału?",
+  correct: "Karty VCR służą do rejestracji obrazu na twardym dysku komputera. Długość nagrania zależy wyłącznie od pojemności zastosowanego dysku twardego.",
+  image: ""
+},
+
+{
+  category: "CCTV",
+  question: "Z jakiego powodu w profesjonalnych systemach bezpieczeństwa rzadziej stosuje się zwykłe karty VCR na rzecz rejestratorów cyfrowych? Wymień dwa zagrożenia.",
+  correct: "Stosowanie kart VCR wiąże się z ryzykiem sabotażu (niekontrolowany dostęp do komputera osób trzecich) oraz utraty danych z powodu niestabilności systemów operacyjnych.",
+  image: ""
+},
+
+{
+  category: "CCTV",
+  question: "Z jakich dwóch kluczowych podzespołów (urządzeń) składa się konstrukcyjnie typowy rejestrator cyfrowy?",
+  correct: "Składa się z wielokanałowego multipleksera oraz twardego dysku (lub zespołu dysków).",
+  image: ""
+},
+
+{
+  category: "CCTV",
+  question: "Wyjaśnij, dlaczego rejestrator cyfrowy uważa się za rozwiązanie bezpieczniejsze pod kątem dostępu osób niepowołanych w porównaniu do komputera z kartą VCR.",
+  correct: "Posiada zabezpieczenia mechaniczne (zamykane obudowy) oraz zaawansowane kody dostępu, co utrudnia ingerencję osobom postronnym.",
+  image: ""
+},
+
+{
+  category: "CCTV",
+  question: "Porównaj nośniki danych stosowane w magnetowidach i rejestratorach cyfrowych. Które rozwiązanie jest trwalsze i dlaczego?",
+  correct: "Magnetowidy używały kaset, a rejestratory dysków twardych. Dyski są trwalsze, oferują szybszy dostęp do nagrań i nie wymagają fizycznej wymiany taśm.",
+  image: ""
+},
+
+{
+  category: "CCTV",
+  question: "W jakich sytuacjach zastosowanie karty VCR w komputerze z dostępem do Internetu może być ryzykowne dla ciągłości nagrań?",
+  correct: "Ryzyko wynika z możliwości sabotażu przez sieć, ataków hakerskich oraz niestabilności systemu operacyjnego, który może się zawiesić podczas pracy w sieci.",
+  image: ""
+},
+
+{
+  category: "CCTV",
+  question: "Co oznacza stwierdzenie, że rejestrator cyfrowy posiada dyski 'wymienne' i jakie ma to znaczenie dla serwisu urządzenia?",
+  correct: "Oznacza to, że dyski można łatwo wysunąć i wymienić na nowe. Ułatwia to szybką archiwizację materiału lub naprawę w przypadku awarii jednego z nośników.",
+  image: ""
+},
+
+{
+  category: "CCTV",
+  question: "Czy magnetowidy są nadal powszechnie budowane i instalowane w nowych systemach CCTV? Uzasadnij odpowiedź na podstawie tekstu.",
+  correct: "Nie, są to rozwiązania najstarsze i obecnie już niebudowane ze względu na niską wydajność w porównaniu do technologii cyfrowej.",
+  image: ""
+},
+
+{
+  category: "CCTV",
+  question: "Zdefiniuj pojęcie rejestracji cyfrowej w kontekście różnicy między rejestratorem cyfrowym a magnetowidem.",
+  correct: "Rejestracja cyfrowa to zapis obrazu w formie danych na dysku twardym (NVR/DVR), podczas gdy magnetowid zapisywał sygnał analogowy na taśmie magnetycznej.",
+  image: ""
+},
+
+{
+  category: "CCTV",
+  question: "Jakie korzyści daje zastosowanie zespołu dysków zamiast jednego dysku w rejestratorze cyfrowym?",
+  correct: "Pozwala to na rejestrację znacznie większej ilości materiału wideo oraz zwiększa bezpieczeństwo danych (np. poprzez dublowanie nagrań).",
+  image: ""
+},
+
+{
+  category: "CCTV",
+  question: "Dlaczego rejestrator cyfrowy nazywamy urządzeniem wielokanałowym?",
+  correct: "Ponieważ dzięki wbudowanemu multiplekserowi potrafi odbierać, przetwarzać i zapisywać obraz z wielu kamer jednocześnie na jednym nośniku.",
+  image: ""
+},
+
+{
+  category: "CCTV",
+  question: "Zidentyfikuj rodzaj kamery przedstawionej na zdjęciu oraz krótko opisz jej charakterystyczne cechy konstrukcyjne i przeznaczenie.",
+  image: "img/CCTV/kamera_kopulowa.png",
+  correct: "Jest to kamera kopułkowa (dome). Charakteryzuje się półkolistą obudową, która utrudnia osobom postronnym określenie kierunku, w którym patrzy obiektyw. Jest często stosowana wewnątrz budynków ze względu na estetykę i odporność na akty wandalizmu.",
+}
 
 
 ];
