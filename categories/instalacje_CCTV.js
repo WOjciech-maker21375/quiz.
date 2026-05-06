@@ -2319,18 +2319,6 @@ correct:"Elektronikę kamery w zależności od natężenia światła."
 
 {
 category:"CCTV",
-question:"Co oznacza skrót P2P w kontekście podglądu z kamer?",
-answers:[
-"Power to Power.",
-"Łączność bezpośrednią przez serwer producenta bez publicznego IP.",
-"Rodzaj kabla koncentrycznego.",
-"Protokół przesyłania prądu."
-],
-correct:"Łączność bezpośrednią przez serwer producenta bez publicznego IP."
-},
-
-{
-category:"CCTV",
 question:"Balans bieli (White Balance) służy do:",
 answers:[
 "Regulacji ostrości.",
@@ -8553,7 +8541,7 @@ correct:"Współpracę elementów systemu."
 
 {
   category: "CCTV",
-  question: "Ile głównych kryteriów podziału obiektywów wyróżniono na slajdzie?",
+  question: "Ile jest głównych kryteriów podziału obiektywów ?",
   answers: [
     "Dwa",
     "Trzy",
@@ -8597,18 +8585,6 @@ correct:"Współpracę elementów systemu."
     "W miejscach, gdzie zabronione jest używanie zoomu"
   ],
   correct: "Tam, gdzie liczy się swoboda w wyborze długości ogniskowej"
-},
-
-{
-  category: "CCTV",
-  question: "Która wartość ogniskowej NIE została wymieniona na slajdzie jako typowa dla obiektywu stałego?",
-  answers: [
-    "4,0mm",
-    "6,0mm",
-    "8,0mm",
-    "12,0mm"
-  ],
-  correct: "8,0mm"
 },
 
 {
@@ -9266,18 +9242,6 @@ correct:"Współpracę elementów systemu."
     "Mobilnego"
   ],
   correct: "Cyfrowego"
-},
-
-{
-  category: "CCTV",
-  question: "Która z wymienionych konfiguracji kanałów jest najniższą wymienioną na slajdzie?",
-  answers: [
-    "1-kanałowe",
-    "2-kanałowe",
-    "4-kanałowe",
-    "6-kanałowe"
-  ],
-  correct: "4-kanałowe"
 },
 
 {
@@ -10105,7 +10069,7 @@ image:""
   category: "CCTV",
   question: "Przeanalizuj rysunek i podaj nazwę parametru zaznaczonego literą (A).",
   image: "img/CCTV/waska_glembia_ostrosci.png",
-  correct: "Literą (A) zaznaczono odległość ostrzenia (odległość przedmiotu od obiektywu).",
+  correct: "Literą (A) zaznaczono odległość ostrzenia .",
 },
 
 {
@@ -10124,45 +10088,46 @@ image:""
 
 {
   category: "CCTV",
-  question: "Przeanalizuj pierwszy schemat. Wyjaśnij zależność między parametrem (C) a parametrem (E). Co się stanie z (E), jeśli zwiększymy wartość (C)?",
+  question: "Przeanalizuj  schemat. Wyjaśnij zależność między parametrem (C) a parametrem (E). Co się stanie z (E), jeśli zwiększymy wartość (C)?",
   image: "img/CCTV/OGNISKOWA_SCHEMAT.png",
   correct: "Zwiększenie ogniskowej (C) spowoduje zmniejszenie kąta widzenia (E). Jest to zależność odwrotnie proporcjonalna.",
 },
 
 {
   category: "CCTV",
-  question: "Na podstawie pierwszego schematu opisz, jaką rolę w procesie powstawania obrazu pełnią elementy (A) oraz (B).",
+  question: "Na podstawie  schematu opisz, jaką rolę w procesie powstawania obrazu pełnią elementy (A) oraz (B).",
   image: "img/CCTV/OGNISKOWA_SCHEMAT.png",
   correct: "(A) to obiektyw, który skupia światło na (B) przetworniku, który zamienia fotony na sygnał elektryczny.",
 },
 
 {
   category: "CCTV",
-  question: "Spójrz na drugi schemat. Jak zmieni się kąt widzenia (A), jeżeli skróceniu ulegnie parametr (C)? Uzasadnij odpowiedź.",
+  question: "Spójrz na  schemat. Jak zmieni się (A), jeżeli skróceniu ulegnie parametr (C)? Uzasadnij odpowiedź.",
   image: "img/CCTV/ogniskowa_schemat2.png",
   correct: "Kąt widzenia (A) zwiększy się. Skrócenie ogniskowej (C) sprawia, że kamera widzi szerszy obszar terenu.",
 },
 
 {
   category: "CCTV",
-  question: "Na drugim schemacie odległość między elementem (E) a (D) oznaczono jako (C). Podaj fachową nazwę tego parametru i wyjaśnij jego znaczenie.",
+  question: "Na  schemacie odległość między elementem (E) a (D) oznaczono jako (C). Podaj  nazwę tego parametru i wyjaśnij jego znaczenie.",
   image: "img/CCTV/ogniskowa_schemat2.png",
   correct: "(C) to ogniskowa. Jest to odległość od środka optycznego obiektywu (E) do płaszczyzny przetwornika (D), w której skupia się światło.",
 },
 
 {
   category: "CCTV",
-  question: "Na trzecim schemacie literą (E) oznaczono ogniskową. Opisz, jak zmiana tego parametru wpłynie na parametr (C).",
+  question: "Na schemacie literą (E) . Opisz, jak zmiana tego parametru wpłynie na parametr (C).",
   image: "img/CCTV/ogniskowa_schemat3.png",
   correct: "Zmiana ogniskowej (E) bezpośrednio zmienia kąt widzenia (C). Im dłuższa jest ogniskowa (E), tym mniejszy staje się kąt widzenia (C).",
 },
 
 {
   category: "CCTV",
-  question: "Przeanalizuj trzeci schemat. Nazwij elementy (D) i (B) oraz wyjaśnij, dlaczego ich wzajemne położenie względem siebie jest kluczowe dla jakości obrazu.",
+  question: "Przeanalizuj  schemat. Nazwij elementy (D) i (B) oraz wyjaśnij, dlaczego ich wzajemne położenie względem siebie jest kluczowe dla jakości obrazu.",
   image: "img/CCTV/ogniskowa_schemat3.png",
   correct: "(D) to obiektyw, a (B) to przetwornik. Ich odległość (E) decyduje o ostrości obrazu - przetwornik musi znajdować się w ognisku soczewki.",
 },
+
 
 {
   category: "CCTV",
@@ -10281,6 +10246,5 @@ image:""
   image: "img/CCTV/kamera_kopulowa.png",
   correct: "Jest to kamera kopułkowa (dome). Charakteryzuje się półkolistą obudową, która utrudnia osobom postronnym określenie kierunku, w którym patrzy obiektyw. Jest często stosowana wewnątrz budynków ze względu na estetykę i odporność na akty wandalizmu.",
 }
-
 
 ];
