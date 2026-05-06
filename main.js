@@ -14,7 +14,7 @@ const database = [
 /////////////////////// ALIASY ///////////////////////
 const categoryMap = {
 "instalacje elektryczne":["ie","elektryk","instalacje","elektryczne","instalacje elektryczne","instlaje elektryczne"],
-"elektronika":["elektronika","el","elektronika","elektronik","uklady","układy","el","elektrony"],
+"elektronika":["elektronika","elektronika","elektronik","uklady","układy","elektrony","el","a","e"],
 "fizyka":["fiz","fizyka","fizunia"],
 "CCTV":["CCTV","instlacje dozorowe","monitoring"],
 "SAT": ["sat", "satelita", "tvsat", "anteny", "telewizja satelitarna"],
@@ -45,18 +45,36 @@ return t.toLowerCase()
 }
 
 /////////////////////// MATCH ///////////////////////
-function matchCategory(input, category){
-input = normalize(input);
-category = normalize(category);
+function matchCategory(input, questionCategory) {
+  if (!input || !questionCategory) return false;
 
-let aliases = categoryMap[category] || [category];
+  // 1. To co wpisałeś w mikserze (np. "układy, fiz")
+  const searchTerms = input.split(",").map(s => normalize(s.trim()).toLowerCase());
+  // 2. To co jest w bazie danych (np. "elektronika")
+  const qCat = normalize(questionCategory).toLowerCase();
 
-return aliases.some(a=>{
-a = normalize(a);
-return input === a || a.includes(input) || input.includes(a);
-});
+  return searchTerms.some(term => {
+    // A. Sprawdzenie bezpośrednie: czy wpisane słowo to kategoria w bazie?
+    if (term === qCat) return true;
+
+    // B. Przeszukiwanie całej mapy aliasów:
+    // Sprawdzamy każdy klucz w Twoim categoryMap
+    for (let mainCat in categoryMap) {
+      // Pobieramy listę aliasów dla danego klucza i normalizujemy je
+      let aliases = categoryMap[mainCat].map(a => normalize(a).toLowerCase());
+      
+      // Jeśli wpisane słowo (term) jest na tej liście
+      if (aliases.includes(term)) {
+        // ...to sprawdź, czy kategoria pytania (qCat) pasuje do głównej kategorii LUB któregokolwiek aliasu
+        let mainCatNormalized = normalize(mainCat).toLowerCase();
+        if (qCat === mainCatNormalized || aliases.includes(qCat)) {
+          return true;
+        }
+      }
+    }
+    return false;
+  });
 }
-
 /////////////////////// START ///////////////////////
 function start(){
 
@@ -84,49 +102,76 @@ function start(){
   let cat = document.getElementById("category").value;
   let count = parseInt(document.getElementById("count").value);
 
-  // Filtrujemy po kategorii ORAZ sprawdzamy, czy pytanie ma odpowiedzi (jest zamknięte)
-let filtered = database.filter(q => matchCategory(cat, q.category) && q.answers && q.answers.length > 0);
-  if(filtered.length === 0){
+  // --- START SPRAWIEDLIWEJ PODMIANY Z SUWAKIEM ---
+  let imgRatio = parseInt(document.getElementById("ratioInput").value) / 100;
+  
+  // 1. Rozpoznajemy wybrane kategorie (mikser)
+  let selectedCats = cat.split(",").map(s => s.trim()).filter(s => s !== "");
+  let finalSelection = [];
+  
+  // Obliczamy ile łącznie chcemy obrazków i tekstów
+  let imgGoalTotal = Math.floor(count * imgRatio);
+  let textGoalTotal = count - imgGoalTotal;
+
+  // 2. Dzielimy limity sprawiedliwie na każdą kategorię
+  let imgPerCat = Math.floor(imgGoalTotal / selectedCats.length) || 0;
+  let textPerCat = Math.floor(textGoalTotal / selectedCats.length) || 0;
+
+  // Koszyki na resztki (do dopełniania)
+  let remainingImages = [];
+  let remainingTexts = [];
+
+  selectedCats.forEach(catName => {
+    // Filtrujemy bazę dla danej kategorii
+    let pool = database.filter(q => matchCategory(catName, q.category) && q.answers && q.answers.length > 0);
+    
+    let catImgs = shuffle(pool.filter(q => q.image));
+    let catTexts = shuffle(pool.filter(q => !q.image));
+
+    // Pobieramy sprawiedliwą porcję
+    let pickedImgs = catImgs.slice(0, imgPerCat);
+    let pickedTexts = catTexts.slice(0, textPerCat);
+
+    finalSelection.push(...pickedImgs, ...pickedTexts);
+
+    // Zapisujemy to, czego nie użyliśmy (do późniejszego dopełnienia)
+    remainingImages.push(...catImgs.slice(imgPerCat));
+    remainingTexts.push(...catTexts.slice(textPerCat));
+  });
+
+  // 3. RATUNEK: Dopełnianie do limitów (jeśli małe kategorie się skończyły)
+  
+  // Czy brakuje nam jeszcze zdjęć do limitu z suwaka?
+  let currentImgCount = finalSelection.filter(q => q.image).length;
+  if (currentImgCount < imgGoalTotal) {
+    let diff = imgGoalTotal - currentImgCount;
+    let extraImgs = shuffle(remainingImages).slice(0, diff);
+    finalSelection.push(...extraImgs);
+    remainingImages = remainingImages.filter(q => !extraImgs.includes(q));
+  }
+
+  // Czy brakuje nam jeszcze pytań do całkowitego limitu (count)?
+  if (finalSelection.length < count) {
+    let diff = count - finalSelection.length;
+    let combinedRest = [...remainingImages, ...remainingTexts];
+    finalSelection.push(...shuffle(combinedRest).slice(0, diff));
+  }
+
+  // Finalny wynik losowania
+  questions = shuffle(finalSelection);
+
+  if(questions.length === 0){
     alert("Brak pytań");
     return;
   }
+  // --- KONIEC SPRAWIEDLIWEJ PODMIANY ---
 
-      // --- START PODMIANY Z SUWAKIEM ---
-let imgRatio = parseInt(document.getElementById("ratioInput").value) / 100;
-
-  
-  let poolText = filtered.filter(q => !q.image); 
-  let poolImg = filtered.filter(q => q.image);
-
-  // Obliczamy ile chcemy obrazków na podstawie suwaka
-  let imgCountGoal = Math.floor(count * imgRatio); 
-
-  // Wybieramy zdjęcia (tyle ile chcemy, ale nie więcej niż mamy w bazie)
-  let partImg = shuffle(poolImg).slice(0, imgCountGoal);
-
-  // Dobieramy tekst tak, aby suma pytań zawsze wynosiła dokładnie "count"
-  let actualImgCount = partImg.length;
-  let actualTextGoal = count - actualImgCount; 
-  
-  // Zabezpieczenie: jeśli w bazie jest za mało tekstu, dobieramy więcej zdjęć (i na odwrót)
-  let partText = shuffle(poolText).slice(0, actualTextGoal);
-  
-  // Jeśli po dobraniu tekstu wciąż brakuje pytań do limitu "count"
-  if ((partImg.length + partText.length) < count) {
-      let remaining = count - (partImg.length + partText.length);
-      // Próbujemy dobrać brakujące z dowolnej puli, której jeszcze nie zużyliśmy w całości
-      let extra = shuffle(filtered.filter(q => ![...partImg, ...partText].includes(q))).slice(0, remaining);
-      questions = shuffle([...partImg, ...partText, ...extra]);
-  } else {
-      questions = shuffle([...partImg, ...partText]);
-  }
-  // --- KONIEC PODMIANY ---
   i = 0;
   score = 0;
 
   load();
   document.getElementById("audienceBox").style.display = "none";
-document.getElementById("audienceBox").innerHTML = "";
+  document.getElementById("audienceBox").innerHTML = "";
 }
 /////////////////////// LOAD ///////////////////////
 document.getElementById("reportBtn").style.display = "block";
@@ -213,20 +258,72 @@ alert(exam
 : "Wynik: "+score);
 }
 
-/////////////////////// RANKING nie działa dałem dla zasady///////////////////////
-function save(s){
-let r=JSON.parse(localStorage.getItem("rank"))||[];
-r.push(s);
-r.sort((a,b)=>b-a);
-localStorage.setItem("rank",JSON.stringify(r.slice(0,10)));
+/////////////////////// RANKING ///////////////////////
+// --- ZAPISYWANIE WYNIKU ---
+function save(s) {
+    let r = JSON.parse(localStorage.getItem("rank")) || [];
+    let cat = document.getElementById("category").value || "Ogólny";
+    
+    // Zbieramy informację o użytych kołach
+    let usedHelps = [];
+    if (typeof audienceUsed !== 'undefined' && audienceUsed) usedHelps.push("Publiczność");
+    if (typeof fiftyUsed !== 'undefined' && fiftyUsed) usedHelps.push("50/50");
+
+    let entry = {
+        score: s,
+        total: questions.length,
+        percent: Math.round((s / questions.length) * 100),
+        date: new Date().toLocaleString('pl-PL', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }),
+        category: cat,
+        helps: usedHelps.length > 0 ? usedHelps.join(", ") : "Brak"
+    };
+
+    r.push(entry);
+    r.sort((a, b) => b.percent - a.percent); // Sortowanie od najlepszych (%)
+    localStorage.setItem("rank", JSON.stringify(r.slice(0, 10))); // Tylko top 10
 }
 
-function showRank(){
-let r=JSON.parse(localStorage.getItem("rank"))||[];
-alert("TOP 10:\n"+r.join("\n"));
+// --- WYŚWIETLANIE RANKINGU ---
+function showRank() {
+    let r = JSON.parse(localStorage.getItem("rank")) || [];
+    const container = document.getElementById("rankListContainer");
+    const modal = document.getElementById("rankModal");
+    
+    container.innerHTML = "";
+    
+    if (r.length === 0) {
+        container.innerHTML = "<p style='color:#7f8c8d; padding:20px;'>Brak zapisanych wyników. Czas na Twój pierwszy test!</p>";
+    } else {
+        r.forEach((res, index) => {
+            let trophy = index === 0 ? "🥇 " : index === 1 ? "🥈 " : index === 2 ? "🥉 " : "🔹 ";
+            
+            const div = document.createElement("div");
+            div.className = "rank-entry";
+            div.innerHTML = `
+                <span class="rank-date">${res.date}</span>
+                <div style="font-weight:bold; font-size:16px;">
+                    ${trophy} ${index + 1}. ${res.percent}% <span style="font-weight:normal; color:#7f8c8d; font-size:13px;">(${res.score}/${res.total})</span>
+                </div>
+                <div style="font-size:12px; margin-top:5px; color:#34495e;">
+                    📁 Kat: <strong>${res.category}</strong>
+                </div>
+                <span class="help-badge">🆘 Koła: ${res.helps}</span>
+            `;
+            container.appendChild(div);
+        });
+    }
+    
+    modal.style.display = "flex";
 }
 
-/////////////////////// THEME ///////////////////////
+// --- CZYSZCZENIE RANKINGU ---
+function clearRank() {
+    if (confirm("Czy na pewno chcesz wyczyścić historię wyników?")) {
+        localStorage.removeItem("rank");
+        showRank(); // Odśwież widok
+    }
+}
+//////////////////// THEME ///////////////////////
 function toggleTheme(){
 document.body.classList.toggle("dark");
 }
@@ -393,7 +490,8 @@ document.addEventListener("DOMContentLoaded", () => {
       slider.value = numInput.value; 
     };
   }
-});
+})
+//////////////////////////////////////category list //////////////////////////////////////////////////////////////////////
 function toggleCategoryList() {
   const panel = document.getElementById("categoryPanel");
   const container = document.getElementById("categoryListContainer");
@@ -402,30 +500,94 @@ function toggleCategoryList() {
   if (!isOpen) {
     container.innerHTML = "";
     
-    // 1. Liczenie pytań w kategoriach
+    // 1. Liczenie pytań w bazie
     const counts = {};
-    database.forEach(q => {
-      counts[q.category] = (counts[q.category] || 0) + 1;
-    });
-
-    // 2. Pobranie nazw kategorii i posortowanie ich alfabetycznie
-    // Używamy localeCompare, aby poprawnie sortować polskie znaki (Ą, Ć, Ę itp.)
+    database.forEach(q => { counts[q.category] = (counts[q.category] || 0) + 1; });
     const sortedCategories = Object.keys(counts).sort((a, b) => a.localeCompare(b));
 
-    // 3. Budowanie listy w nowej kolejności
-    sortedCategories.forEach(cat => {
-      const item = document.createElement("div");
-      item.className = "category-item";
-      item.innerHTML = `<span>${cat}</span> <span class="q-badge">${counts[cat]} pytań</span>`;
+    // 2. Kontener na listę kategorii (scrollowalny)
+    const listWrapper = document.createElement("div");
+    listWrapper.style = "max-height: 250px; overflow-y: auto; margin-bottom: 15px; scrollbar-width: none;";
+    listWrapper.id = "listWrapper";
+    container.appendChild(listWrapper);
+
+    // 3. Funkcja renderująca listę (z obsługą aliasów i słownika pomocy "ie")
+    const renderList = (filterText = "") => {
+      listWrapper.innerHTML = "";
+      const search = normalize(filterText).toLowerCase();
+      const uiSearchHints = { "ie": ["cctv", "sat", "instalacje elektryczne", "elektryk", "monitoring", "anteny"] };
+
+      sortedCategories.forEach(cat => {
+        const catNorm = normalize(cat).toLowerCase();
+        const aliases = (categoryMap[cat] || []).map(a => normalize(a).toLowerCase());
+        
+        let isMatch = catNorm.includes(search) || aliases.some(a => a.includes(search));
+        if (!isMatch && search !== "") {
+          for (let key in uiSearchHints) {
+            if (search === key && uiSearchHints[key].some(h => catNorm.includes(normalize(h)))) isMatch = true;
+          }
+        }
+
+        if (isMatch || search === "") {
+          const item = document.createElement("label");
+          item.className = "category-item";
+          item.innerHTML = `
+            <input type="checkbox" class="cat-checkbox" value="${cat}" style="margin-right: 12px; width: 18px; height: 18px;">
+            <span style="flex-grow: 1;">${cat}</span> 
+            <span class="q-badge">${counts[cat]}</span>
+          `;
+          listWrapper.appendChild(item);
+        }
+      });
+    };
+
+    // 4. Dynamiczny przycisk ZASTOSUJ MIX (tylko w JS)
+    const mixBtn = document.createElement("button");
+    mixBtn.innerHTML = "ZASTOSUJ MIX";
+    mixBtn.style = "background: #27ae60; color: white; width: 100%; border: 2px solid #000; cursor: pointer; padding: 10px; font-weight: bold; margin-bottom: 5px; font-family: Garamond, serif;";
+    mixBtn.onclick = () => {
+      const selected = Array.from(document.querySelectorAll('.cat-checkbox:checked')).map(cb => cb.value);
+      if (selected.length === 0) return alert("Zaznacz kategorie!");
+      document.getElementById("category").value = selected.join(", ");
+      const total = selected.reduce((sum, cat) => sum + (counts[cat] || 0), 0);
+      document.getElementById("count").value = total;
+      toggleCategoryList(); // Zamknij panel
+    };
+    container.appendChild(mixBtn);
+
+    // 5. OBSŁUGA LUPY I ANIMACJI NAPISU (Kropki zamiast białego pola)
+    const searchIcon = document.getElementById("searchIcon");
+    const searchInput = document.getElementById("catSearch");
+    const panelTitle = document.getElementById("panelTitle");
+
+    searchIcon.onclick = () => {
+      const isHidden = searchInput.style.width === "0px" || searchInput.style.width === "0" || searchInput.style.width === "";
       
-      item.onclick = () => {
-        document.getElementById("category").value = cat;
-        document.getElementById("count").value = counts[cat];
-        panel.style.display = "none";
-        document.body.classList.remove("settings-open-bg");
-      };
-      container.appendChild(item);
-    });
+      if (isHidden) {
+        // Efekt: Napis się kurczy i przesuwa, pojawia się kropkowane pole
+        panelTitle.style.fontSize = "14px";
+        panelTitle.style.transform = "translateX(-10px)";
+        
+        searchInput.style.width = "130px";
+        searchInput.style.padding = "2px 5px";
+        searchInput.style.opacity = "1";
+        searchInput.style.borderBottom = "2px dotted #2c3e50"; // Twoje wymarzone kropki
+        searchInput.focus();
+      } else {
+        // Powrót do normy
+        panelTitle.style.fontSize = "18px";
+        panelTitle.style.transform = "translateX(0)";
+        
+        searchInput.style.width = "0";
+        searchInput.style.padding = "0";
+        searchInput.style.opacity = "0";
+        searchInput.style.borderBottom = "none";
+        renderList(""); // Resetuj widok kategorii
+      }
+    };
+
+    searchInput.oninput = (e) => renderList(e.target.value);
+    renderList(); // Pierwsze ładowanie listy
 
     panel.style.display = "block";
     document.body.classList.add("settings-open-bg");
@@ -434,6 +596,7 @@ function toggleCategoryList() {
     document.body.classList.remove("settings-open-bg");
   }
 }
+
 function reportQuestion() {
   const currentQ = questions[i].question;
   const baseUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdiFERRik1ruie77zsyXoIP08XVB0T5A__tsY6OHUvVsLZgew/viewform?usp=dialog";
@@ -457,7 +620,7 @@ function generatePDFs() {
     if (numGroups > 17) numGroups = 17;
 
     // 2. Filtrowanie bazy na typy (zamknięte vs otwarte)
-    let catFiltered = database.filter(q => q.category.toLowerCase().includes(cat.toLowerCase()));
+    let catFiltered = database.filter(q => matchCategory(cat, q.category));
     let openPool = catFiltered.filter(q => !q.answers || q.answers.length === 0);
     let closedPool = catFiltered.filter(q => q.answers && q.answers.length > 0);
 
@@ -526,28 +689,70 @@ function generatePDFs() {
 
     for (let set = 1; set <= numGroups; set++) {
         
-        // Funkcja wyboru pytań z uwzględnieniem proporcji obrazków
-        const pickQuestions = (pool, target) => {
-            let withImg = pool.filter(q => q.image && q.image !== "");
-            let noImg = pool.filter(q => !q.image || q.image === "");
-            
-            let targetImgCount = Math.round(target * (imgRatio / 100));
-            let selectedWithImg = shuffle([...withImg]).slice(0, targetImgCount);
-            let neededMore = target - selectedWithImg.length;
-            let selectedNoImg = shuffle([...noImg]).slice(0, neededMore);
-            
-            let result = [...selectedWithImg, ...selectedNoImg];
-            if (result.length < target) {
-                let remaining = pool.filter(q => !result.includes(q));
-                result = [...result, ...shuffle(remaining).slice(0, target - result.length)];
-            }
-            return result;
-        };
+               // --- START SPRAWIEDLIWEJ PODMIANY PDF ---
+        const catInput = document.getElementById("category").value;
+        const selectedCats = catInput.split(",").map(s => s.trim()).filter(s => s !== "");
+        
+        let finalClosed = [];
+        let finalOpen = [];
 
-        let selOpen = pickQuestions(openPool, openTarget);
-        let selClosed = pickQuestions(closedPool, closedTarget);
-        let questions = shuffle([...selOpen, ...selClosed]);
+        // Cele dla tej grupy na podstawie suwaka
+        let imgGoalTotal = Math.floor(closedTarget * (imgRatio / 100));
+        let textGoalTotal = closedTarget - imgGoalTotal;
+
+        // Porcje na każdą wybraną kategorię
+        let imgPerCat = Math.floor(imgGoalTotal / selectedCats.length) || 0;
+        let textPerCat = Math.floor(textGoalTotal / selectedCats.length) || 0;
+        let openPerCat = Math.floor(openTarget / selectedCats.length) || 0;
+
+        let remImg = [], remTxt = [], remOpen = [];
+
+        // Pobieranie sprawiedliwych porcji
+        selectedCats.forEach(catName => {
+            let pool = database.filter(q => matchCategory(catName, q.category));
+            
+            let cImg = shuffle(pool.filter(q => q.answers?.length > 0 && q.image));
+            let cTxt = shuffle(pool.filter(q => q.answers?.length > 0 && !q.image));
+            let oP   = shuffle(pool.filter(q => !q.answers || q.answers.length === 0));
+
+            finalClosed.push(...cImg.slice(0, imgPerCat), ...cTxt.slice(0, textPerCat));
+            finalOpen.push(...oP.slice(0, openPerCat));
+
+            // Resztki do późniejszego dopełnienia braków
+            remImg.push(...cImg.slice(imgPerCat));
+            remTxt.push(...cTxt.slice(textPerCat));
+            remOpen.push(...oP.slice(openPerCat));
+        });
+
+        // DOPEŁNIANIE (Ratunek dla małych kategorii i suwaka)
+        let currentImgs = finalClosed.filter(q => q.image).length;
+        if (currentImgs < imgGoalTotal) {
+            let diff = imgGoalTotal - currentImgs;
+            let extra = shuffle(remImg).slice(0, diff);
+            finalClosed.push(...extra);
+            remImg = remImg.filter(q => !extra.includes(q));
+        }
+        if (finalClosed.length < closedTarget) {
+            let diff = closedTarget - finalClosed.length;
+            let rest = [...remImg, ...remTxt];
+            finalClosed.push(...shuffle(rest).slice(0, diff));
+        }
+        if (finalOpen.length < openTarget) {
+            finalOpen.push(...shuffle(remOpen).slice(0, openTarget - finalOpen.length));
+        }
+
+        // Mieszanie całości i blokada kolejności odpowiedzi dla KLUCZA
+        let questions = shuffle([...finalOpen, ...finalClosed]);
+        questions.forEach(q => {
+            if (q.answers && q.answers.length > 0) {
+                // To gwarantuje, że tabela ABCD na górze nie będzie kłamać
+                q.savedOrder = shuffle([...q.answers]);
+            }
+        });
+
         let groupID = String.fromCharCode(64 + set);
+        // --- KONIEC SPRAWIEDLIWEJ PODMIANY PDF ---
+
 
         // Funkcja generująca tabelę poziomą ABCD
         const createTable = (qs, isKey) => {
@@ -573,23 +778,35 @@ function generatePDFs() {
             return `<table class="ans-sheet">${rowNr}</tr>${rows.A}</tr>${rows.B}</tr>${rows.C}</tr>${rows.D}</tr></table>`;
         };
 
+                // Obliczamy sumę punktów dynamicznie
+        const totalPoints = questions.reduce((acc, q) => {
+            if (!q.answers || q.answers.length === 0) return acc + 3; // Otwarte: 3 pkt
+            return acc + (q.question.length > 100 ? 2 : 1); // Zamknięte: 1 lub 2 pkt
+        }, 0);
+
         // --- STRONA UCZNIA ---
         html += `<div class="page">
             <div class="header-content">
                 <div class="user-data">
-                    <h1 style="margin:0; font-size:22px;">Sprawdzian: ${cat}</h1>
-                    <p><strong>GRUPA ${groupID}</strong> | Uczeń: ________________________________ Klasa: _______NR:____</p>
+                    <span style="float:right; border: 2px solid black; padding: 5px 15px; font-weight: bold;">PUNKTY: ........ / ${totalPoints}</span>
+                    <h1 style="margin:0; font-size:22px;">Sprawdzian: ${catInput}</h1>
+                    <p><strong>GRUPA ${groupID}</strong> | Uczeń: ________________________________ Klasa: _______ NR:____</p>
                 </div>
                 ${createTable(questions, false)}
             </div>
-            <hr style="border: 1px solid black; margin: 15px 0;">
+            <hr style="border: 1px solid black; margin: 10px 0;">
             ${questions.map((q, idx) => {
-                let res = `<div class="question"><strong>${idx + 1}. ${q.question}</strong>`;
+                const isOpen = !q.answers || q.answers.length === 0;
+                const pts = isOpen ? 3 : (q.question.length > 100 ? 2 : 1);
+                
+                let res = `<div class="question">
+                    <div style="float:right; font-size:10px; color:#555;">[ ........ / ${pts} pkt ]</div>
+                    <strong>${idx + 1}. ${q.question}</strong>`;
+                
                 if (q.image) res += `<img src="${q.image}" class="q-img">`;
                 
-                if (q.answers && q.answers.length > 0) {
-                    let ans = shuffle([...q.answers]);
-                    q.savedOrder = ans;
+                if (!isOpen) {
+                    let ans = q.savedOrder;
                     res += `<table class="options">
                         <tr><td>A) [ ] ${ans[0]}</td><td>B) [ ] ${ans[1]}</td></tr>
                         <tr><td>C) [ ] ${ans[2]}</td><td>D) [ ] ${ans[3] || "---"}</td></tr>
@@ -602,17 +819,21 @@ function generatePDFs() {
         </div>`;
 
         // --- STRONA KLUCZA ---
-        html += `<div class="page" style="background:#fcfcfc;">
+        html += `<div class="page" style="background:#f9f9f9;">
             <div class="header-content">
                 <h2>KLUCZ ODPOWIEDZI - GRUPA ${groupID}</h2>
+                <p>Suma punktów do zdobycia: <b>${totalPoints}</b></p>
                 ${createTable(questions, true)}
             </div>
             <hr style="border: 1px solid black; margin: 15px 0;">
-            <div style="font-size: 11px;">
-                ${questions.map((q, idx) => `<p style="margin:3px 0;"><strong>${idx+1}:</strong> ${q.correct}</p>`).join('')}
+            <div style="font-size: 11px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5px;">
+                ${questions.map((q, idx) => {
+                    const pts = (!q.answers || q.answers.length === 0) ? 3 : (q.question.length > 100 ? 2 : 1);
+                    return `<div><strong>${idx+1}:</strong> ${q.correct || 'OTWARTE'} (${pts}p)</div>`;
+                }).join('')}
             </div>
         </div>`;
-    }
+    } // koniec pętli for
 
     html += `</body></html>`;
     printWindow.document.write(html);
