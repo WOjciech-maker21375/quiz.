@@ -746,18 +746,6 @@ correct:"Ręcznym przypisaniu stałego adresu na stałe do urządzenia."
 
 {
 category:"CCTV",
-question:"Kabel 'trytka' (opaska zaciskowa) w montażu CCTV służy do:",
-answers:[
-"Przesyłania sygnału.",
-"Porządkowania wiązek kabli i ich mocowania.",
-"Izolowania przewodów.",
-"Zasilania rejestratora."
-],
-correct:"Porządkowania wiązek kabli i ich mocowania."
-},
-
-{
-category:"CCTV",
 question:"Który z wymienionych standardów kompresji jest najstarszy?",
 answers:[
 "H.265.",
@@ -7394,7 +7382,7 @@ correct:"Kamery małej rozdzielczości."
 {
 category:"CCTV",
 question:"Standard VGA (640 x 480) plasuje się pod względem liczby pikseli:",
-answers:["Powyżej D1.","Poniżej D1.","Powyżej SXGA.","Pomiżej CIF."],
+answers:["Powyżej D1.","Poniżej D1.","Powyżej SXGA.","Poniżej CIF."],
 correct:"Poniżej D1."
 },
 
