@@ -177,6 +177,7 @@ function start(){
 /////////////////////// LOAD ///////////////////////
 document.getElementById("reportBtn").style.display = "block";
 function load(){
+  hideNextButton();
   clearZoom(); 
   // reset wykresu publiczności
   let box = document.getElementById("audienceBox");
@@ -221,33 +222,52 @@ function load(){
 
 /////////////////////// CHECK ///////////////////////
 function check(btn, ans){
-if(lock) return;
-lock=true;
+  if(lock) return;
+  lock=true;
 
-let correct = questions[i].correct;
+  let correct = questions[i].correct;
 
-buttons.forEach(b=>{
-if(b.textContent === correct){
-b.classList.add("correct");
+  buttons.forEach(b=>{
+    if(b.textContent === correct){
+      b.classList.add("correct");
+    }
+  });
+
+  if(ans !== correct){
+    btn.classList.add("incorrect");
+  } else {
+    score++;
+  }
+  showNextButton();
 }
-});
-
-if(ans !== correct){
-btn.classList.add("incorrect");
-} else {
-score++;
-}
-
-setTimeout(next,800);
-}
-
 /////////////////////// NEXT ///////////////////////
 function next(){
 i++;
 if(i<questions.length) load();
 else end();
 }
+function showNextButton() {
+  let nextBtn = document.getElementById("manualNextBtn");
+  if (!nextBtn) {
+    nextBtn = document.createElement("button");
+    nextBtn.id = "manualNextBtn";
+    nextBtn.innerHTML = "Dalej ➔";
+    
+    // Zmieniony styl: usunięto display:block i marginesy auto, dodano margines boczny
+    nextBtn.style = "background: #364c63; color: white; padding: 10px 20px; font-size: 16px; border: 2px solid #000; cursor: pointer; font-family: Garamond, serif; margin-left: 10px;";
+    
+    nextBtn.onclick = next;
 
+    // KLUCZOWA ZMIANA: Dodajemy do kontenera przycisków, a nie do całego .container
+    document.getElementById("buttons-container").appendChild(nextBtn);
+  }
+  nextBtn.style.display = "inline-block"; // inline-block pozwoli mu stać w linii
+}
+
+function hideNextButton() {
+  let nextBtn = document.getElementById("manualNextBtn");
+  if (nextBtn) nextBtn.style.display = "none";
+}
 /////////////////////// END ///////////////////////
 function end(){
 let p=score/questions.length;
@@ -672,7 +692,7 @@ function generatePDFs() {
         .black-cell { background-color: black !important; color: white !important; -webkit-print-color-adjust: exact; }
 
         /* ZDJĘCIA (+39%) */
-          .q-img { 
+        .q-img { 
     display: block; 
     max-width: 222px; 
     max-height: 180px; 
@@ -681,7 +701,7 @@ function generatePDFs() {
     /* Twoje nowe dodatki wyostrzające: */
     image-rendering: -webkit-optimize-contrast; 
     filter: contrast(1.1); 
-    
+}
         /* PRZERYWANA LINIA MIĘDZY PYTANIAMI */
         .question { 
       margin-bottom: 30px; 
@@ -878,7 +898,6 @@ function shuffle(array) {
     }
     return array;
 }
-////////////////////////////////////////////////////////sterowanie klawiszami /////////////////////////////////////////////////////////////////////////
 window.addEventListener('keydown', (event) => {
     // Sprawdzamy, czy okno ustawień lub kategorii jest zamknięte (żeby nie klikać w tle)
     const settingsOpen = document.body.classList.contains("settings-open-bg");
@@ -904,4 +923,3 @@ window.addEventListener('keydown', (event) => {
         location.reload();
     }
 });
-
