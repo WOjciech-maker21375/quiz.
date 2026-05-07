@@ -9976,20 +9976,6 @@ image:""
 
 {
 category:"CCTV",
-question:"W jaki sposób działa funkcja automatycznej przysłony (Auto Iris) i przed czym chroni przetwornik?",
-correct:"Elektronika kamery automatycznie steruje otwarciem przysłony w zależności od natężenia światła. Chroni to przetwornik przed prześwietleniem przy silnym słońcu i pozwala na pracę w zmiennych warunkach oświetleniowych.",
-image:""
-},
-
-{
-category:"CCTV",
-question:"Wyjaśnij działanie technologii P2P w kontekście zdalnego podglądu obrazu z kamer na telefonie.",
-correct:"Technologia P2P pozwala na nawiązanie bezpośredniego połączenia z rejestratorem przez serwer producenta (za pomocą kodu QR/SN), bez konieczności posiadania publicznego adresu IP i konfigurowania przekierowań na routerze.",
-image:""
-},
-
-{
-category:"CCTV",
 question:"Do czego służy funkcja balansu bieli (White Balance) w kamerze?",
 correct:"Służy do prawidłowego odwzorowania barw, tak aby białe obiekty były faktycznie białe, niezależnie od temperatury barwowej światła (np. słońce vs. świetlówki).",
 image:""
@@ -10128,6 +10114,26 @@ image:""
   correct: "(D) to obiektyw, a (B) to przetwornik. Ich odległość (E) decyduje o ostrości obrazu - przetwornik musi znajdować się w ognisku soczewki.",
 },
 
+{
+  category: "CCTV",
+  question: "Przeanalizuj  schemat. Nazwij elementy i je scharakteryzuj używaj oznaczeń zawartych na obrazie",
+  image: "img/CCTV/ogniskowa_schemat3.png",
+  correct: "A — odległość obserwowanego obiektu (lub sceny) od obiektywu Jest to dystans od układu optycznego do obserwowanej płaszczyzny po prawej. Wraz ze wzrostem A obiekt znajduje się dalej, a jego obraz na przetworniku staje się mniejszy.  B — przetwornik obrazu To element światłoczuły (np. CMOS albo CCD). Wysokość zaznaczona na rysunku jako h odpowiada aktywnemu wymiarowi sensora. To właśnie na nim powstaje obraz utworzony przez obiektyw.  C — kąt widzenia Kąt pomiędzy skrajnymi promieniami, które mogą zostać zarejestrowane przez przetwornik. Im większy C, tym szerszy fragment sceny jest widoczny.  D — obiektyw Zespół soczewek formujących obraz. Jego zadaniem jest skupienie promieni pochodzących z różnych punktów sceny na powierzchni przetwornika B.  E — ogniskowa Odległość od przetwornika do głównej płaszczyzny optycznej obiektywu (na rysunku oznaczona jako „Ogniskowa F”). To parametr silnie wpływający na pole widzenia:  krótsza ogniskowa → większy kąt widzenia,  dłuższa ogniskowa → węższy kąt widzenia i większe powiększenie.",
+},
+
+{
+  category: "CCTV",
+  question: "Przeanalizuj schemat. Nazwij elementy i je scharakteryzuj używając oznaczeń zawartych na obrazie",
+  image: "img/CCTV/ogniskowa_schemat2.png",
+  correct: "A — kąt widzenia. Kąt pomiędzy skrajnymi promieniami wychodzącymi z obiektywu. Określa szerokość obserwowanego pola. Im większa wartość A, tym większy obszar sceny obejmuje kamera. B — odległość obserwowanego obiektu. Jest to dystans od obiektywu do obserwowanej płaszczyzny po prawej stronie schematu. Wraz ze wzrostem B rośnie pole obserwacji, ale szczegółowość obiektu maleje. C — ogniskowa. Odległość pomiędzy przetwornikiem a główną płaszczyzną optyczną obiektywu. Parametr ten wpływa bezpośrednio na kąt widzenia. Krótsza ogniskowa daje szerszy obraz, natomiast dłuższa zawęża pole widzenia i zwiększa powiększenie. D — przetwornik obrazu. Element światłoczuły, na przykład CMOS lub CCD. Wysokość oznaczona jako h określa aktywny wymiar sensora. Na jego powierzchni powstaje obraz utworzony przez obiektyw. E — obiektyw. Zespół soczewek odpowiedzialny za skupianie promieni świetlnych i odwzorowanie obserwowanej sceny na powierzchni przetwornika."
+},
+
+{
+  category: "CCTV",
+  question: "Przeanalizuj schemat. Nazwij elementy i je scharakteryzuj używając oznaczeń zawartych na obrazie",
+  image: "img/CCTV/OGNISKOWA_SCHEMAT.png",
+  correct: "E — kąt widzenia. Kąt pomiędzy skrajnymi promieniami wychodzącymi z obiektywu. Określa szerokość obserwowanego pola. Im większa wartość E, tym większy obszar sceny obejmuje kamera. D — odległość obserwowanego obiektu. Jest to dystans od obiektywu do obserwowanej płaszczyzny po prawej stronie schematu. Wraz ze wzrostem D rośnie pole obserwacji, ale szczegółowość obiektu maleje. C — ogniskowa. Odległość pomiędzy przetwornikiem a główną płaszczyzną optyczną obiektywu. Parametr ten wpływa bezpośrednio na kąt widzenia. Krótsza ogniskowa daje szerszy obraz, natomiast dłuższa zawęża pole widzenia i zwiększa powiększenie. B — przetwornik obrazu. Element światłoczuły, na przykład CMOS lub CCD. Wysokość oznaczona jako h określa aktywny wymiar sensora. Na jego powierzchni powstaje obraz utworzony przez obiektyw. A — obiektyw. Zespół soczewek odpowiedzialny za skupianie promieni świetlnych i odwzorowanie obserwowanej sceny na powierzchni przetwornika."
+},
 
 {
   category: "CCTV",
