@@ -500,37 +500,37 @@ function toggleCategoryList() {
   if (!isOpen) {
     container.innerHTML = "";
     
-    // 1. Liczenie pytań w bazie
+    // 1. Liczenie i sortowanie kategorii
     const counts = {};
     database.forEach(q => { counts[q.category] = (counts[q.category] || 0) + 1; });
     const sortedCategories = Object.keys(counts).sort((a, b) => a.localeCompare(b));
 
-    // 2. Kontener na listę kategorii (scrollowalny)
+    // 2. Kontener na listę (z Twoimi stylami)
     const listWrapper = document.createElement("div");
     listWrapper.style = "max-height: 250px; overflow-y: auto; margin-bottom: 15px; scrollbar-width: none;";
     listWrapper.id = "listWrapper";
     container.appendChild(listWrapper);
 
-    // 3. Funkcja renderująca listę (z obsługą aliasów i słownika pomocy "ie")
+    // 3. Funkcja renderująca (sprawiedliwy widok)
     const renderList = (filterText = "") => {
       listWrapper.innerHTML = "";
       const search = normalize(filterText).toLowerCase();
-      const uiSearchHints = { "ie": ["cctv", "sat", "instalacje elektryczne", "elektryk", "monitoring", "anteny"] };
+      const uiHints = { "ie": ["cctv", "sat", "instalacje elektryczne", "elektryk", "monitoring", "anteny"] };
 
       sortedCategories.forEach(cat => {
         const catNorm = normalize(cat).toLowerCase();
         const aliases = (categoryMap[cat] || []).map(a => normalize(a).toLowerCase());
-        
         let isMatch = catNorm.includes(search) || aliases.some(a => a.includes(search));
+        
         if (!isMatch && search !== "") {
-          for (let key in uiSearchHints) {
-            if (search === key && uiSearchHints[key].some(h => catNorm.includes(normalize(h)))) isMatch = true;
+          for (let key in uiHints) {
+            if (search === key && uiHints[key].some(h => catNorm.includes(normalize(h)))) isMatch = true;
           }
         }
 
         if (isMatch || search === "") {
           const item = document.createElement("label");
-          item.className = "category-item";
+          item.className = "category-item"; // TWOJA KLASA Z CSS
           item.innerHTML = `
             <input type="checkbox" class="cat-checkbox" value="${cat}" style="margin-right: 12px; width: 18px; height: 18px;">
             <span style="flex-grow: 1;">${cat}</span> 
@@ -541,53 +541,62 @@ function toggleCategoryList() {
       });
     };
 
-    // 4. Dynamiczny przycisk ZASTOSUJ MIX (tylko w JS)
+    // 4. Przycisk MIX (Twoje kolory)
     const mixBtn = document.createElement("button");
     mixBtn.innerHTML = "ZASTOSUJ MIX";
-    mixBtn.style = "background: #27ae60; color: white; width: 100%; border: 2px solid #000; cursor: pointer; padding: 10px; font-weight: bold; margin-bottom: 5px; font-family: Garamond, serif;";
+    mixBtn.style = "background: #20864b; color: white; width: 100%; border: 2px solid #000; cursor: pointer; padding: 10px; font-weight: bold; margin-bottom: 5px; font-family: Garamond, serif;";
     mixBtn.onclick = () => {
       const selected = Array.from(document.querySelectorAll('.cat-checkbox:checked')).map(cb => cb.value);
       if (selected.length === 0) return alert("Zaznacz kategorie!");
       document.getElementById("category").value = selected.join(", ");
       const total = selected.reduce((sum, cat) => sum + (counts[cat] || 0), 0);
       document.getElementById("count").value = total;
-      toggleCategoryList(); // Zamknij panel
+      toggleCategoryList(); 
     };
     container.appendChild(mixBtn);
 
-    // 5. OBSŁUGA LUPY I ANIMACJI NAPISU (Kropki zamiast białego pola)
+    // 5. OBSŁUGA LUPY I DŁUGOPISU
+    const noteIcon = document.getElementById("noteIcon");
+    const noteInput = document.getElementById("pdfNote");
     const searchIcon = document.getElementById("searchIcon");
     const searchInput = document.getElementById("catSearch");
     const panelTitle = document.getElementById("panelTitle");
 
-    searchIcon.onclick = () => {
-      const isHidden = searchInput.style.width === "0px" || searchInput.style.width === "0" || searchInput.style.width === "";
-      
+    // Funkcja resetująca pola
+    const resetInputs = () => {
+      noteInput.style.width = "0px"; noteInput.style.opacity = "0";
+      searchInput.style.width = "0px"; searchInput.style.opacity = "0";
+      panelTitle.style.opacity = "1";
+    };
+
+    noteIcon.onclick = () => {
+      const isHidden = !noteInput.style.width || noteInput.style.width === "0px";
+      resetInputs();
       if (isHidden) {
-        // Efekt: Napis się kurczy i przesuwa, pojawia się kropkowane pole
-        panelTitle.style.fontSize = "14px";
-        panelTitle.style.transform = "translateX(-10px)";
-        
-        searchInput.style.width = "130px";
-        searchInput.style.padding = "2px 5px";
+        noteInput.style.width = "180px";
+        noteInput.style.opacity = "1";
+        noteInput.style.padding = "2px 5px";
+        panelTitle.style.opacity = "0.3";
+        noteInput.focus();
+      }
+    };
+
+    searchIcon.onclick = () => {
+      const isHidden = !searchInput.style.width || searchInput.style.width === "0px";
+      resetInputs();
+      if (isHidden) {
+        searchInput.style.width = "180px";
         searchInput.style.opacity = "1";
-        searchInput.style.borderBottom = "2px dotted #2c3e50"; // Twoje wymarzone kropki
+        searchInput.style.padding = "2px 5px";
+        panelTitle.style.opacity = "0.3";
         searchInput.focus();
       } else {
-        // Powrót do normy
-        panelTitle.style.fontSize = "18px";
-        panelTitle.style.transform = "translateX(0)";
-        
-        searchInput.style.width = "0";
-        searchInput.style.padding = "0";
-        searchInput.style.opacity = "0";
-        searchInput.style.borderBottom = "none";
-        renderList(""); // Resetuj widok kategorii
+        renderList(""); // Resetuj widok po zamknięciu
       }
     };
 
     searchInput.oninput = (e) => renderList(e.target.value);
-    renderList(); // Pierwsze ładowanie listy
+    renderList(); // Start listy
 
     panel.style.display = "block";
     document.body.classList.add("settings-open-bg");
@@ -596,6 +605,8 @@ function toggleCategoryList() {
     document.body.classList.remove("settings-open-bg");
   }
 }
+
+
 
 function reportQuestion() {
   const currentQ = questions[i].question;
@@ -616,6 +627,7 @@ function generatePDFs() {
     const closedTarget = totalTarget - openTarget;
     const imgRatio = parseInt(document.getElementById("imgRatio").value) || 50;
     let numGroups = parseInt(document.getElementById("pdfGroups")?.value) || 1;
+    const instruction = document.getElementById("pdfNote").value;  
 
     if (numGroups > 17) numGroups = 17;
 
@@ -778,7 +790,7 @@ function generatePDFs() {
             return `<table class="ans-sheet">${rowNr}</tr>${rows.A}</tr>${rows.B}</tr>${rows.C}</tr>${rows.D}</tr></table>`;
         };
 
-                // Obliczamy sumę punktów dynamicznie
+       // Obliczamy sumę punktów dynamicznie
         const totalPoints = questions.reduce((acc, q) => {
             if (!q.answers || q.answers.length === 0) return acc + 3; // Otwarte: 3 pkt
             return acc + (q.question.length > 100 ? 2 : 1); // Zamknięte: 1 lub 2 pkt
@@ -794,7 +806,15 @@ function generatePDFs() {
                 </div>
                 ${createTable(questions, false)}
             </div>
-            <hr style="border: 1px solid black; margin: 10px 0;">
+
+            <!-- INSTRUKCJA (Pobrana z pola pdfNote / długopisu ✍️) -->
+            ${instruction && instruction.trim() !== "" ? `
+                <div style="border-left: 5px solid black; background: #f4f4f4; padding: 10px; margin: 10px 0; font-size: 12px; font-style: italic;">
+                    <strong>INSTRUKCJA:</strong> ${instruction}
+                </div>
+            ` : ""}
+
+            <hr style="border: 1px solid black; margin: 15px 0;">
             ${questions.map((q, idx) => {
                 const isOpen = !q.answers || q.answers.length === 0;
                 const pts = isOpen ? 3 : (q.question.length > 100 ? 2 : 1);
