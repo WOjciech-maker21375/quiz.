@@ -252,17 +252,19 @@ function showNextButton() {
     nextBtn = document.createElement("button");
     nextBtn.id = "manualNextBtn";
     nextBtn.innerHTML = "Dalej ➔";
-    
-    // Zmieniony styl: usunięto display:block i marginesy auto, dodano margines boczny
-    nextBtn.style = "background: #364c63; color: white; padding: 10px 20px; font-size: 16px; border: 2px solid #000; cursor: pointer; font-family: Garamond, serif; margin-left: 10px;";
-    
+    nextBtn.style = "background: #2c3e50; color: white; padding: 10px 20px; font-size: 16px; border: 2px solid #000; cursor: pointer; font-family: Garamond, serif; margin-left: 10px; display: none;";
     nextBtn.onclick = next;
-
-    // KLUCZOWA ZMIANA: Dodajemy do kontenera przycisków, a nie do całego .container
     document.getElementById("buttons-container").appendChild(nextBtn);
   }
-  nextBtn.style.display = "inline-block"; // inline-block pozwoli mu stać w linii
+  
+  // Reset i start animacji
+  nextBtn.classList.remove("animacja-dalej");
+  void nextBtn.offsetWidth; // Wymuszenie restartu
+  nextBtn.classList.add("animacja-dalej");
+  
+  nextBtn.style.display = "inline-block";
 }
+
 
 function hideNextButton() {
   let nextBtn = document.getElementById("manualNextBtn");
