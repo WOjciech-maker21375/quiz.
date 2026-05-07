@@ -1,6 +1,7 @@
 document.getElementById("imgRatio").addEventListener("input", function() {
     document.getElementById("ratioVal").textContent = this.value + "%";
 });
+
 /////////////////////// BAZA ///////////////////////
 const database = [
 ...fizyka,
@@ -674,12 +675,13 @@ function generatePDFs() {
         .q-img { display: block; max-width: 222px; max-height: 180px; margin: 10px 0; border: 1px solid #ccc; }
         /* PRZERYWANA LINIA MIĘDZY PYTANIAMI */
         .question { 
-            margin-bottom: 20px; 
-            page-break-inside: avoid; 
-            border-top: 2px dashed #0f186094 !important;  //<----------zmiana koloru linni przerywanej //////////
-            padding-top: 15px; 
-            clear: both; 
-        }
+      margin-bottom: 30px; 
+     page-break-inside: avoid; 
+     border-top: 2px dashed #0f186094 !important;  /* zmiana koloru linni przerywanej */
+      padding-top: 25px; 
+      clear: both; 
+    }
+
 
         .options { width: 100%; margin-top: 5px; }
         .options td { width: 50%; padding: 2px 0; font-size: 12px; vertical-align: top; }
