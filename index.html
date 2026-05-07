@@ -458,35 +458,46 @@ input[type=range]::-moz-range-thumb {
 
 <!-- NOWY PANEL KATEGORII -->
 <div id="categoryPanel" class="gothic-panel">
-  <!-- Nagłówek z napisem i lupą -->
-  <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 5px; min-height: 40px;">
-      <h3 id="panelTitle" style="margin: 0; font-size: 18px; transition: 0.4s ease; white-space: nowrap;">Dostępne Kategorie</h3>
+  <!-- 1. TYTUŁ (Na samej górze, wyśrodkowany) -->
+  <h3 id="panelTitle" style="margin: 0; padding-top: 5px; font-size: 20px; transition: 0.3s; font-family: Garamond, serif; text-align: center;">
+    Dostępne Kategorie
+  </h3>
+
+  <!-- 2. PASEK NARZĘDZI (Długopis i Lupa) -->
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 5px 10px; min-height: 40px; margin-top: 5px; position: relative;">
       
-      <div style="display: flex; align-items: center; flex-grow: 1; justify-content: flex-end;">
-          <input type="text" id="catSearch" placeholder="Szukaj..." 
-                 style="width: 0; padding: 0; border: none; border-bottom: 2px dotted #2c3e50; transition: all 0.4s ease; opacity: 0; outline: none; background: transparent; font-family: Arial; font-size: 14px; margin-right: 5px;">
-          <span id="searchIcon" style="cursor: pointer; font-size: 20px;">🔍</span>
+      <!-- LEWA: INSTRUKCJA -->
+      <div id="noteWrapper" style="display: flex; align-items: center; flex: 1;">
+          <span id="noteIcon" style="cursor: pointer; font-size: 20px; padding: 5px; z-index: 5;">✍️</span>
+          <input type="text" id="pdfNote" placeholder="Instrukcja dla uczniów..." 
+                 style="width: 0; padding: 0; border: none; border-bottom: 2px dotted #2c3e50; transition: all 0.4s ease; opacity: 0; outline: none; background: transparent; font-family: Arial; font-size: 13px; margin-left: 5px;">
+      </div>
+      
+      <!-- PRAWA: SZUKANIE -->
+      <div id="searchWrapper" style="display: flex; align-items: center; flex: 1; justify-content: flex-end;">
+          <input type="text" id="catSearch" placeholder="Szukaj kategorii..." 
+                 style="width: 0; padding: 0; border: none; border-bottom: 2px dotted #2c3e50; transition: all 0.4s ease; opacity: 0; outline: none; background: transparent; font-family: Arial; font-size: 13px; margin-right: 5px;">
+          <span id="searchIcon" style="cursor: pointer; font-size: 20px; padding: 5px; z-index: 5;">🔍</span>
       </div>
   </div>
 
   <hr style="border: 1px solid #2c3e50; margin: 5px 0 10px 0;">
 
-  <div id="categoryListContainer">
-    <!-- Kategorie i przycisk Mix z JS -->
-  </div>
+  <!-- KONTENER NA LISTĘ -->
+  <div id="categoryListContainer"></div>
 
-  <!-- TWOJE PRZYCISKI DOLNE BEZ ZMIAN -->
+  <!-- PRZYCISKI DOLNE -->
   <button onclick="toggleCategoryList()" style="background: #2c3e50; color: #ebf5ff; width: 100%; border: 2px solid #000; cursor: pointer; padding: 10px; margin-top: 10px;">Zamknij</button>
+  
   <button onclick="generatePDFs()" style="background: #146335; color: #fbfffd; width: 100%; margin-top: 10px; border: 2px solid #000; cursor: pointer; padding: 10px; font-family: 'Palatino Linotype', serif; font-weight: bold;">
     📄 GENERUJ ARKUSZE DO DRUKU 
   </button>
-  <div style="margin-top:10px;">
+  
+  <div style="margin-top:10px; font-size: 13px; font-family: Palatino Linotype, serif;">
       Ile pytań otwartych: <input type="number" id="openCount" value="2" min="0" style="width: 40px;">
       Grupy: <input type="number" id="pdfGroups" value="2" min="1" max="17" style="width: 40px;">
   </div>
 </div>
-
-
   <input id="category" placeholder="IE / elektronika / fizyka / CCTV">
   <input id="count" type="number" value="10">
   <br>
