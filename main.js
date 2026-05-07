@@ -878,3 +878,30 @@ function shuffle(array) {
     }
     return array;
 }
+////////////////////////////////////////////////////////sterowanie klawiszami /////////////////////////////////////////////////////////////////////////
+window.addEventListener('keydown', (event) => {
+    // Sprawdzamy, czy okno ustawień lub kategorii jest zamknięte (żeby nie klikać w tle)
+    const settingsOpen = document.body.classList.contains("settings-open-bg");
+    if (settingsOpen || lock) return;
+
+    // Mapujemy klawisze 1, 2, 3, 4 na indeksy przycisków 0, 1, 2, 3
+    const keyMap = {
+        "1": 0,
+        "2": 1,
+        "3": 2,
+        "4": 3
+    };
+
+    const index = keyMap[event.key];
+
+    // Jeśli naciśnięto klawisz od 1 do 4 i taki przycisk istnieje
+    if (index !== undefined && buttons[index]) {
+        buttons[index].click(); // Wywołujemy kliknięcie przycisku
+    }
+
+    // Opcjonalnie: Spacja przechodzi do następnego pytania, jeśli wynik jest wyświetlony
+    if (event.code === "Space" && document.getElementById("q").textContent.includes("Wynik")) {
+        location.reload();
+    }
+});
+
