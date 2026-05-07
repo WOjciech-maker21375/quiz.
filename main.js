@@ -672,7 +672,16 @@ function generatePDFs() {
         .black-cell { background-color: black !important; color: white !important; -webkit-print-color-adjust: exact; }
 
         /* ZDJĘCIA (+39%) */
-        .q-img { display: block; max-width: 222px; max-height: 180px; margin: 10px 0; border: 1px solid #ccc; }
+          .q-img { 
+    display: block; 
+    max-width: 222px; 
+    max-height: 180px; 
+    margin: 10px 0; 
+    border: 1px solid #ccc; 
+    /* Twoje nowe dodatki wyostrzające: */
+    image-rendering: -webkit-optimize-contrast; 
+    filter: contrast(1.1); 
+    
         /* PRZERYWANA LINIA MIĘDZY PYTANIAMI */
         .question { 
       margin-bottom: 30px; 
