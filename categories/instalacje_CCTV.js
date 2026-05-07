@@ -6234,18 +6234,6 @@ correct:"Zmienna prędkość przesyłu danych zależna od dynamiki sceny."
 
 {
 category:"CCTV",
-question:"Maksymalna szerokość pasma (Throughput) switcha 24-portowego 10/100 Mbps z 2 portami Gigabit wynosi w teorii:",
-answers:[
-"100 Mbps.",
-"1000 Mbps.",
-"4.4 Gbps (Full Duplex).",
-"24 Gbps."
-],
-correct:"4.4 Gbps (Full Duplex)."
-},
-
-{
-category:"CCTV",
 question:"Funkcja 'Auto-Focus' w kamerach PTZ działa poprzez:",
 answers:[
 "Analizę kontrastu krawędzi na obrazie przez procesor DSP.",
