@@ -1429,7 +1429,7 @@ correct:"przepływ ładunków"
 
 {
 category:"fizyka",
-question:"Jednostka ładunku:",
+question:"Jednostka ładunku elektrycznego:",
 answers:[
 "kulomb",
 "amper",
@@ -2119,9 +2119,9 @@ answers:[
 "16 J",
 "200 J",
 "160 J",
-"20 J"
+"40 J"
 ],
-correct:"160 J"
+correct:"40 J"
 },
 
 {
@@ -2866,5 +2866,801 @@ correct:"Amper"
 "rozpada się"
 ],
 "correct":"skraca się w kierunku ruchu"
+},
+
+
+{
+    "category": "fizyka",
+    "question": "Elektron porusza się w próżni w obszarze, w którym natężenie pola elektrycznego E i indukcja pola magnetycznego B są do siebie prostopadłe. Prędkość elektronu v jest prostopadła do obu pól. Jeśli siła Lorentza i siła elektryczna równoważą się, to prędkość elektronu wynosi:",
+    "answers": [
+      "E / B",
+      "B / E",
+      "E * B",
+      "e * E / B"
+    ],
+    "correct": "E / B"
+},
+
+{
+    "category": "fizyka",
+    "question": "W obwodzie prądu zmiennego szeregowo połączono opornik R, cewkę L i kondensator C. Układ znajduje się w rezonansie napięć. Jeśli częstotliwość prądu wzrośnie dwukrotnie, to zawada (impedancja) obwodu:",
+    "answers": [
+      "wzrośnie",
+      "zmaleje",
+      "nie zmieni się",
+      "spadnie do zera"
+    ],
+    "correct": "wzrośnie"
+},
+
+{
+    "category": "fizyka",
+    "question": "Na metalową płytkę o pracy wyjścia 2 eV pada światło o energii fotonów 5 eV. Jaki potencjał hamowania należy przyłożyć, aby zatrzymać najszybsze fotoelektrony?",
+    "answers": [
+      "3 V",
+      "7 V",
+      "5 V",
+      "2 V"
+    ],
+    "correct": "3 V"
+},
+
+{
+    "category": "fizyka",
+    "question": "Ciało o masie m zawieszone na sprężynie wykonuje drgania harmoniczne o okresie T. Jeśli do tego samego ciała dołożymy drugie o takiej samej masie (razem 2m), to nowy okres drgań wyniesie:",
+    "answers": [
+      "T * √2",
+      "2T",
+      "T / √2",
+      "T / 2"
+    ],
+    "correct": "T * √2"
+},
+
+{
+    "category": "fizyka",
+    "question": "Satelita geostacjonarny krąży nad Ziemią na wysokości h nad jej powierzchnią. Przyspieszenie grawitacyjne na tej wysokości w porównaniu z przyspieszeniem g na powierzchni (R - promień Ziemi) wynosi:",
+    "answers": [
+      "g * [R/(R+h)]^2",
+      "g * [R/(R+h)]",
+      "g * [R/h]^2",
+      "g * [h/(R+h)]^2"
+    ],
+    "correct": "g * [R/(R+h)]^2"
+},
+
+{
+    "category": "fizyka",
+    "question": "Ciało o masie 2 kg spada swobodnie z wysokości 10 m (g=10 m/s^2). W wyniku uderzenia o ziemię 80% energii mechanicznej zamienia się w ciepło. Oblicz pozostałą energię użyteczną ciała tuż po odbiciu.",
+    "answers": [
+      "40 J",
+      "160 J",
+      "200 J",
+      "16 J"
+    ],
+    "correct": "40 J"
+},
+
+{
+    "category": "fizyka",
+    "question": "Pocisk o masie 0,01 kg poruszający się z prędkością 200 m/s wbija się w nieruchomy klocek o masie 0,99 kg i grzęźnie w nim. Prędkość klocka z pociskiem wynosi:",
+    "answers": [
+      "2 m/s",
+      "200 m/s",
+      "2,02 m/s",
+      "0,2 m/s"
+    ],
+    "correct": "2 m/s"
+},
+
+{
+    "category": "fizyka",
+    "question": "Kondensator o pojemności C naładowano do napięcia U. Jeśli napięcie na okładkach wzrośnie dwukrotnie (2U), to zgromadzona w nim energia:",
+    "answers": [
+      "wzrośnie 4 razy",
+      "wzrośnie 2 razy",
+      "zmaleje 2 razy",
+      "nie zmieni się"
+    ],
+    "correct": "wzrośnie 4 razy"
+},
+
+{
+    "category": "fizyka",
+    "question": "W naczyniu znajduje się 1 mol gazu doskonałego o temperaturze 27°C. Po ogrzaniu gazu jego ciśnienie wzrosło 3-krotnie przy stałej objętości. Nowa temperatura gazu wynosi:",
+    "answers": [
+      "627 °C",
+      "81 °C",
+      "900 °C",
+      "300 °C"
+    ],
+    "correct": "627 °C"
+},
+
+{
+  "category": "fizyka",
+  "question": "Samochód o masie 1200 kg zwiększył prędkość z 36 km/h do 108 km/h. Praca wykonana przez siłę wypadkową wynosi:",
+  "answers": [
+    "480 kJ",
+    "6048 kJ",
+    "43,2 kJ",
+    "600 kJ"
+  ],
+  "correct": "480 kJ"
+},
+
+{
+  "category": "fizyka",
+  "question": "Samochód o masie 1200 kg zwiększył prędkość z 36 km/h do 108 km/h. Praca wykonana przez siłę wypadkową wynosi:",
+  "answers": [
+    "480 kJ",
+    "6048 kJ",
+    "43,2 kJ",
+    "600 kJ"
+  ],
+  "correct": "480 kJ"
+},
+
+{
+  "category": "fizyka",
+  "question": "Pocisk o masie 10 g uderza w deskę z prędkością 200 m/s i zatrzymuje się na głębokości 5 cm. Średnia siła oporu deski wynosi:",
+  "answers": [
+    "4000 N",
+    "40 N",
+    "400 N",
+    "200 J"
+  ],
+  "correct": "4000 N"
+},
+
+{
+  "category": "fizyka",
+  "question": "Ciało o masie 2 kg spada swobodnie z wysokości 45 m. W połowie tej wysokości jego energia kinetyczna wynosi (g=10 m/s²):",
+  "answers": [
+    "450 J",
+    "90 J",
+    "45 J",
+    "900 J"
+  ],
+  "correct": "450 J"
+},
+
+{
+  "category": "fizyka",
+  "question": "Ciężarek o masie 500 g zawieszono na sprężynie o współczynniku sprężystości k=50 N/m. Okres drgań tego ciężarka wynosi około:",
+  "answers": [
+    "0,63 s",
+    "20 s",
+    "0,2 s",
+    "0,1 s"
+  ],
+  "correct": "0,63 s"
+},
+
+{
+  "category": "fizyka",
+  "question": "Motocyklista przejechał 100 m, startując z miejsca z przyspieszeniem 2 m/s². Jego prędkość końcowa wynosi:",
+  "answers": [
+    "20 m/s",
+    "400 m/s",
+    "200 m/s",
+    "10 s"
+  ],
+  "correct": "20 m/s"
+},
+
+{
+  "category": "fizyka",
+  "question": "Na ciało o masie 4 kg działa siła 20 N pod kątem 60° do poziomu. Przyspieszenie ciała w kierunku poziomym (pomiń tarcie, cos 60° = 0,5) wynosi:",
+  "answers": [
+    "2,5 m/s²",
+    "5 m/s²",
+    "4,33 m/s²",
+    "10 N"
+  ],
+  "correct": "2,5 m/s²"
+},
+
+{
+  "category": "fizyka",
+  "question": "Kulka o masie 0,2 kg poruszająca się z prędkością 5 m/s uderza w nieruchomą kulkę o masie 0,3 kg i grzęźnie w niej. Prędkość kulek po zderzeniu wynosi:",
+  "answers": [
+    "2 m/s",
+    "3,33 m/s",
+    "5 m/s",
+    "1 kg·m/s"
+  ],
+  "correct": "2 m/s"
+},
+
+{
+  "category": "fizyka",
+  "question": "Satelita krąży wokół Ziemi na wysokości równej promieniowi Ziemi (R). Przyspieszenie grawitacyjne na tej wysokości w stosunku do g na powierzchni wynosi:",
+  "answers": [
+    "0,25 g",
+    "0,5 g",
+    "2 g",
+    "4 g"
+  ],
+  "correct": "0,25 g"
+},
+
+{
+  "category": "fizyka",
+  "question": "Winda o masie 800 kg rusza w górę z przyspieszeniem 1 m/s². Siła naciągu liny wynosi (g=10 m/s²):",
+  "answers": [
+    "8800 N",
+    "800 N",
+    "7200 N",
+    "8000 N"
+  ],
+  "correct": "8800 N"
+},
+
+{
+  "category": "fizyka",
+  "question": "Podczas badań w tunelu aerodynamicznym, gdzie temperatura powietrza wynosiła 15°C, a ciśnienie 1000 hPa, testowano model samochodu o masie 500 g. Model ten poruszał się po prostym odcinku drogi, a jego prędkość wzrosła o 10 m/s w czasie 2 sekund, startując z prędkości początkowej 5 m/s. Powierzchnia czołowa modelu wynosiła 0,02 m^2, jednak w tym zadaniu pomijamy opory powietrza. Przyjmij przyspieszenie ziemskie g = 10 m/s2. Oblicz wartość siły wypadkowej nadającej przyspieszenie temu modelowi.",
+  "answers": [
+    "2,5 N",
+    "2500 N",
+    "5 N",
+    "5,2 N"
+  ],
+  "correct": "2,5 N"
+},
+
+{
+  "category": "fizyka",
+  "question": "Winda w wieżowcu, w którym na parterze panuje wilgotność 60%, wyruszyła w górę z pasażerem o masie 70 kg. Winda poruszała się z przyspieszeniem o wartości 2 m/s2, a natężenie pola grawitacyjnego przyjęto jako 10 N/kg. W kabinie windy zainstalowano oświetlenie LED o łącznej mocy 40 W, a temperatura wewnątrz wynosiła stałe 21°C. Linki podtrzymujące windę mają wytrzymałość na zerwanie wynoszącą 50 kN. Oblicz wartość siły nacisku, jaką pasażer wywiera na podłogę windy podczas tego ruchu.",
+  "answers": [
+    "840 N",
+    "140 N",
+    "840,6 N",
+    "560 N"
+  ],
+  "correct": "840 N"
+},
+
+{
+  "category": "fizyka",
+  "question": "Z balkonu na wysokości 20 m, przy słonecznej pogodzie (indeks UV 4), upuszczono swobodnie klucze o masie 200 g. Przyspieszenie ziemskie wynosi 10 m/s2, a gęstość stali, z której wykonano klucze, to 7800 kg/m3. Podczas spadku kluczy wiał boczny wiatr o stałej prędkości 1 m/s, który jednak nie wpływa na czas spadku pionowego. Opór powietrza w tym modelu jest pomijalnie mały. Ile czasu zajmie kluczom dotarcie do powierzchni gruntu?",
+  "answers": [
+    "2 s",
+    "4 s",
+    "0,4 s",
+    "20 m/s"
+  ],
+  "correct": "2 s"
+},
+
+{
+  "category": "fizyka",
+  "question": "Na gładkim stole bilardowym w sali o powierzchni 50 m2 leży nieruchoma bila A o masie 150 g. Druga bila B uderza w nią z prędkością, która w ciągu ostatniej sekundy przed zderzeniem wynosiła dokładnie 4 m/s. Współczynnik tarcia sukna o bile wynosi 0,01, a temperatura w sali to 295 K. Po zderzeniu centralnym i doskonale sprężystym bila B zatrzymuje się, a cała jej energia zostaje przekazana bili A. Oblicz wartość pędu, jaki uzyskała bila A tuż po zderzeniu.",
+  "answers": [
+    "0,6 kg·m/s",
+    "600 kg·m/s",
+    "1,2 kg·m/s",
+    "1,2 J"
+  ],
+  "correct": "0,6 kg·m/s"
+},
+
+{
+  "category": "fizyka",
+  "question": "Robot przemysłowy o zasięgu ramienia 1,5 m podnosi element o masie 2 kg na wysokość 3 metrów. Silnik robota zasilany jest napięciem 230 V, a natężenie prądu podczas pracy wynosi 0,5 A. Podnoszenie odbywa się ruchem jednostajnym w czasie 4 sekund przy przyspieszeniu ziemskim 10 m/s2. Przekładnie robota są nasmarowane olejem o lepkości 0,1 Pa·s. Jaką pracę wykonał robot przeciwko sile ciężkości podczas podnoszenia tego elementu?",
+  "answers": [
+    "60 J",
+    "60000 J",
+    "15 W",
+    "61,5 J"
+  ],
+  "correct": "60 J"
+},
+
+{
+  "category": "fizyka",
+  "question": "Pocisk o masie 10 g uderza w deskę z prędkością 300 m/s i zagłębia się w niej na głębokość 5 cm. Deska wykonana jest z drewna sosnowego o gęstości 500 kg/m3, a jej temperatura przed testem wynosiła 20°C. Ciśnienie akustyczne towarzyszące uderzeniu osiągnęło poziom 110 dB. Przyjmij, że ruch pocisku wewnątrz deski jest jednostajnie opóźniony. Oblicz wartość średniej siły oporu, jaka działała na pocisk wewnątrz deski.",
+  "answers": [
+    "9000 N",
+    "90 N",
+    "450 J",
+    "9110 N"
+  ],
+  "correct": "9000 N"
+},
+
+{
+  "category": "fizyka",
+  "question": "Karuzela o promieniu 5 m obraca się tak, że pasażer o masie 60 kg porusza się ze stałą prędkością liniową. Prędkość ta w ciągu pierwszych 10 sekund rozruchu wzrosła od zera do 4 m/s. Na pasażera działa siła ciężkości (g = 10 m/s2) oraz siły bezwładności w układzie nieinercjalnym. Konstrukcja karuzeli wykonana jest ze stali o module Younga 200 GPa. Oblicz wartość siły dośrodkowej działającej na pasażera, gdy porusza się on z prędkością 4 m/s.",
+  "answers": [
+    "192 N",
+    "192000 N",
+    "48 N",
+    "3,2 m/s2"
+  ],
+  "correct": "192 N"
+},
+
+{
+  "category": "fizyka",
+  "question": "Mały dron o masie 800 g unosi się nieruchomo w powietrzu na wysokości 50 m nad poziomem morza. Silniki drona pracują z łączną mocą 120 W, a temperatura baterii wynosi 35°C. W pewnym momencie dron zaczyna opadać pionowo w dół, a jego prędkość wzrasta o 5 m/s w każdej sekundzie ruchu (a = 5 m/s2). Przyspieszenie ziemskie wynosi 10 m/s2. Oblicz wartość siły nośnej generowanej przez śmigła drona podczas tego opadania przyspieszonego.",
+  "answers": [
+    "4 N",
+    "4000 N",
+    "8 N",
+    "40 J"
+  ],
+  "correct": "4 N"
+},
+
+{
+  "category": "fizyka",
+  "question": "Saturn porusza się po orbicie zbliżonej do kołowej o promieniu około 9,5 jednostek astronomicznych (AU) od Słońca. Masa Saturna wynosi w przybliżeniu 5,7e26 kg, a jego atmosfera składa się głównie z wodoru i helu. Średnia temperatura na powierzchni planety to około 95 K. Oblicz wartość siły grawitacji, jaką Słońce (masa 2e30 kg) działa na Saturna, przyjmując stałą grawitacji G = 6,67e-11 N·m2/kg2 oraz 1 AU = 1,5e11 m.",
+  "answers": [
+    "3,7e22 N",
+    "5,5e23 N",
+    "3,7e33 N",
+    "9,5 m/s2"
+  ],
+  "correct": "3,7e22 N"
+},
+
+{
+  "category": "fizyka",
+  "question": "Łucznik napina cięciwę łuku, wykonując pracę 40 J, co powoduje jej wychylenie o 40 cm od położenia równowagi. Łuk wykonany jest z kompozytu o wysokiej sprężystości, a strzała ma masę 20 g. W momencie strzału panuje cisza nocna, a wilgotność powietrza wynosi 80%. Przyjmij, że cała energia zgromadzona w łuku zostaje przekazana strzale. Oblicz prędkość, z jaką strzała opuszcza łuk.",
+  "answers": [
+    "63,2 m/s",
+    "2 m/s",
+    "2000 m/s",
+    "4000 m/s"
+  ],
+  "correct": "63,2 m/s"
+},
+
+{
+  "category": "fizyka",
+  "question": "Ciało o masie 4 kg przesuwa się po poziomej powierzchni pod działaniem siły F = 20 N skierowanej równolegle do podłoża. Współczynnik tarcia kinetycznego wynosi 0,2, a przyspieszenie ziemskie to 10 m/s2. Powierzchnia styku ma pole 100 cm2, a temperatura układu wzrasta o 0,5°C na każdą minutę ruchu. Po jakim czasie prędkość ciała wzrośnie o 12 m/s, jeśli ruch zaczął się z prędkością zerową?",
+  "answers": [
+    "4 s",
+    "2,4 s",
+    "400 s",
+    "3 m/s2"
+  ],
+  "correct": "4 s"
+},
+
+{
+  "category": "fizyka",
+  "question": "Podczas zawodów w curlingu kamień o masie 20 kg został wypchnięty i sunie po lodzie o temperaturze -4°C. Prędkość kamienia zmalała o 2 m/s w czasie 10 sekund pod wpływem siły tarcia. Powierzchnia lodu jest regularnie zraszana wodą, a hala jest klimatyzowana (ciśnienie 1010 hPa). Przyjmij g = 10 m/s2. Oblicz wartość współczynnika tarcia kinetycznego kamienia o lód.",
+  "answers": [
+    "0,02",
+    "0,2",
+    "20",
+    "4 N"
+  ],
+  "correct": "0,02"
+},
+
+{
+  "category": "fizyka",
+  "question": "Koło zamachowe o momencie bezwładności 2 kg·m2 obraca się z częstotliwością 5 Hz w próżniowej komorze testowej. Wewnątrz komory panuje śladowe ciśnienie 1e-5 Pa, a łożyska są chłodzone ciekłym azotem (77 K). Zewnętrzna średnica koła wynosi 40 cm. Oblicz energię kinetyczną ruchu obrotowego tego koła.",
+  "answers": [
+    "987 J",
+    "25 J",
+    "98700 J",
+    "31,4 rad/s"
+  ],
+  "correct": "987 J"
+},
+
+{
+  "category": "fizyka",
+  "question": "W eksperymencie Torricellego użyto rurki o przekroju 1 cm2, a masa słupa rtęci wynosiła około 1 kg. Gęstość rtęci to 13600 kg/m3, a lokalne przyspieszenie ziemskie wynosi 9,81 m/s2. Eksperyment przeprowadzono w pomieszczeniu o kubaturze 30 m3 przy oświetleniu 500 luksów. Oblicz ciśnienie hydrostatyczne wywierane przez ten słup rtęci u podstawy rurki.",
+  "answers": [
+    "98100 Pa",
+    "9,81 Pa",
+    "133280 Pa",
+    "0,76 m"
+  ],
+  "correct": "98100 Pa"
+},
+
+{
+  "category": "fizyka",
+  "question": "Ciężarek zawieszony na sprężynie o stałej sprężystości k = 200 N/m wykonuje drgania harmoniczne o amplitudzie 5 cm. Masa ciężarka wynosi 500 g, a cały układ znajduje się w oleju o gęstości 900 kg/m3, który w tym zadaniu uznajemy za niepowodujący tłumienia. Temperatura oleju wynosi 20°C, a przyspieszenie ziemskie 10 m/s2. Oblicz maksymalną wartość siły zwracającej działającej w tym układzie.",
+  "answers": [
+    "10 N",
+    "1000 N",
+    "10000 N",
+    "0,25 J"
+  ],
+  "correct": "10 N"
+},
+
+{
+  "category": "fizyka",
+  "question": "Pociąg o masie 500 ton rusza ze stacji z przyspieszeniem 0,2 m/s2 przy wilgotności powietrza 90%. Szerokość torów to 1435 mm, a opory ruchu stanowią 1% ciężaru pociągu (g = 10 m/s2). Lokomotywa elektryczna pobiera prąd z sieci o napięciu 3 kV. Oblicz wartość siły ciągu, jaką muszą generować silniki lokomotywy, aby nadać pociągowi takie przyspieszenie.",
+  "answers": [
+    "150000 N",
+    "150000000 N",
+    "100000 N",
+    "50000 N"
+  ],
+  "correct": "150000 N"
+},
+
+{
+  "category": "fizyka",
+  "question": "Z łodzi o masie 150 kg, stojącej nieruchomo na jeziorze o głębokości 5 m, wyskoczył poziomo chłopiec o masie 50 kg z prędkością 3 m/s względem brzegu. Temperatura wody wynosiła 18°C, a gęstość wody 1000 kg/m3. Opór wody podczas ruchu łodzi pomijamy w początkowej fazie. Przyspieszenie ziemskie wynosi 10 m/s2. Oblicz wartość prędkości, jaką uzyskała łódź w wyniku skoku chłopca.",
+  "answers": [
+    "1 m/s",
+    "1000 m/s",
+    "0,33 m/s",
+    "150 kg·m/s"
+  ],
+  "correct": "1 m/s"
+},
+
+{
+  "category": "fizyka",
+  "question": "Piłeczka o masie 50 g uderza prostopadle w ścianę z prędkością 10 m/s i odbija się z prędkością o tej samej wartości. Czas kontaktu piłeczki ze ścianą wynosił 0,01 s, a współczynnik restytucji wynosi 1. Ściana jest pokryta farbą o współczynniku odbicia światła 0,7, a w pomieszczeniu panuje ciśnienie 1000 hPa. Oblicz średnią siłę, jaką ściana działała na piłeczkę podczas zderzenia.",
+  "answers": [
+    "100 N",
+    "10000 N",
+    "50 N",
+    "1 kg·m/s"
+  ],
+  "correct": "100 N"
+},
+
+{
+  "category": "fizyka",
+  "question": "W układzie słonecznym planetoida porusza się po orbicie eliptycznej. W peryhelium znajduje się w odległości 2 AU od Słońca i porusza się z prędkością 30 km/s. Masa planetoidy wynosi 1e12 kg, a jej albedo jest równe 0,1. Średnia temperatura kosmosu to 2,7 K. Oblicz prędkość tej planetoidy w aphelium, wiedząc, że znajduje się ona wtedy w odległości 6 AU od Słońca.",
+  "answers": [
+    "10 km/s",
+    "10000 km/s",
+    "3,33 km/s",
+    "90 km/s"
+  ],
+  "correct": "10 km/s"
+},
+
+{
+  "category": "fizyka",
+  "question": "Klocek o masie 100 g został dociśnięty do sprężyny o k = 400 N/m, skracając ją o 10 cm. Układ znajduje się na poziomej powierzchni, gdzie panuje temperatura 25°C, a natężenie światła wynosi 300 luksów. Po zwolnieniu blokady sprężyna wystrzeliwuje klocek, który porusza się dalej bez tarcia. Przyspieszenie ziemskie wynosi 10 m/s2. Oblicz maksymalną prędkość, jaką uzyska ten klocek po opuszczeniu sprężyny.",
+  "answers": [
+    "6,32 m/s",
+    "632 m/s",
+    "20 m/s",
+    "2 J"
+  ],
+  "correct": "6,32 m/s"
+},
+
+{
+  "category": "fizyka",
+  "question": "W laboratorium optycznym, w którym wilgotność powietrza wynosiła 40%, a temperatura 20°C, przeprowadzono badanie współczynnika załamania nieznanego szkła. Promień światła monochromatycznego o długości fali 589 nm przechodzi z powietrza do szkła pod kątem 30 stopni względem normalnej. Ciśnienie w laboratorium wynosiło 1010 hPa, a prędkość światła w próżni to 300 000 km/s. Po wejściu do szkła kąt załamania wyniósł 20 stopni. Oblicz współczynnik załamania tego szkła względem powietrza (przyjmij n_powietrza = 1).",
+  "answers": ["1,46", "1,52", "1460", "0,68"],
+  "correct": "1,46"
+},
+
+{
+  "category": "fizyka",
+  "question": "Przed soczewką skupiającą o zdolności skupiającej 5 dioptrii ustawiono przedmiot w odległości 30 cm. Soczewka wykonana jest ze szkła o gęstości 2500 kg/m3 i znajduje się w oprawie o masie 50 g. Oświetlenie w pomieszczeniu zapewniały lampy o strumieniu świetlnym 1000 lumenów, a temperatura otoczenia wynosiła 22°C. Oblicz odległość obrazu od soczewki, wiedząc, że obraz powstaje po drugiej stronie soczewki.",
+  "answers": ["0,6 m", "60 m", "1,5 m", "0,2 m"],
+  "correct": "0,6 m"
+},
+
+{
+  "category": "fizyka",
+  "question": "Na siatkę dyfrakcyjną, która posiada 500 rys na każdy milimetr długości, pada prostopadle wiązka światła laserowego. Laser ma moc 5 mW i emituje światło o długości fali 600 nm, przy czym obudowa lasera nagrzała się o 5°C podczas pracy. Eksperyment przeprowadzono w próżni przy ciśnieniu 1e-6 Pa, a odległość siatki od ekranu wynosiła 2 metry. Oblicz sinus kąta ugięcia dla prążka pierwszego rzędu (n=1).",
+  "answers": ["0,3", "300", "0,15", "1,2"],
+  "correct": "0,3"
+},
+
+{
+  "category": "fizyka",
+  "question": "Zwierciadło kuliste wklęsłe o promieniu krzywizny 40 cm wykorzystano do rzutowania obrazu na ekran. Przedmiot umieszczono w odległości 60 cm od wierzchołka zwierciadła, a wilgotność w pokoju wynosiła 55%. Zwierciadło jest pokryte warstwą aluminium o grubości 100 nm, która odbija 90% padającego światła. Temperatura powietrza wzrosła o 2 stopnie Celsjusza w trakcie pomiarów. Oblicz odległość, w jakiej należy umieścić ekran, aby otrzymać ostry obraz przedmiotu.",
+  "answers": ["30 cm", "120 cm", "0,3 cm", "20 cm"],
+  "correct": "30 cm"
+},
+
+{
+  "category": "fizyka",
+  "question": "W światłowodzie o średnicy rdzenia 50 mikrometrów współczynnik załamania wynosi 1,5. Światłowód jest osłonięty kevlarem o wytrzymałości 3000 MPa i znajduje się w wodzie o temperaturze 4°C. Prędkość światła w próżni wynosi 3e8 m/s, a tłumienie sygnału to 0,2 dB/km. Oblicz prędkość, z jaką światło rozchodzi się wewnątrz rdzenia tego światłowodu.",
+  "answers": ["200 000 000 m/s", "450 000 000 m/s", "200 000 m/s", "0,66 c"],
+  "correct": "200 000 000 m/s"
+},
+
+{
+  "category": "fizyka",
+  "question": "Lupa o ogniskowej 10 cm służy do obserwacji znaczka pocztowego o wymiarach 2x3 cm. Obserwator trzyma lupę w odległości 8 cm od znaczka, a ciśnienie atmosferyczne wynosi 1000 hPa. Natężenie oświetlenia znaczka wynosi 400 luksów, a współczynnik odbicia papieru to 0,8. Powiększenie liniowe obrazu w tej konfiguracji wynosi pewną wartość. Oblicz odległość, w jakiej powstaje obraz tego znaczka względem lupy.",
+  "answers": ["40 cm", "4000 cm", "5 cm", "5"],
+  "correct": "40 cm"
+},
+
+{
+  "category": "fizyka",
+  "question": "Wiązka światła białego pada na pryzmat szklany o kącie łamiącym 60 stopni, znajdujący się w atmosferze azotu. Współczynnik załamania szkła dla światła czerwonego wynosi 1,5, a dla fioletowego jest o 0,02 większy. Temperatura pryzmatu wynosi 293 K, a masa pryzmatu to 120 g. Przyjmij, że kąt padania wynosi 0 stopni (promień pada prostopadle na pierwszą ściankę). Oblicz sinus kąta wyjścia promienia fioletowego z pryzmatu do powietrza (n=1).",
+  "answers": ["1,316", "0,76", "152", "0,866"],
+  "correct": "1,316"
+},
+
+{
+  "category": "fizyka",
+  "question": "Aparat fotograficzny posiada obiektyw o ogniskowej 50 mm i jasności f/1.8. Podczas robienia zdjęcia przy czasie naświetlania 1/100 s, temperatura matrycy wzrosła o 0,1°C. Fotografowany obiekt znajduje się w odległości 5 metrów od aparatu, a natężenie światła słonecznego wynosi 1000 W/m2. Obiektyw składa się z 7 soczewek pokrytych warstwami antyrefleksyjnymi o grubości 150 nm. Oblicz powiększenie liniowe (skalę odwzorowania) obrazu na matrycy.",
+  "answers": ["0,01", "1,0", "0,0001", "100"],
+  "correct": "0,01"
+},
+
+{
+  "category": "fizyka",
+  "question": "Mikroskop posiada obiektyw o powiększeniu 40x i okular o powiększeniu 10x. Podczas obserwacji preparatu o grubości 20 mikrometrów użyto imersji olejowej o współczynniku załamania 1,51. Moc żarówki oświetlającej wynosi 20 W, a temperatura preparatu to 37°C. Długość tubusu mikroskopu wynosi 160 mm. Oblicz całkowite powiększenie wizualne tego mikroskopu.",
+  "answers": ["400", "50", "604", "0,025"],
+  "correct": "400"
+},
+
+{
+  "category": "fizyka",
+  "question": "Płytka szklana o grubości 1 cm i współczynniku załamania 1,6 jest zanurzona w cieczy o współczynniku załamania 1,2. Na płytkę pada promień pod kątem, którego sinus wynosi 0,8 względem normalnej w cieczy. Gęstość cieczy wynosi 800 kg/m3, a jej ciepło właściwe to 2500 J/(kg*K). Prędkość światła w próżni to 3e8 m/s. Oblicz sinus kąta załamania światła wewnątrz płytki szklanej.",
+  "answers": ["0,6", "0,72", "60", "1,33"],
+  "correct": "0,6"
+},
+
+{
+  "category": "fizyka",
+  "question": "Promień światła przechodzi z diamentu (n=2,4) do wody (n=1,33). Temperatura wody wynosi 25°C, a diament ma masę 0,5 karata. Ciśnienie hydrostatyczne na dnie naczynia z wodą wynosi 2000 Pa, a pH wody jest równe 7. Istnieje pewien kąt graniczny, powyżej którego zachodzi całkowite wewnętrzne odbicie. Oblicz wartość sinusa kąta granicznego dla tej granicy ośrodków.",
+  "answers": ["0,55", "1,8", "550", "0,75"],
+  "correct": "0,55"
+},
+
+{
+  "category": "fizyka",
+  "question": "Okulary korekcyjne mają moc optyczną -2,5 dioptrii i są wykonane z poliwęglanu o współczynniku załamania 1,59. Oprawki ważą 15 g i mają szerokość 140 mm. Pacjent czyta tekst z odległości 40 cm przy świetle o temperaturze barwowej 4000 K. Przyspieszenie ziemskie wynosi 9,81 m/s2. Oblicz ogniskową soczewki zastosowanej w tych okularach.",
+  "answers": ["-0,4 m", "-400 m", "2,5 m", "0,4 m"],
+  "correct": "-0,4 m"
+},
+
+{
+  "category": "fizyka",
+  "question": "Płaska fala elektromagnetyczna o częstotliwości 5e14 Hz pada na szczelinę o szerokości 0,01 mm. Eksperyment odbywa się w pokoju o objętości 40 m3, gdzie stężenie CO2 wynosi 400 ppm. Prędkość światła wynosi 3e8 m/s, a temperatura powietrza to 20°C. Obserwuje się obraz dyfrakcyjny na ekranie oddalonym o 1 m. Oblicz długość fali tego światła w nanometrach.",
+  "answers": ["600 nm", "600 000 nm", "0,6 nm", "0,5e-14 m"],
+  "correct": "600 nm"
+},
+
+{
+  "category": "fizyka",
+  "question": "Lustro dentystyczne jest zwierciadłem kulistym o ogniskowej 2 cm. Dentysta umieszcza je w odległości 1 cm od zęba pacjenta, u którego tętno wynosi 70 uderzeń na minutę. Narzędzie jest wykonane ze stali chirurgicznej i zdezynfekowane w autoklawie w temperaturze 134°C. Oblicz powiększenie liniowe obrazu zęba widzianego w tym lustrze.",
+  "answers": ["2", "0,5", "200", "-2"],
+  "correct": "2"
+},
+
+{
+  "category": "fizyka",
+  "question": "Wiązka światła laserowego o mocy 1 mW przechodzi przez polaryzator, którego oś przepuszczania jest skręcona o kąt 30 stopni względem płaszczyzny polaryzacji światła. Temperatura polaryzatora wynosi 22°C, a jego średnica to 25 mm. Natężenie światła przed polaryzatorem wynosi 100 W/m2, a ciśnienie w laboratorium to 1013 hPa. Przyjmij, że polaryzator jest idealny. Oblicz, jaka część natężenia światła przejdzie przez polaryzator (podaj wartość cos^2(30°)).",
+  "answers": ["0,75", "0,866", "750", "0,25"],
+  "correct": "0,75"
+},
+
+{
+  "category": "fizyka",
+  "question": "Dwie cienkie soczewki skupiające o ogniskowych odpowiednio 20 cm i 30 cm stykają się ze sobą. Układ ten znajduje się w kuwecie z olejem silikonowym o lepkości 100 cSt i temperaturze 50°C. Masa soczewek to łącznie 40 g, a współczynnik rozszerzalności cieplnej szkła jest pomijalny. Przyspieszenie ziemskie wynosi 10 m/s2. Oblicz zdolność skupiającą tego układu soczewek w powietrzu.",
+  "answers": ["8,33 D", "50 D", "0,083 D", "12 cm"],
+  "correct": "8,33 D"
+},
+
+{
+  "category": "fizyka",
+  "question": "Podczas zachodu Słońca, gdy temperatura spadła o 5°C, światło przechodzi przez warstwy atmosfery o zmiennej gęstości. Indeks refrakcji powietrza przy gruncie wynosi 1,00029, a wilgotność względna 80%. Fotony pokonują drogę ze Słońca w czasie 8 minut i 20 sekund. Średnica kątowa Słońca to 0,5 stopnia. Oblicz prędkość światła w powietrzu przy gruncie, przyjmując c = 299 792 458 m/s.",
+  "answers": ["299 705 515 m/s", "150 000 000 000 m/s", "299 792 458 m/s", "299 705 km/s"],
+  "correct": "299 705 515 m/s"
+},
+
+{
+  "category": "fizyka",
+  "question": "Cień pionowego masztu o wysokości 10 m ma długość 10 m. Maszt stoi na statku płynącym z prędkością 15 węzłów po morzu o zasoleniu 35 promili. Temperatura wody wynosi 15°C, a gęstość powietrza 1,2 kg/m3. Przyspieszenie ziemskie to 10 m/s2. Oblicz kąt padania promieni słonecznych mierzony względem pionu (normalnej do powierzchni ziemi).",
+  "answers": ["45 stopni", "450 stopni", "10 stopni", "1"],
+  "correct": "45 stopni"
+},
+
+{
+  "category": "fizyka",
+  "question": "W osi optycznej soczewki rozpraszającej o ogniskowej -15 cm umieszczono świecący punkt w odległości 30 cm od soczewki. Soczewka jest chłodzona strumieniem powietrza o prędkości 5 m/s, a pobór mocy źródła światła to 10 W. Temperatura obudowy wynosi 300 K, a wilgotność 30%. Oblicz, w jakiej odległości od soczewki powstanie obraz tego punktu.",
+  "answers": ["10 cm", "1000 cm", "-10 cm", "30 cm"],
+  "correct": "10 cm"
+},
+
+{
+  "category": "fizyka",
+  "question": "Bańka mydlana o grubości ścianki 150 nm jest oświetlona prostopadle światłem białym. Współczynnik załamania wody mydlanej wynosi 1,33, a napięcie powierzchniowe to 0,025 N/m. Temperatura otoczenia wynosi 20°C, a masa bańki to 0,1 g. Ciśnienie wewnątrz bańki jest o 10 Pa wyższe od atmosferycznego. Oblicz drogę optyczną, jaką pokonuje światło przechodząc przez ściankę bańki i wracając po odbiciu od jej wewnętrznej powierzchni.",
+  "answers": ["399 nm", "399 000 nm", "300 nm", "200 nm"],
+  "correct": "399 nm"
+},
+//////////////////////////////pytania otwarte///////////////////////////////////////////////
+{
+  "category": "fizyka",
+  "question": "Mikroskop posiada obiektyw o powiększeniu 40x i okular o powiększeniu 10x. Podczas obserwacji preparatu o grubości 20 mikrometrów użyto imersji olejowej o współczynniku załamania 1,51. Moc żarówki oświetlającej wynosi 20 W, a temperatura preparatu to 37°C. Długość tubusu mikroskopu wynosi 160 mm. Oblicz całkowite powiększenie wizualne tego mikroskopu.",
+  "correct": "400"
+},
+
+{
+  "category": "fizyka",
+  "question": "Płytka szklana o grubości 1 cm i współczynniku załamania 1,6 jest zanurzona w cieczy o współczynniku załamania 1,2. Na płytkę pada promień pod kątem, którego sinus wynosi 0,8 względem normalnej w cieczy. Gęstość cieczy wynosi 800 kg/m3, a jej ciepło właściwe to 2500 J/(kg*K). Prędkość światła w próżni to 3e8 m/s. Oblicz sinus kąta załamania światła wewnątrz płytki szklanej.",
+  "correct": "0,6"
+},
+
+{
+  "category": "fizyka",
+  "question": "Promień światła przechodzi z diamentu (n=2,4) do wody (n=1,33). Temperatura wody wynosi 25°C, a diament ma masę 0,5 karata. Ciśnienie hydrostatyczne na dnie naczynia z wodą wynosi 2000 Pa, a pH wody jest równe 7. Istnieje pewien kąt graniczny, powyżej którego zachodzi całkowite wewnętrzne odbicie. Oblicz wartość sinusa kąta granicznego dla tej granicy ośrodków.",
+  "correct": "0,55"
+},
+
+{
+  "category": "fizyka",
+  "question": "Okulary korekcyjne mają moc optyczną -2,5 dioptrii i są wykonane z poliwęglanu o współczynniku załamania 1,59. Oprawki ważą 15 g i mają szerokość 140 mm. Pacjent czyta tekst z odległości 40 cm przy świetle o temperaturze barwowej 4000 K. Przyspieszenie ziemskie wynosi 9,81 m/s2. Oblicz ogniskową soczewki zastosowanej w tych okularach.",
+  "correct": "-0,4 m"
+},
+
+{
+  "category": "fizyka",
+  "question": "Płaska fala elektromagnetyczna o częstotliwości 5e14 Hz pada na szczelinę o szerokości 0,01 mm. Eksperyment odbywa się w pokoju o objętości 40 m3, gdzie stężenie CO2 wynosi 400 ppm. Prędkość światła wynosi 3e8 m/s, a temperatura powietrza to 20°C. Obserwuje się obraz dyfrakcyjny na ekranie oddalonym o 1 m. Oblicz długość fali tego światła w nanometrach.",
+  "correct": "600 nm"
+},
+
+{
+  "category": "fizyka",
+  "question": "Lustro dentystyczne jest zwierciadłem kulistym o ogniskowej 2 cm. Dentysta umieszcza je w odległości 1 cm od zęba pacjenta, u którego tętno wynosi 70 uderzeń na minutę. Narzędzie jest wykonane ze stali chirurgicznej i zdezynfekowane w autoklawie w temperaturze 134°C. Oblicz powiększenie liniowe obrazu zęba widzianego w tym lustrze.",
+  "correct": "2"
+},
+
+{
+  "category": "fizyka",
+  "question": "Wiązka światła laserowego o mocy 1 mW przechodzi przez polaryzator, którego oś przepuszczania jest skręcona o kąt 30 stopni względem płaszczyzny polaryzacji światła. Temperatura polaryzatora wynosi 22°C, a jego średnica to 25 mm. Natężenie światła przed polaryzatorem wynosi 100 W/m2, a ciśnienie w laboratorium to 1013 hPa. Przyjmij, że polaryzator jest idealny. Oblicz, jaka część natężenia światła przejdzie przez polaryzator (podaj wartość cos^2(30°)).",
+  "correct": "0,75"
+},
+
+{
+  "category": "fizyka",
+  "question": "Dwie cienkie soczewki skupiające o ogniskowych odpowiednio 20 cm i 30 cm stykają się ze sobą. Układ ten znajduje się w kuwecie z olejem silikonowym o lepkości 100 cSt i temperaturze 50°C. Masa soczewek to łącznie 40 g, a współczynnik rozszerzalności cieplnej szkła jest pomijalny. Przyspieszenie ziemskie wynosi 10 m/s2. Oblicz zdolność skupiającą tego układu soczewek w powietrzu.",
+  "correct": "8,33 D"
+},
+
+{
+  "category": "fizyka",
+  "question": "Podczas zachodu Słońca, gdy temperatura spadła o 5°C, światło przechodzi przez warstwy atmosfery o zmiennej gęstości. Indeks refrakcji powietrza przy gruncie wynosi 1,00029, a wilgotność względna 80%. Fotony pokonują drogę ze Słońca w czasie 8 minut i 20 sekund. Średnica kątowa Słońca to 0,5 stopnia. Oblicz prędkość światła w powietrzu przy gruncie, przyjmując c = 299 792 458 m/s.",
+  "correct": "299 705 515 m/s"
+},
+
+{
+  "category": "fizyka",
+  "question": "Cień pionowego masztu o wysokości 10 m ma długość 10 m. Maszt stoi na statku płynącym z prędkością 15 węzłów po morzu o zasoleniu 35 promili. Temperatura wody wynosi 15°C, a gęstość powietrza 1,2 kg/m3. Przyspieszenie ziemskie to 10 m/s2. Oblicz kąt padania promieni słonecznych mierzony względem pionu (normalnej do powierzchni ziemi).",
+  "correct": "45 stopni"
+},
+
+{
+  "category": "fizyka",
+  "question": "W osi optycznej soczewki rozpraszającej o ogniskowej -15 cm umieszczono świecący punkt w odległości 30 cm od soczewki. Soczewka jest chłodzona strumieniem powietrza o prędkości 5 m/s, a pobór mocy źródła światła to 10 W. Temperatura obudowy wynosi 300 K, a wilgotność 30%. Oblicz, w jakiej odległości od soczewki powstanie obraz tego punktu.",
+  "correct": "10 cm"
+},
+
+{
+  "category": "fizyka",
+  "question": "Bańka mydlana o grubości ścianki 150 nm jest oświetlona prostopadle światłem białym. Współczynnik załamania wody mydlanej wynosi 1,33, a napięcie powierzchniowe to 0,025 N/m. Temperatura otoczenia wynosi 20°C, a masa bańki to 0,1 g. Ciśnienie wewnątrz bańki jest o 10 Pa wyższe od atmosferycznego. Oblicz drogę optyczną, jaką pokonuje światło przechodząc przez ściankę bańki i wracając po odbiciu od jej wewnętrznej powierzchni.",
+  "correct": "399 nm"
+},
+
+{
+    "category": "fizyka",
+    "question": "Ciało o masie 2 kg spada swobodnie z wysokości 10 m (g=10 m/s^2). W wyniku uderzenia o ziemię 80% energii mechanicznej zamienia się w ciepło. Oblicz pozostałą energię użyteczną ciała tuż po odbiciu.",
+    "correct": "40 J"
+},
+
+{
+    "category": "fizyka",
+    "question": "Pocisk o masie 0,01 kg poruszający się z prędkością 200 m/s wbija się w nieruchomy klocek o masie 0,99 kg i grzęźnie w nim. Prędkość klocka z pociskiem wynosi:",
+    "correct": "2 m/s"
+},
+
+{
+    "category": "fizyka",
+    "question": "W naczyniu znajduje się 1 mol gazu doskonałego o temperaturze 27°C. Po ogrzaniu gazu jego ciśnienie wzrosło 3-krotnie przy stałej objętości. Nowa temperatura gazu wynosi:",
+    "correct": "627 °C"
+},
+
+{
+  "category": "fizyka",
+  "question": "Samochód o masie 1200 kg zwiększył prędkość z 36 km/h do 108 km/h. Praca wykonana przez siłę wypadkową wynosi:",
+  "correct": "480 kJ"
+},
+
+{
+  "category": "fizyka",
+  "question": "Samochód o masie 1200 kg zwiększył prędkość z 36 km/h do 108 km/h. Praca wykonana przez siłę wypadkową wynosi:",
+  "correct": "480 kJ"
+},
+
+{
+  "category": "fizyka",
+  "question": "Pocisk o masie 10 g uderza w deskę z prędkością 200 m/s i zatrzymuje się na głębokości 5 cm. Średnia siła oporu deski wynosi:",
+  "correct": "4000 N"
+},
+
+{
+  "category": "fizyka",
+  "question": "Ciało o masie 2 kg spada swobodnie z wysokości 45 m. W połowie tej wysokości jego energia kinetyczna wynosi (g=10 m/s²):",
+  "correct": "450 J"
+},
+
+{
+  "category": "fizyka",
+  "question": "Satelita krąży wokół Ziemi na wysokości równej promieniowi Ziemi (R). Przyspieszenie grawitacyjne na tej wysokości w stosunku do g na powierzchni wynosi:",
+  "correct": "0,25 g"
+},
+
+{
+  "category": "fizyka",
+  "question": "Winda o masie 800 kg rusza w górę z przyspieszeniem 1 m/s². Siła naciągu liny wynosi (g=10 m/s²):",
+  "correct": "8800 N"
+},
+
+{
+  "category": "fizyka",
+  "question": "Podczas badań w tunelu aerodynamicznym, gdzie temperatura powietrza wynosiła 15°C, a ciśnienie 1000 hPa, testowano model samochodu o masie 500 g. Model ten poruszał się po prostym odcinku drogi, a jego prędkość wzrosła o 10 m/s w czasie 2 sekund, startując z prędkości początkowej 5 m/s. Powierzchnia czołowa modelu wynosiła 0,02 m^2, jednak w tym zadaniu pomijamy opory powietrza. Przyjmij przyspieszenie ziemskie g = 10 m/s2. Oblicz wartość siły wypadkowej nadającej przyspieszenie temu modelowi.",
+  "correct": "2,5 N"
+},
+
+{
+  "category": "fizyka",
+  "question": "Winda w wieżowcu, w którym na parterze panuje wilgotność 60%, wyruszyła w górę z pasażerem o masie 70 kg. Winda poruszała się z przyspieszeniem o wartości 2 m/s2, a natężenie pola grawitacyjnego przyjęto jako 10 N/kg. W kabinie windy zainstalowano oświetlenie LED o łącznej mocy 40 W, a temperatura wewnątrz wynosiła stałe 21°C. Linki podtrzymujące windę mają wytrzymałość na zerwanie wynoszącą 50 kN. Oblicz wartość siły nacisku, jaką pasażer wywiera na podłogę windy podczas tego ruchu.",
+  "correct": "840 N"
+},
+
+{
+  "category": "fizyka",
+  "question": "Z balkonu na wysokości 20 m, przy słonecznej pogodzie (indeks UV 4), upuszczono swobodnie klucze o masie 200 g. Przyspieszenie ziemskie wynosi 10 m/s2, a gęstość stali, z której wykonano klucze, to 7800 kg/m3. Podczas spadku kluczy wiał boczny wiatr o stałej prędkości 1 m/s, który jednak nie wpływa na czas spadku pionowego. Opór powietrza w tym modelu jest pomijalnie mały. Ile czasu zajmie kluczom dotarcie do powierzchni gruntu?",
+  "correct": "2 s"
+},
+
+{
+  "category": "fizyka",
+  "question": "Na gładkim stole bilardowym w sali o powierzchni 50 m2 leży nieruchoma bila A o masie 150 g. Druga bila B uderza w nią z prędkością, która w ciągu ostatniej sekundy przed zderzeniem wynosiła dokładnie 4 m/s. Współczynnik tarcia sukna o bile wynosi 0,01, a temperatura w sali to 295 K. Po zderzeniu centralnym i doskonale sprężystym bila B zatrzymuje się, a cała jej energia zostaje przekazana bili A. Oblicz wartość pędu, jaki uzyskała bila A tuż po zderzeniu.",
+  "correct": "0,6 kg·m/s"
+},
+
+{
+  "category": "fizyka",
+  "question": "Robot przemysłowy o zasięgu ramienia 1,5 m podnosi element o masie 2 kg na wysokość 3 metrów. Silnik robota zasilany jest napięciem 230 V, a natężenie prądu podczas pracy wynosi 0,5 A. Podnoszenie odbywa się ruchem jednostajnym w czasie 4 sekund przy przyspieszeniu ziemskim 10 m/s2. Przekładnie robota są nasmarowane olejem o lepkości 0,1 Pa·s. Jaką pracę wykonał robot przeciwko sile ciężkości podczas podnoszenia tego elementu?",
+  "correct": "60 J"
+},
+
+{
+  "category": "fizyka",
+  "question": "Pocisk o masie 10 g uderza w deskę z prędkością 300 m/s i zagłębia się w niej na głębokość 5 cm. Deska wykonana jest z drewna sosnowego o gęstości 500 kg/m3, a jej temperatura przed testem wynosiła 20°C. Ciśnienie akustyczne towarzyszące uderzeniu osiągnęło poziom 110 dB. Przyjmij, że ruch pocisku wewnątrz deski jest jednostajnie opóźniony. Oblicz wartość średniej siły oporu, jaka działała na pocisk wewnątrz deski.",
+  "correct": "9000 N"
+},
+
+{
+  "category": "fizyka",
+  "question": "Karuzela o promieniu 5 m obraca się tak, że pasażer o masie 60 kg porusza się ze stałą prędkością liniową. Prędkość ta w ciągu pierwszych 10 sekund rozruchu wzrosła od zera do 4 m/s. Na pasażera działa siła ciężkości (g = 10 m/s2) oraz siły bezwładności w układzie nieinercjalnym. Konstrukcja karuzeli wykonana jest ze stali o module Younga 200 GPa. Oblicz wartość siły dośrodkowej działającej na pasażera, gdy porusza się on z prędkością 4 m/s.",
+  "correct": "192 N"
+},
+
+{
+  "category": "fizyka",
+  "question": "Mały dron o masie 800 g unosi się nieruchomo w powietrzu na wysokości 50 m nad poziomem morza. Silniki drona pracują z łączną mocą 120 W, a temperatura baterii wynosi 35°C. W pewnym momencie dron zaczyna opadać pionowo w dół, a jego prędkość wzrasta o 5 m/s w każdej sekundzie ruchu (a = 5 m/s2). Przyspieszenie ziemskie wynosi 10 m/s2. Oblicz wartość siły nośnej generowanej przez śmigła drona podczas tego opadania przyspieszonego.",
+  "correct": "4 N"
+},
+
+{
+  "category": "fizyka",
+  "question": "Saturn porusza się po orbicie zbliżonej do kołowej o promieniu około 9,5 jednostek astronomicznych (AU) od Słońca. Masa Saturna wynosi w przybliżeniu 5,7e26 kg, a jego atmosfera składa się głównie z wodoru i helu. Średnia temperatura na powierzchni planety to około 95 K. Oblicz wartość siły grawitacji, jaką Słońce (masa 2e30 kg) działa na Saturna, przyjmując stałą grawitacji G = 6,67e-11 N·m2/kg2 oraz 1 AU = 1,5e11 m.",
+  "correct": "3,7e22 N"
+},
+
+{
+  "category": "fizyka",
+  "question": "Łucznik napina cięciwę łuku, wykonując pracę 40 J, co powoduje jej wychylenie o 40 cm od położenia równowagi. Łuk wykonany jest z kompozytu o wysokiej sprężystości, a strzała ma masę 20 g. W momencie strzału panuje cisza nocna, a wilgotność powietrza wynosi 80%. Przyjmij, że cała energia zgromadzona w łuku zostaje przekazana strzale. Oblicz prędkość, z jaką strzała opuszcza łuk.",
+  "correct": "63,2 m/s"
 }
+
 ];
