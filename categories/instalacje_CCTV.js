@@ -2127,18 +2127,6 @@ correct:"Ilość danych przesyłanych w ciągu sekundy."
 
 {
 category:"CCTV",
-question:"Który protokół sieciowy jest najczęściej używany do przesyłania strumienia wideo 'na żywo'?",
-answers:[
-"FTP.",
-"RTSP.",
-"SMTP.",
-"ICMP."
-],
-correct:"RTSP."
-},
-
-{
-category:"CCTV",
 question:"Złącze RS-485 w kamerach PTZ służy do:",
 answers:[
 "Zasilania silników.",
@@ -8128,7 +8116,7 @@ correct:"Współpracę elementów systemu."
   category: "CCTV",
   question: "Wartość przysłony F = 4,0 oznacza, że do przetwornika dociera:",
   answers: ["12,5% światła", "6,3% światła", "3,1% światła", "1,6% światła"],
-  correct: "6,3%"
+  correct: "6,3% światła"
 },
 
 {
@@ -9887,7 +9875,1638 @@ correct:"Współpracę elementów systemu."
   correct: "wąską"
 },
 
+{
+    category: "CCTV",
+    question: "Mamy 4 kamery IP 4K (8MPx). Rejestrator NVR posiada pasmo wejściowe (incoming bandwidth) 80 Mbps. Czy rejestrator obsłuży te kamery, jeśli każda generuje strumień 25 Mbps?",
+    answers: [
+      "Tak, bo 4 kamery to standard dla małego rejestratora",
+      "Nie, ponieważ suma strumieni (100 Mbps) przekracza pasmo rejestratora",
+      "Tak, pod warunkiem zastosowania kabla kategorii 6",
+      "Tak, jeśli kamery mają zasilanie PoE"
+    ],
+    correct: "Nie, ponieważ suma strumieni (100 Mbps) przekracza pasmo rejestratora"
+},
+
+{
+    category: "CCTV",
+    question: "Dlaczego po włączeniu oświetlacza IR w nocy, obraz w kamerze z obiektywem bez korekcji IR może stać się nieostry, mimo że w dzień był idealny?",
+    answers: [
+      "Ponieważ matryca zużywa więcej prądu w nocy",
+      "Ponieważ światło podczerwone ogniskuje się w innym punkcie niż światło widzialne",
+      "Jest to wina wyłącznie zbyt niskiej rozdzielczości kamery",
+      "Ponieważ diody IR nagrzewają obiektyw i zmieniają jego kształt"
+    ],
+    correct: "Ponieważ światło podczerwone ogniskuje się w innym punkcie niż światło widzialne"
+},
+
+{
+    category: "CCTV",
+    question: "Kamera IP jest zasilana przez PoE (802.3af). Jaka jest maksymalna teoretyczna odległość tej kamery od switcha PoE bez stosowania dodatkowych wzmacniaczy?",
+    answers: [
+      "50 metrów",
+      "100 metrów",
+      "250 metrów",
+      "500 metrów"
+    ],
+    correct: "100 metrów"
+},
+
+{
+    category: "CCTV",
+    question: "Funkcja WDR (Wide Dynamic Range) w kamerze jest najbardziej przydatna, gdy:",
+    answers: [
+      "Kamera obserwuje bardzo ciemne pomieszczenie (np. piwnicę)",
+      "Kamera jest skierowana na przeszklone wejście pod słońce",
+      "Chcemy zwiększyć liczbę klatek na sekundę",
+      "Używamy bardzo długiego kabla koncentrycznego"
+    ],
+    correct: "Kamera jest skierowana na przeszklone wejście pod słońce"
+},
+
+{
+    category: "CCTV",
+    question: "Co się stanie z kątem widzenia kamery, jeśli ten sam obiektyw 4mm przełożymy z kamery z przetwornikiem 1/3 cala do kamery z przetwornikiem 1/2 cala?",
+    answers: [
+      "Kąt widzenia się nie zmieni, bo ogniskowa to nadal 4mm",
+      "Kąt widzenia się zwiększy (obraz będzie szerszy)",
+      "Kąt widzenia się zmniejszy (obraz będzie węższy)",
+      "Kamera przestanie widzieć kolory"
+    ],
+    correct: "Kąt widzenia się zwiększy (obraz będzie szerszy)"
+},
+
+{
+    category: "CCTV",
+    question: "Podczas modernizacji systemu dozoru w lokalnej piekarni, gdzie kamery analogowe zostały zamocowane na wysokości 3,5 metra przy użyciu dedykowanych adapterów słupowych, zaszła konieczność wymiany starego odbiornika kineskopowego. Nowy monitor, zasilany zasilaczem buforowym 12V DC umieszczonym w wentylowanej szafce RACK 19 cali, musi obsługiwać standardowe złącze koncentryczne wykorzystywane w starszych instalacjach. Które z wejść wideo wymienionych w specyfikacji monitorów LCD będzie odpowiednie do bezpośredniego podłączenia sygnału wizyjnego z kabla koncentrycznego zakończonego wtykiem zaciskanym?",
+    answers: ["BNC", "D-Sub (VGA)", "DVI-D", "S-Video"],
+    correct: "BNC"
+},
+
+{
+    category: "CCTV",
+    question: "Właściciel warsztatu samochodowego zgłosił, że obraz na stanowisku diagnostycznym jest mało czytelny. Instalacja prowadzona jest w korytkach PCV o szerokości 20mm, a przewody sygnałowe przebiegają obok linii zasilających podnośniki hydrauliczne. Planujesz wymianę monitora na model o proporcjach ekranu 5:4. Jaka rozdzielczość w pikselach będzie właściwa dla tego formatu urządzenia zgodnie ze standardami stosowanymi w telewizji przemysłowej?",
+    answers: ["1280 na 1024 pikseli", "1920 na 1080 pikseli", "800 na 600 pikseli", "1024 na 768 pikseli"],
+    correct: "1280 na 1024 pikseli"
+},
+
+{
+    category: "CCTV",
+    question: "W hurtowni spożywczej, w punkcie wydawania towaru, zamontowano kamerę kopułkową na uchwycie ściennym przy użyciu kołków rozporowych 8mm. Sygnał przesyłany jest skrętką komputerową w kolorze szarym do pokoju ochrony. Inwestor wymaga wymiany monitora podglądowego na większy model, który zmieści się w ograniczonej przestrzeni między regałami. Biorąc pod uwagę dostępne na rynku monitory LCD do CCTV, jaką największą przekątną ekranu możesz zaproponować opierając się na posiadanej dokumentacji technicznej?",
+    answers: ["22", "19", "24", "17"],
+    correct: "22"
+},
+
+{
+    category: "CCTV",
+    question: "Podczas okresowego przeglądu systemu w biurowcu, technik stwierdził uszkodzenie gniazda cyfrowego w monitorze LCD o formacie 16:9, który jest zamocowany na uchwycie VESA do betonowego filaru. Rejestrator cyfrowy wysyła sygnał bez kompresji, co wymaga użycia konkretnego typu złącza cyfrowego dostępnego w tych urządzeniach. Jakie wejście cyfrowe, obok D-Sub, S-Video czy BNC, zazwyczaj posiadają monitory stosowane w telewizji przemysłowej?",
+    answers: ["DVI-D", "HDMI", "DisplayPort", "Thunderbolt"],
+    correct: "DVI-D"
+},
+
+{
+    category: "CCTV",
+    question: "W systemie monitoringu parkingu podziemnego zastosowano okablowanie w peszlach o wysokiej odporności mechanicznej. W pomieszczeniu dozoru planowane jest postawienie monitora o mniejszej przekątnej (19 cali) ze względu na wąski blat roboczy. Według notatek technicznych dotyczących monitorów LCD stosowanych w telewizji przemysłowej, jakie formaty ekranu (proporcje) są najczęściej spotykane w tego typu urządzeniach?",
+    answers: ["5:4, 16:9", "4:3, 16:10", "21:9, 16:9", "1:1, 4:3"],
+    correct: "5:4, 16:9"
+},
+
+{
+category: "CCTV",
+question: "Wskaż zdanie fałszywe dotyczące parametrów i montażu urządzeń rejestrujących w systemach dozoru technicznego:",
+answers: [
+"W profesjonalnych instalacjach wykorzystuje się rejestratory DVR, które montowane są w szafach RACK na specjalnych półkach i odpowiadają za wysokiej jakości rejestrację obrazu pochodzącego wyłącznie z kamer cyfrowych.",
+"Podczas serwisu starszych systemów można spotkać magnetowidy, które mimo braku skomplikowanej budowy i zaprzestania ich produkcji, pozwalają na zapis materiału na kasetach w zakresie od 24 do 960 godzin.",
+"Rejestratory hybrydowe, często zasilane zasilaczami buforowymi 12V umieszczonymi w wentylowanych obudowach, posiadają wyjścia VGA oraz HDMI, co umożliwia podłączenie monitora lub telewizora do śledzenia pracy kamer IP i analogowych.",
+"W systemach o architekturze rozproszonej, gdzie kable są prowadzone w korytkach PCV 20mm, rejestrator NVR działa jako niezależne urządzenie zarządzające kamerami IP, którym po podłączeniu do sieci nadaje się adresy IP."
+],
+correct: "W profesjonalnych instalacjach wykorzystuje się rejestratory DVR, które montowane są w szafach RACK na specjalnych półkach i odpowiadają za wysokiej jakości rejestrację obrazu pochodzącego wyłącznie z kamer cyfrowych."
+},
+
+{
+category: "CCTV",
+question: "Wskaż zdanie fałszywe dotyczące technologii zapisu danych i transmisji sygnału w systemach CCTV:",
+answers: [
+"Karty VCR są dedykowane do zapisu materiału wideo na twardym dysku komputera stacjonarnego, a łączna długość zarejestrowanego materiału jest limitowana wyłącznie przez całkowitą pojemność zastosowanego w jednostce dysku.",
+"W systemach analogowych wymagane jest prowadzenie dedykowanego kabla koncentrycznego typu RG59 w kolorze czarnym lub białym między każdą z kamer a rejestratorem, co ogranicza elastyczność architektury w porównaniu do systemów IP.",
+"Rejestratory DVR, stosowane często w biurowcach i montowane na wysokości 1,5 metra w szafach teletechnicznych, oferują maksymalną rozdzielczość rejestracji D1 i bez problemu obsługują zapis obrazu z kamer megapikselowych.",
+"Rejestrator cyfrowy, będący profesjonalnym połączeniem twardego dysku i wielokanałowego multipleksera, redukuje ryzyko utraty danych związane z niestabilnością systemów operacyjnych, na których pracują zwykłe karty VCR."
+],
+correct: "Rejestratory DVR, stosowane często w biurowcach i montowane na wysokości 1,5 metra w szafach teletechnicznych, oferują maksymalną rozdzielczość rejestracji D1 i bez problemu obsługują zapis obrazu z kamer megapikselowych."
+},
+
+{
+category: "CCTV",
+question: "Wskaż zdanie fałszywe dotyczące typów i funkcjonalności rejestratorów cyfrowych:",
+answers: [
+"Rejestrator mobilny, montowany zazwyczaj w pojazdach komunikacji miejskiej przy użyciu uchwytów antywibracyjnych, zapewnia pełną funkcję transmisji danych w sieci oraz synchronizację audio i wideo podczas odtwarzania.",
+"W zależności od skali obiektu, np. hurtowni spożywczej, instalatorzy mogą dobrać rejestratory cyfrowe posiadające różną liczbę wejść, w tym modele 4-, 8-, 16-, 24-, 32- oraz 64-kanałowe.",
+"Systemy telewizji dozorowej są wyposażone w zależności od potrzeb w trzy główne typy urządzeń rejestrujących: magnetowidy, karty VCR lub profesjonalne rejestratory cyfrowe, zapisujące obraz na nośnikach danych.",
+"Rejestrator cyfrowy DVR to profesjonalna odmiana urządzenia, która ze względu na otwarty dostęp przez internet i brak kodów dostępu jest bardziej narażona na sabotaż niż standardowe karty VCR montowane w komputerach."
+],
+correct: "Rejestrator cyfrowy DVR to profesjonalna odmiana urządzenia, która ze względu na otwarty dostęp przez internet i brak kodów dostępu jest bardziej narażona na sabotaż niż standardowe karty VCR montowane w komputerach."
+},
+
+{
+category: "CCTV",
+question: "Wskaż zdanie fałszywe dotyczące instalacji rejestratorów w obiektach przemysłowych:",
+answers: [
+"W systemach analogowych, prowadzonych w rurkach RL o średnicy 22mm, niezbędne jest zastosowanie kabla koncentrycznego pomiędzy każdą kamerą a rejestratorem, co ogranicza swobodę rozmieszczenia urządzeń.",
+"Rejestratory DVR są wyjątkowo niezawodnymi urządzeniami, których głównym zadaniem jest wyświetlanie obrazu na monitorach oraz wysokiej jakości rejestracja sygnału z kamer analogowych i cyfrowych.",
+"Przy montażu w szafie pancernej z mechanicznym zabezpieczeniem obudowy, rejestrator cyfrowy pełni rolę urządzenia łączącego funkcje twardego dysku oraz wielokanałowego multipleksera.",
+"W magazynie wysokiego składowania, gdzie kable zasilające są koloru czarnego, systemy telewizji dozorowej wyposaża się w zależności od potrzeb w magnetowidy, karty VCR lub rejestratory cyfrowe."
+],
+correct: "Rejestratory DVR są wyjątkowo niezawodnymi urządzeniami, których głównym zadaniem jest wyświetlanie obrazu na monitorach oraz wysokiej jakości rejestracja sygnału z kamer analogowych i cyfrowych."
+},
+
+{
+category: "CCTV",
+question: "Wskaż zdanie fałszywe dotyczące technologii NVR i transmisji sieciowej:",
+answers: [
+"Rejestrator sieciowy NVR jest samodzielnym urządzeniem, które po wpięciu do infrastruktury LAN służy do zarządzania kamerami IP poprzez nadanie im właściwych adresów IP.",
+"W przypadku budowy systemu opartego o kamery IP, inżynier może projektować rozmieszczenie urządzeń w dowolnej odległości, co stanowi przewagę nad sztywną architekturą kabla koncentrycznego.",
+"Podczas konfiguracji rejestratora sieciowego NVR w biurowcu, instalator musi pamiętać, że urządzenie to nie pozwala na rejestrację obrazu z kamer megapikselowych, co odróżnia je od standardowych DVR.",
+"Zaletą stosowania dedykowanych rejestratorów cyfrowych zamiast kart VCR jest mniejsza możliwość dostępu osób niepowołanych dzięki stosowaniu kodów dostępu i mechanicznych blokad obudowy."
+],
+correct: "Podczas konfiguracji rejestratora sieciowego NVR w biurowcu, instalator musi pamiętać, że urządzenie to nie pozwala na rejestrację obrazu z kamer megapikselowych, co odróżnia je od standardowych DVR."
+},
+
+{
+category: "CCTV",
+question: "Wskaż zdanie fałszywe dotyczące specyfikacji monitorów LCD i ich montażu:",
+answers: [
+"W pomieszczeniu ochrony na stanowisku operatora montuje się monitory LCD o formacie ekranu 5:4 lub 16:9, które często posiadają wejścia BNC, D-Sub (VGA) oraz DVI-D.",
+"Monitory przemysłowe o przekątnej 19 cali, mocowane do ściany za pomocą kołków 10mm, charakteryzują się standardową rozdzielczością wynoszącą 1280 na 1024 piksele.",
+"Przy instalacji monitora LCD o przekątnej 22 cali, doprowadzenie sygnału audio z rejestratora jest możliwe tylko wtedy, gdy urządzenie posiada dedykowane wejście dźwiękowe określone w notatkach.",
+"Format ekranu 5:4 jest dedykowany wyłącznie dla monitorów o przekątnej 22 cale, podczas gdy format 16:9 stosuje się tylko w monitorach 19-calowych mocowanych na uchwytach biurkowych."
+],
+correct: "Format ekranu 5:4 jest dedykowany wyłącznie dla monitorów o przekątnej 22 cale, podczas gdy format 16:9 stosuje się tylko w monitorach 19-calowych mocowanych na uchwytach biurkowych."
+},
+
+{
+category: "CCTV",
+question: "Wskaż zdanie fałszywe dotyczące urządzeń mobilnych i hybrydowych:",
+answers: [
+"Rejestrator mobilny montowany pod siedzeniem kierowcy w autobusie wykorzystuje nowoczesną kompresję plików, co pozwala na jednoczesny zapis, odtwarzanie i podgląd na żywo.",
+"Rejestrator hybrydowy, umieszczony w metalowej obudowie zabezpieczonej kluczem, jest fabrycznie przystosowany do współpracy zarówno z kamerami IP, jak i kamerami analogowymi.",
+"Właściciel warsztatu może śledzić pracę kamer na telewizorze z wejściem HDMI, ponieważ rejestratory hybrydowe są zazwyczaj wyposażone w wyjścia wideo HDMI oraz VGA.",
+"Rejestratory mobilne, ze względu na swoją specyfikę, nie posiadają funkcji transmisji danych w sieci i służą wyłącznie do zapisu obrazu na wymiennym dysku bez możliwości podglądu zdalnego."
+],
+correct: "Rejestratory mobilne, ze względu na swoją specyfikę, nie posiadają funkcji transmisji danych w sieci i służą wyłącznie do zapisu obrazu na wymiennym dysku bez możliwości podglądu zdalnego."
+},
+
+{
+category: "CCTV",
+question: "Wskaż zdanie fałszywe dotyczące kart VCR i bezpieczeństwa danych:",
+answers: [
+"Karty VCR są instalowane bezpośrednio w jednostkach komputerowych, a ich głównym zadaniem jest zapisywanie strumienia wideo z kamer na dysku twardym tego komputera.",
+"Stosowanie kart VCR wiąże się z podwyższonym ryzykiem utraty danych, co wynika z pracy na potencjalnie niestabilnych systemach operacyjnych oraz dostępu wielu użytkowników do komputera.",
+"Czas nagrania na karcie VCR jest ściśle ograniczony do 960 godzin, niezależnie od tego, jak duży dysk twardy został zamontowany w komputerze PC przez instalatora.",
+"Rejestrator cyfrowy stanowi profesjonalną alternatywę dla kart VCR, oferując większą stabilność i ograniczając ryzyko sabotażu poprzez systemy kodów i zabezpieczenia mechaniczne."
+],
+correct: "Czas nagrania na karcie VCR jest ściśle ograniczony do 960 godzin, niezależnie od tego, jak duży dysk twardy został zamontowany w komputerze PC przez instalatora."
+},
+
+{
+category: "CCTV",
+question: "Wskaż zdanie fałszywe dotyczące parametrów sygnału w rejestratorach DVR:",
+answers: [
+"Maksymalna rozdzielczość rejestracji dla systemów opartych na urządzeniach typu DVR jest zdefiniowana jako standard D1, co odpowiada wartości 720 x 576 pikseli w formacie PAL.",
+"Kabel koncentryczny, używany do łączenia kamer z rejestratorem DVR, jest układany w białych korytkach PCV o szerokości 20mm przy zachowaniu odpowiednich promieni gięcia przewodu.",
+"Kamery megapikselowe mogą być bez przeszkód rejestrowane przez każdy standardowy rejestrator DVR, pod warunkiem użycia kabla koncentrycznego o niskiej tłumienności.",
+"Rejestratory cyfrowe, poza funkcją zapisu, odpowiadają za poprawne wyświetlanie obrazów z kamer na monitorach CCTV zainstalowanych w punkcie dozoru."
+],
+correct: "Kamery megapikselowe mogą być bez przeszkód rejestrowane przez każdy standardowy rejestrator DVR, pod warunkiem użycia kabla koncentrycznego o niskiej tłumienności."
+},
+
+{
+category: "CCTV",
+question: "Wskaż zdanie fałszywe dotyczące podziału kanałowego rejestratorów:",
+answers: [
+"Na rynku dostępne są rejestratory cyfrowe o różnej liczbie wejść, co pozwala na budowę systemów 4-, 8-, 16-, 24-, 32-, a nawet 64-kanałowych.",
+"Wybór liczby kanałów rejestratora zależy od liczby kamer zamontowanych na elewacji przy użyciu uchwytów ściennych i kołków rozporowych o średnicy 8mm.",
+"Rejestratory 24-kanałowe są wykorzystywane wyłącznie w technologii sieciowej NVR i nie występują w wersji hybrydowej ani analogowej DVR.",
+"Każdy rejestrator cyfrowy, niezależnie od liczby kanałów, służy do zapisu obrazu na nośniku danych, którym zazwyczaj jest dysk twardy lub zespół dysków."
+],
+correct: "Rejestratory 24-kanałowe są wykorzystywane wyłącznie w technologii sieciowej NVR i nie występują w wersji hybrydowej ani analogowej DVR."
+},
+
+{
+category: "CCTV",
+question: "Wskaż zdanie fałszywe dotyczące najstarszych technologii zapisu:",
+answers: [
+"Magnetowidy to najstarsze i najmniej skomplikowane urządzenia rejestrujące, które obecnie nie są już produkowane w nowych systemach telewizji dozorowej.",
+"W magnetowidach obraz zapisywany jest na taśmie magnetycznej wewnątrz kasety, co pozwala na nagranie materiału trwającego od jednej doby do 960 godzin.",
+"Magnetowidy, ze względu na swoją cyfrową budowę, pozwalają na jednoczesne zarządzanie adresami IP kamer sieciowych w dużych obiektach handlowych.",
+"W zależności od potrzeb, instalacje dozorowe mogą być wyposażone w trzy typy urządzeń rejestrujących, wśród których magnetowidy stanowią rozwiązanie historyczne."
+],
+correct: "Magnetowidy, ze względu na swoją cyfrową budowę, pozwalają na jednoczesne zarządzanie adresami IP kamer sieciowych w dużych obiektach handlowych."
+},
+
+{
+category: "CCTV",
+question: "Wskaż zdanie fałszywe dotyczące budowy rejestratora cyfrowego:",
+answers: [
+"Rejestrator cyfrowy konstrukcyjnie stanowi połączenie wielokanałowego multipleksera oraz dysku twardego, który zazwyczaj jest elementem wymiennym.",
+"W profesjonalnych systemach stosuje się obudowy zabezpieczane mechanicznie, aby uniemożliwić osobom niepowołanym fizyczny dostęp do dysków z nagraniami.",
+"Rejestrator cyfrowy, w przeciwieństwie do magnetowidów, zapisuje dane na dysku twardym, ale podobnie jak one, wymaga stosowania kaset wideo w celu archiwizacji danych.",
+"Stabilność rejestratorów DVR jest wyższa niż kart VCR, ponieważ nie są one oparte na standardowych systemach operacyjnych podatnych na zawieszenia."
+],
+correct: "Rejestrator cyfrowy, w przeciwieństwie do magnetowidów, zapisuje dane na dysku twardym, ale podobnie jak one, wymaga stosowania kaset wideo w celu archiwizacji danych."
+},
+
+{
+category: "CCTV",
+question: "Wskaż zdanie fałszywe dotyczące elastyczności systemów IP i analogowych:",
+answers: [
+"Budowa systemu opartego o kamery IP pozwala na dużą swobodę, ponieważ urządzenia mogą znajdować się w dowolnej odległości od rejestratora sieciowego NVR.",
+"W systemach analogowych konieczne jest doprowadzenie przewodu koncentrycznego z każdego punktu kamerowego bezpośrednio do gniazda wejściowego rejestratora DVR.",
+"Architektura systemu opartego o skrętkę komputerową i kamery IP pozwala na przesyłanie obrazu megapikselowego do rejestratorów typu DVR bez użycia dodatkowych konwerterów.",
+"Rejestrator sieciowy NVR jest dedykowany do pracy w sieci, gdzie po fizycznym połączeniu kamer konfiguracja polega na ustawieniu odpowiednich adresów IP."
+],
+correct: "Architektura systemu opartego o skrętkę komputerową i kamery IP pozwala na przesyłanie obrazu megapikselowego do rejestratorów typu DVR bez użycia dodatkowych konwerterów."
+},
+
+{
+category: "CCTV",
+question: "W trakcie modernizacji systemu dozoru w magazynie wysokiego składowania, gdzie kamery montowane są na wysokości 6 metrów przy użyciu uchwytów stalowych i śrub M8, inżynier analizuje parametry optyczne. Które z poniższych stwierdzeń dotyczących parametrów obiektywu jest fałszywe?",
+answers: [
+"Podczas projektowania obserwacji wąskich korytarzy między regałami wykorzystuje się obiektywy o długiej ogniskowej, ponieważ wraz ze wzrostem wartości ogniskowej wyrażonej w milimetrach kąt widzenia kamery ulega zmniejszeniu.",
+"Wartość liczby aperturowej F określa zdolność przepuszczania światła przez soczewki, przy czym mała wartość F oznacza, że obiektyw jest jaśniejszy i na powierzchnię przetwornika obrazu pada większa ilość światła.",
+"Parametr głębi ostrości, decydujący o zakresie odległości, w którym obiekty wydają się ostre, ulega zwiększeniu w sytuacjach, gdy instalator decyduje się na przymykanie przysłony lub wydłużanie ogniskowej obiektywu.",
+"Wskaźnik określający rzeczywistą zdolność obiektywu do przepuszczania światła, uwzględniający materiał soczewek i rodzaj światła, nazywany jest liczbą transmisyjną T i umożliwia on bezwzględną ocenę jasności optyki."
+],
+correct: "Parametr głębi ostrości, decydujący o zakresie odległości, w którym obiekty wydają się ostre, ulega zwiększeniu w sytuacjach, gdy instalator decyduje się na przymykanie przysłony lub wydłużanie ogniskowej obiektywu."
+},
+
+{
+category: "CCTV",
+question: "Podczas serwisu kamer zewnętrznych zainstalowanych na elewacji biurowca w korytkach PCV 20mm, technik sprawdza konfigurację przysłon oraz rodzaje zamontowanych ogniskowych. Wskaż zdanie fałszywe w oparciu o dokumentację techniczną:",
+answers: [
+"W kamerach umieszczanych na zewnątrz obiektu zazwyczaj stosuje się przysłonę automatyczną typu Auto-IRIS, która reguluje dostęp światła do przetwornika i zapobiega oślepieniu urządzenia przez promienie słoneczne.",
+"Obiektywy o zmiennej ogniskowej, określane mianem Varifocal lub Zoom, są najczęściej spotykane w zakresach 3,5-8mm i pozwalają na swobodny wybór pola widzenia podczas montażu kamery na uchwycie ściennym.",
+"Obiektywy typu moto-zoom, posiadające ogniskową regulowaną zdalnie, są przeznaczone do najbardziej wymagających zastosowań, w przeciwieństwie do prostych obiektywów no-IRIS, które nie posiadają przysłony.",
+"Zgodnie z klasyfikacją ze względu na kąt widzenia, obiektyw standardowy to taki, którego wartość ogniskowej wyrażona w milimetrach jest znacznie mniejsza od przekątnej zastosowanego w kamerze przetwornika obrazu."
+],
+correct: "Zgodnie z klasyfikacją ze względu na kąt widzenia, obiektyw standardowy to taki, którego wartość ogniskowej wyrażona w milimetrach jest znacznie mniejsza od przekątnej zastosowanego w kamerze przetwornika obrazu."
+},
+
+{
+category: "CCTV",
+question: "Właściciel warsztatu samochodowego zlecił wymianę obiektywów w kamerach stacjonarnych. Instalacja wykorzystuje przewody w kolorze szarym i złącza BNC. Wskaż zdanie fałszywe dotyczące standardów mocowania i doboru optyki:",
+answers: [
+"Na rynku spotyka się dwa typy mocowań: CS, gdzie odległość od przetwornika wynosi 12,5mm, oraz C, gdzie dystans ten wynosi 17,526mm, przy czym standard CS jest uznawany za znacznie częściej spotykany.",
+"Dzięki większej uniwersalności mocowania typu C, możliwe jest jego przekształcenie w mocowanie CS poprzez zastosowanie dodatkowego pierścienia dystansowego, co pozwala na montaż nowszych obiektywów na starych kamerach.",
+"Dobór obiektywu wymaga uwzględnienia pola obserwacji, jasności, a także rodzaju oświetlenia i charakterystyki obiektów, takich jak ich prędkość przemieszczania się (wolno, szybko lub bardzo szybko).",
+"W przypadku obiektywów o stałej ogniskowej najczęściej spotyka się wartości takie jak 3,6mm, 4,0mm, 6,0mm oraz 12,0mm, które dobiera się na podstawie obliczonego kąta widzenia dla konkretnego rozmiaru przetwornika."
+],
+correct: "Dzięki większej uniwersalności mocowania typu C, możliwe jest jego przekształcenie w mocowanie CS poprzez zastosowanie dodatkowego pierścienia dystansowego, co pozwala na montaż nowszych obiektywów na starych kamerach."
+},
+
+{
+category: "CCTV",
+question: "Podczas instalacji systemu dozoru w strefie rozładunkowej, gdzie przewody typu żelowanego prowadzone są w peszlach odpornych na UV, monter konfiguruje parametry optyczne dla kamer obserwujących bramy wjazdowe. Które z poniższych twierdzeń dotyczących jasności i konstrukcji obiektywu jest fałszywe?",
+answers: [
+"Liczba aperturowa F jest wartością określającą zdolność przepuszczania światła, gdzie wraz ze wzrostem tej liczby maleje ilość strumienia świetlnego padającego na powierzchnię światłoczułą.",
+"Obiektyw to kluczowy element optyczny, którego zadaniem jest zbieranie i przenoszenie obrazu przedmiotu bezpośrednio na przetwornik obrazu znajdujący się w dalszej części urządzenia.",
+"W specyfikacjach technicznych zazwyczaj podaje się dwie wartości liczby F, z których pierwsza określa maksymalne otwarcie przysłony, a druga wartość definiuje jej otwarcie minimalne.",
+"Liczba transmisyjna T jest parametrem zależnym wyłącznie od ogniskowej obiektywu i nie uwzględnia w swoich obliczeniach rodzaju materiału, z którego wykonano soczewki obiektywu."
+],
+correct: "Liczba transmisyjna T jest parametrem zależnym wyłącznie od ogniskowej obiektywu i nie uwzględnia w swoich obliczeniach rodzaju materiału, z którego wykonano soczewki obiektywu."
+},
+
+{
+category: "CCTV",
+question: "W ramach serwisu gwarancyjnego w szkole podstawowej, technik sprawdza kamery zamontowane na korytarzach za pomocą kołków rozporowych 6mm. System wykorzystuje zasilanie PoE przesyłane skrętką w kolorze niebieskim. Wskaż zdanie fałszywe dotyczące głębi ostrości i ogniskowej:",
+answers: [
+"Ogniskowa, wyrażana w milimetrach, to odległość, w jakiej w centrum optycznym obiektywu powstaje obraz obiektu, który jest położony w nieskończoności.",
+"Zastosowanie obiektywu o małej wartości ogniskowej powoduje, że kamera posiada duży kąt widzenia, co jest wykorzystywane przy obserwacji dużych pomieszczeń, takich jak sale gimnastyczne.",
+"Głębia ostrości to parametr określający zakres odległości, w którym obiekty są ostre, a jej wartość zwiększa się wraz z otwieraniem przysłony i wydłużaniem ogniskowej obiektywu.",
+"W profesjonalnych systemach dąży się do tego, aby głębia ostrości sięgała nieskończoności, co zapewnia poprawną widoczność obiektów leżących dalej niż pewna minimalna odległość."
+],
+correct: "Głębia ostrości to parametr określający zakres odległości, w którym obiekty są ostre, a jej wartość zwiększa się wraz z otwieraniem przysłony i wydłużaniem ogniskowej obiektywu."
+},
+
+{
+category: "CCTV",
+question: "W trakcie projektowania systemu telewizji dozorowej dla osiedla mieszkaniowego, inżynier dobiera osprzęt do kamer dzień/noc montowanych w obudowach zewnętrznych z grzałkami. Wskaż zdanie fałszywe dotyczące podziału i mocowania obiektywów:",
+answers: [
+"Obiektywy szerokokątne definiuje się jako te, w których wartość ogniskowej jest znacznie mniejsza od przekątnej przetwornika obrazu zastosowanego w danej kamerze.",
+"W kamerach typu dzień/noc pracujących w zmiennych warunkach oświetleniowych, dedykowanym rozwiązaniem jest zastosowanie obiektywów z automatyczną przysłoną Auto-IRIS.",
+"Podział obiektywów ze względu na rodzaj ogniskowej obejmuje modele o stałej ogniskowej, zmiennej (Varifocal) oraz ogniskowej regulowanej zdalnie (moto-zoom).",
+"Mocowanie typu CS charakteryzuje się odległością obiektywu od przetwornika wynoszącą 17,526mm i jest jedynym standardem, którego nie da się zmienić za pomocą pierścieni."
+],
+correct: "Mocowanie typu CS charakteryzuje się odległością obiektywu od przetwornika wynoszącą 17,526mm i jest jedynym standardem, którego nie da się zmienić za pomocą pierścieni."
+},
+
+{
+category: "CCTV",
+question: "Podczas regulacji pola widzenia kamery w garażu podziemnym, zamontowanej na uchwycie sufitowym w korytku PCV o szerokości 20mm, instalator analizuje relację między przetwornikiem a obiektywem. Wskaż zdanie fałszywe:",
+answers: [
+"Kąt widzenia kamery można wyliczyć, posiadając dane o określonym rozmiarze przetwornika obrazu oraz znając dokładną wartość ogniskowej zastosowanego obiektywu.",
+"Przysłona to mechaniczny element obiektywu w postaci regulowanego otworu, którego zadaniem jest zmiana ilości światła padającego na powierzchnię światłoczułą przetwornika.",
+"W sytuacjach wymagających wyodrębnienia obserwowanego obiektu od tła otoczenia, najbardziej pożądanym zjawiskiem jest uzyskanie jak największej głębi ostrości.",
+"Obiektywy standardowe to takie podzespoły optyczne, w których wartość ogniskowej jest zbliżona (podobna) do przekątnej przetwornika obrazu zamontowanego w kamerze."
+],
+correct: "W sytuacjach wymagających wyodrębnienia obserwowanego obiektu od tła otoczenia, najbardziej pożądanym zjawiskiem jest uzyskanie jak największej głębi ostrości."
+},
+
+{
+category: "CCTV",
+question: "Inżynier systemów zabezpieczeń przygotowuje specyfikację dla obiektu o wysokim rygorze ochrony, gdzie stosowane są obiektywy specjalne. Wskaż zdanie fałszywe dotyczące montażu i doboru elementów optycznych:",
+answers: [
+"Zastosowanie dodatkowego pierścienia dystansowego pozwala na zmianę mocowania obiektywu typu CS na mocowanie typu C, natomiast relacja odwrotna w tym przypadku nie zachodzi.",
+"Obiektywy wąskokątne charakteryzują się tym, że ich ogniskowa jest większa od przekątnej przetwornika obrazu, co predysponuje je do obserwacji np. korytarzy.",
+"Skala T (liczba transmisyjna) umożliwia bezwzględną ocenę jasności obiektywu, biorąc pod uwagę materiał soczewek, co odróżnia ją od skali F (liczby aperturowej).",
+"Obiektywy o stałej ogniskowej, takie jak 4,0mm czy 6,0mm, są dedykowane wyłącznie do kamer umieszczanych na zewnątrz, gdyż posiadają wbudowaną regulację oślepienia słonecznego."
+],
+correct: "Obiektywy o stałej ogniskowej, takie jak 4,0mm czy 6,0mm, są dedykowane wyłącznie do kamer umieszczanych na zewnątrz, gdyż posiadają wbudowaną regulację oślepienia słonecznego."
+},
+
+{
+category: "CCTV",
+question: "Inżynier systemów zabezpieczeń przygotowuje specyfikację dla obiektu o wysokim rygorze ochrony, gdzie stosowane są obiektywy specjalne. Wskaż zdanie fałszywe dotyczące montażu i doboru elementów optycznych:",
+answers: [
+"Zastosowanie dodatkowego pierścienia dystansowego pozwala na zmianę mocowania obiektywu typu CS na mocowanie typu C, natomiast relacja odwrotna w tym przypadku nie zachodzi.",
+"Obiektywy wąskokątne charakteryzują się tym, że ich ogniskowa jest większa od przekątnej przetwornika obrazu, co predysponuje je do obserwacji np. korytarzy.",
+"Skala T (liczba transmisyjna) umożliwia bezwzględną ocenę jasności obiektywu, biorąc pod uwagę materiał soczewek, co odróżnia ją od skali F (liczby aperturowej).",
+"Obiektywy o stałej ogniskowej, takie jak 4,0mm czy 6,0mm, są dedykowane wyłącznie do kamer umieszczanych na zewnątrz, gdyż posiadają wbudowaną regulację oślepienia słonecznego."
+],
+correct: "Obiektywy o stałej ogniskowej, takie jak 4,0mm czy 6,0mm, są dedykowane wyłącznie do kamer umieszczanych na zewnątrz, gdyż posiadają wbudowaną regulację oślepienia słonecznego."
+},
+
+{
+category: "CCTV",
+question: "W trakcie przeglądu okresowego w centrum handlowym, technik sprawdza kamery zamontowane na wysokości 4,5 metra przy użyciu kołków rozporowych Fischer. Zasilanie doprowadzone jest skrętką kat. 5e w kolorze szarym. Wskaż zdanie fałszywe dotyczące doboru i parametrów obiektywów:",
+answers: [
+"Obiektyw pełni rolę elementu zbierającego i przenoszącego obraz przedmiotu bezpośrednio na przetwornik obrazu, stanowiąc kluczowy moduł toru wizyjnego każdej kamery.",
+"W specyfikacjach technicznych obiektywów liczba aperturowa F podawana jest zazwyczaj jako dwie wartości: pierwsza oznacza maksymalne, a druga minimalne otwarcie przysłony.",
+"Aby uzyskać efekt wyodrębnienia konkretnego obiektu od tła otoczenia w zatłoczonym pasażu handlowym, inżynier powinien dążyć do uzyskania jak największej głębi ostrości.",
+"Dobór obiektywu musi uwzględniać nie tylko pole obserwacji, ale także charakterystykę obiektów, w tym to, czy przemieszczają się one wolno, szybko, czy bardzo szybko."
+],
+correct: "Aby uzyskać efekt wyodrębnienia konkretnego obiektu od tła otoczenia w zatłoczonym pasażu handlowym, inżynier powinien dążyć do uzyskania jak największej głębi ostrości."
+},
+
+{
+category: "CCTV",
+question: "Podczas projektowania systemu dozoru dla zewnętrznego parkingu strzeżonego, gdzie przewody kładzione są w peszlach o szerokości 25mm, inżynier analizuje właściwości przysłon. Wskaż zdanie fałszywe na podstawie notatek technicznych:",
+answers: [
+"Przysłona to część obiektywu w postaci regulowanego otworu, która zmienia ilość światła przechodzącego przez soczewki i padającego na powierzchnię światłoczułą przetwornika.",
+"W kamerach zewnętrznych, narażonych na bezpośrednie działanie promieni słonecznych, najczęściej stosuje się przysłonę ręczną, która najlepiej niweluje efekt oślepienia przetwornika.",
+"Automatyczna przysłona (Auto-IRIS) jest dedykowanym rozwiązaniem dla kamer typu dzień/noc, zapewniając regulację dostępu światła w zmiennych warunkach oświetleniowych.",
+"Obiektywy bez przysłony, oznaczane jako no-IRIS, są stosowane głównie w najprostszych modelach kamer przeznaczonych do stabilnych warunków oświetleniowych."
+],
+correct: "W kamerach zewnętrznych, narażonych na bezpośrednie działanie promieni słonecznych, najczęściej stosuje się przysłonę ręczną, która najlepiej niweluje efekt oślepienia przetwornika."
+},
+
+{
+category: "CCTV",
+question: "W serwerowni banku zainstalowano kamery z mocowaniem obiektywowym typu CS. Instalacja prowadzona jest w estetycznych korytkach PCV o szerokości 20mm. Wskaż zdanie fałszywe dotyczące standardów mocowań i odległości optycznych:",
+answers: [
+"Podstawową różnicą między mocowaniem typu C a CS jest odległość płaszczyzny obiektywu od powierzchni przetwornika obrazu zamontowanego wewnątrz kamery.",
+"Dla mocowania typu CS odległość od przetwornika wynosi dokładnie 12,5mm, natomiast dla starszego typu mocowania C wartość ta jest równa 17,526mm.",
+"Mocowanie typu C jest obecnie znacznie częściej spotykane w nowych instalacjach niż standard CS, co wynika z jego większej uniwersalności przy stosowaniu pierścieni.",
+"Dzięki zastosowaniu dodatkowego pierścienia dystansowego, inżynier może bez problemu zmienić mocowanie obiektywu typu CS na mocowanie typu C."
+],
+correct: "Mocowanie typu C jest obecnie znacznie częściej spotykane w nowych instalacjach niż standard CS, co wynika z jego większej uniwersalności przy stosowaniu pierścieni."
+},
+
+{
+category: "CCTV",
+question: "Inżynier przygotowuje wycenę dla hurtowni budowlanej, planując rozmieszczenie kamer szerokokątnych i wąskokątnych na elewacji budynku. Wskaż zdanie fałszywe dotyczące kątów widzenia i ogniskowych:",
+answers: [
+"Ogniskowa to parametr wyrażany w milimetrach, określający odległość, w jakiej powstaje obraz obiektu położonego w nieskończoności względem centrum optycznego.",
+"Obiektyw wąskokątny, idealny do obserwacji długich korytarzy, to taki, w którym wartość ogniskowej jest znacznie mniejsza od przekątnej przetwornika obrazu.",
+"Kąt widzenia kamery jest bezpośrednio uzależniony od dwóch czynników: rozmiaru zastosowanego przetwornika oraz znanej wartości ogniskowej obiektywu.",
+"Obiektywy standardowe definiuje się jako te, w których wartość ogniskowej jest zbliżona do długości przekątnej przetwornika obrazu zainstalowanego w urządzeniu."
+],
+correct: "Obiektyw wąskokątny, idealny do obserwacji długich korytarzy, to taki, w którym wartość ogniskowej jest znacznie mniejsza od przekątnej przetwornika obrazu."
+},
+
+{
+category: "CCTV",
+question: "W zakładzie produkcyjnym zamontowano obiektywy typu moto-zoom przy użyciu uchwytów sufitowych i kabli sygnałowych w kolorze białym. Inżynier weryfikuje jasność optyki. Wskaż zdanie fałszywe:",
+answers: [
+"Liczba aperturowa F określa jasność obiektywu; mała wartość tego parametru sprawia, że obiektyw jest jaśniejszy i przepuszcza więcej światła na przetwornik.",
+"Skala T, czyli liczba transmisyjna, umożliwia bezwzględną ocenę jasności obiektywu, uwzględniając przy tym materiał soczewek oraz rodzaj przepuszczanego światła.",
+"Wraz ze wzrostem liczby aperturowej F, ilość światła przechodzącego przez soczewki obiektywu ulega zwiększeniu, co poprawia jakość obrazu w nocy.",
+"W specyfikacjach technicznych obiektywów parametr jasności jest kluczowy przy doborze urządzeń do pracy w warunkach słabego oświetlenia sztucznego."
+],
+correct: "Wraz ze wzrostem liczby aperturowej F, ilość światła przechodzącego przez soczewki obiektywu ulega zwiększeniu, co poprawia jakość obrazu w nocy."
+},
+
+{
+category: "CCTV",
+question: "jakie AES zaznaczono numerem 1 : ? ",
+answers: [
+"szybkie",
+"wolne",
+"wyłączone",
+"włączone"
+],
+image: "img/CCTV/AES_szybkie_wolne.png",
+correct: "szybkie"
+},
+
+{
+category: "CCTV",
+question: "jakie AES zaznaczono numerem 2 : ? ",
+answers: [
+"szybkie",
+"wolne",
+"wyłączone",
+"włączone"
+],
+image: "img/CCTV/AES_szybkie_wolne.png",
+correct: "wolne"
+},
+
+{
+category: "CCTV",
+question: "jaki parametr zaznaczono numerem 2 : ? ",
+"ASE answers": [
+"ASE szybkie",
+"ASE wolne",
+"ASE wyłączone",
+"ASE włączone"
+],
+image: "img/CCTV/AES_szybkie_wolne.png",
+correct: "ASE wolne"
+},
+
+{
+category: "CCTV",
+question: "jaki parametr zaznaczono numerem 1 : ? ",
+"ASE answers": [
+"ASE szybkie",
+"ASE wolne",
+"ASE wyłączone",
+"ASE włączone"
+],
+image: "img/CCTV/AES_szybkie_wolne.png",
+correct: "ASE szybkie"
+},
+
+{
+category: "CCTV",
+question: "Podczas nocnego audytu systemu w podziemnym parkingu, inżynier analizuje obraz z kamery zamontowanej na betonowym filarze za pomocą kołków rozporowych 10mm. Na monitorze wyświetlona jest ilustracja nr 1 (po lewej stronie). Biorąc pod uwagę charakterystykę szumów oraz jasność tła, jaka wartość parametru Automatycznego sterowania wzmocnieniem (AGC) została tam zastosowana?",
+answers: ["10/255", "100/255", "255/255", "0/255"],
+image: "img/CCTV/AGC_10_255__AGC_100_255.png",
+correct: "10/255"
+},
+
+{
+category: "CCTV",
+question: "Właściciel obiektu handlowego skarży się na zbyt dużą ziarnistość obrazu (szumy) w warunkach nocnych. Instalator, prowadząc kable w korytkach PCV 20mm, prezentuje podgląd z ilustracji nr 2 (po prawej stronie), gdzie czułość została celowo podniesiona, by doświetlić ciemne punkty. Jaka konkretna wartość nastawu AGC odpowiada za ten stan wzmocnienia sygnału?",
+answers: ["100/255", "10/255", "5/255", "255/255"],
+image: "img/CCTV/AGC_10_255__AGC_100_255.png",
+correct: "100/255"
+},
+
+{
+category: "CCTV",
+question: "Na stanowisku operatora w biurowcu porównywane są dwa tryby pracy kamery dzień/noc. Inżynier wyjaśnia, że zwiększenie parametru wzmocnienia pozwala na pracę w ciemniejszych warunkach, ale skutkuje pogorszeniem jakości. Patrząc na różnicę między ilustracją nr 1 a ilustracją nr 2, jaką metodę zalecają notatki techniczne, aby inżynier mógł dojść do optymalnego nastawu AGC w tym konkretnym systemie?",
+answers: ["Metodę prób i błędów", "Automatyczne obliczenia algorytmu AI", "Pomiar luksomierzem na wysokości montażu", "Ustawienie sztywnej wartości fabrycznej"],
+image: "img/CCTV/AGC_10_255__AGC_100_255.png",
+correct: "Metodę prób i błędów"
+},
+
+{
+category: "CCTV",
+question: "Podczas szkolenia dla serwisantów w hurtowni, inżynier omawia negatywne skutki zbyt wysokiego wzmocnienia sygnału wideo. Analizując ilustrację nr 2, wskazuje na wyraźne pogorszenie obrazu względem ilustracji nr 1. Zgodnie z dołączonym do grafiki opisem, co oprócz czułości jest wzmacniane wraz ze wzrostem parametru AGC, co sprawia, że nie można go zwiększać w nieskończoność?",
+answers: ["Szumy", "Ogniskowa obiektywu", "Prędkość migawki", "Kąt widzenia przetwornika"],
+image: "img/CCTV/AGC_10_255__AGC_100_255.png",
+correct: "Szumy"
+},
+
+{
+category: "CCTV",
+question: "Podczas konfiguracji kamery w słabo oświetlonym warsztacie samochodowym, instalator prowadzi przewody w korytkach PCV 20mm i montuje urządzenie na wysokości 3 metrów. Analizując funkcję Automatycznego sterowania wzmocnieniem (AGC), wskaż zdanie fałszywe:",
+answers: [
+"Funkcja AGC umożliwia zwiększenie czułości kamery, co bezpośrednio pozwala na efektywną pracę urządzenia w ciemniejszych warunkach oświetleniowych.",
+"Wraz ze wzrostem wzmocnienia sygnału wideo, wzmacniane są również szumy, co powoduje, że parametru tego nie można zwiększać w nieskończoność bez utraty jakości.",
+"Aby uzyskać idealny obraz w trudnych warunkach, należy ustawić parametr AGC na maksymalną dostępną wartość (np. 255), co całkowicie eliminuje ziarnistość obrazu.",
+"Poprawne ustawienie parametru AGC wymaga od instalatora dojścia do optymalnego nastawu metodą prób i błędów, balansując między jasnością a poziomem szumów."
+],
+image: "img/CCTV/AGC_10_255__AGC_100_255.png",
+correct: "Aby uzyskać idealny obraz w trudnych warunkach, należy ustawić parametr AGC na maksymalną dostępną wartość (np. 255), co całkowicie eliminuje ziarnistość obrazu."
+},
+
+{
+category: "CCTV",
+question: "W hurtowni spożywczej technik dokonuje serwisu kamer zamontowanych na uchwytach ściennych przy użyciu kołków 8mm. Na monitorze porównuje dwa nastawy AGC widoczne na dokumentacji fotograficznej. Wskaż zdanie fałszywe:",
+answers: [
+"Nastaw AGC na poziomie 100/255 generuje jaśniejszy obraz niż nastaw 10/255, co jest widoczne na przykładzie doświetlenia ciemnego tła korytarza.",
+"Zwiększenie parametru AGC z wartości 10/255 na 100/255 jest procesem automatycznym, który nie wpływa na pojawianie się zakłóceń (szumów) w sygnale wizyjnym.",
+"Umożliwienie pracy w ciemniejszych warunkach jest głównym celem stosowania układu AGC (Automatyczne sterowanie wzmocnieniem) w nowoczesnych kamerach.",
+"Zbyt wysokie wzmocnienie sygnału może doprowadzić do sytuacji, w której szumy zdominują obraz, dlatego konieczne jest znalezienie optymalnego punktu pracy."
+],
+image: "img/CCTV/AGC_10_255__AGC_100_255.png",
+correct: "Zwiększenie parametru AGC z wartości 10/255 na 100/255 jest procesem automatycznym, który nie wpływa na pojawianie się zakłóceń (szumów) w sygnale wizyjnym."
+},
+
+{
+category: "CCTV",
+question: "Inżynier systemów zabezpieczeń przygotowuje instrukcję dla operatorów monitoringu. Na podstawie dostarczonej ilustracji dotyczącej funkcji wzmocnienia sygnału, wskaż zdanie fałszywe:",
+answers: [
+"Dla uzyskania optymalnego nastawu parametru AGC nie istnieje jedna uniwersalna wartość, dlatego należy go dobierać indywidualnie metodą prób i błędów.",
+"Wraz ze wzmocnieniem czułości kamery następuje jednoczesne wzmocnienie szumów, co widać na przykładzie porównawczym AGC 10/255 i AGC 100/255.",
+"Zwiększenie czułości poprzez AGC pozwala kamerze widzieć więcej detali w ciemnościach, co potwierdza różnica w jasności między obrazami testowymi.",
+"Parametr AGC wyrażany w skali do 255 odnosi się do czasu otwarcia migawki kamery, a nie do elektronicznego wzmocnienia sygnału wyjściowego z przetwornika."
+],
+image: "img/CCTV/AGC_10_255__AGC_100_255.png",
+correct: "Parametr AGC wyrażany w skali do 255 odnosi się do czasu otwarcia migawki kamery, a nie do elektronicznego wzmocnienia sygnału wyjściowego z przetwornika."
+},
+
+{
+category: "CCTV",
+question: "Podczas projektowania systemu rozpoznawania tablic rejestracyjnych na wjeździe do obiektu, inżynier analizuje parametry migawki. Na ilustracji po lewej stronie (AES szybkie) samochód porusza się z prędkością V=40km/h. Jaki czas otwarcia migawki (S) został zastosowany, aby uzyskać ostry obraz pojazdu?",
+answers: ["1/200 s", "1/5 s", "1/50 s", "1/1000 s"],
+image: "img/CCTV/AES_szybkie_wolne.png",
+correct: "1/200 s"
+},
+
+{
+category: "CCTV",
+question: "W systemie monitoringu miejskiego zainstalowano kamery z funkcją AES. Dlaczego funkcja ta jest określana jako 'bardzo przydatna' w obszarach o niewielkim oświetleniu?",
+answers: ["Pozwala na wydłużenie czasu naświetlania przetwornika", "Zwiększa liczbę klatek na sekundę powyżej standardu", "Automatycznie włącza oświetlacz podczerwieni", "Zmienia ogniskową obiektywu na szerokokątną"],
+image: "img/CCTV/AES_szybkie_wolne.png",
+correct: "Pozwala na wydłużenie czasu naświetlania przetwornika"
+},
+
+{
+category: "CCTV",
+question: "Technik wykonuje zrzut ekranu z kamery (ilustracja po prawej), na którym widać, że zapisany obiekt znajduje się 'na całej swej drodze'. Zjawisko to jest bezpośrednią wadą jakiego ustawienia migawki?",
+answers: ["AES wolne", "AES szybkie", "Migawka wyłączona", "Migawka mechaniczna"],
+image: "img/CCTV/AES_szybkie_wolne.png",
+correct: "AES wolne"
+},
+
+{
+category: "CCTV",
+question: "Analizując oba zdjęcia testowe, na których samochód jedzie z identyczną prędkością V=40km/h, inżynier musi wskazać funkcję, która pozwala na sterowanie czasem naświetlania przetwornika. Jak nazywa się ta funkcja według przedstawionej dokumentacji?",
+answers: ["Automatyczna migawka (AES)", "Automatyczne sterowanie wzmocnieniem (AGC)", "Zmiennoogniskowy obiektyw (Varifocal)", "Kompensacja światła tła (BLC)"],
+image: "img/CCTV/AES_szybkie_wolne.png",
+correct: "Automatyczna migawka (AES)"
+},
+
+{
+    category: "CCTV",
+    question: "Podczas konfiguracji sytemu do kontroli ruchu na drodze wewnętrznej, inżynier zauważa, że przy ustawieniu AES wolne (ilustracja po prawej) obraz traci ostrość. Zgodnie z opisem technicznym, co jest przyczyną sytuacji, w której samochód jest zapisany 'na całej swej drodze'?",
+    answers: [
+        "Obiekt przemieszcza się znacznie w ciągu trwania danej klatki",
+        "Przetwornik kamery uległ prześwietleniu promieniami słonecznymi",
+        "Zastosowano zbyt krótką ogniskową w obiektywie szerokokątnym",
+        "Wystąpiły zakłócenia elektromagnetyczne w szarym przewodzie sygnałowym"
+    ],
+    image: "img/CCTV/AES_szybkie_wolne.png",
+    correct: "Obiekt przemieszcza się znacznie w ciągu trwania danej klatki"
+},
+
+{
+    category: "CCTV",
+    question: "Właściciel magazynu zamontował kamery na wysokości 5 metrów przy użyciu kołków 10mm. W warunkach nocnych przy niewielkim naświetleniu inżynier sugeruje wydłużenie czasu otwarcia migawki (AES wolne). Jaki jest bezpośredni, pozytywny skutek takiego działania według dokumentacji?",
+    answers: [
+        "Powoduje jaśniejszy obraz",
+        "Zwiększa rozdzielczość krawędziową obiektów",
+        "Całkowicie eliminuje szumy cyfrowe sygnału",
+        "Zmniejsza kąt widzenia kamery dla lepszej detekcji"
+    ],
+    image: "img/CCTV/AES_szybkie_wolne.png",
+    correct: "Powoduje jaśniejszy obraz"
+},
+
+
+{
+    category: "CCTV",
+    question: "Analizując ilustrację po lewej stronie oznaczoną jako 'AES szybkie', inżynier widzi wyraźny obraz pojazdu poruszającego się z prędkością V=40km/h. Jaka wartość czasu naświetlania (S) pozwoliła na zamrożenie ruchu w tym konkretnym przykładzie?",
+    answers: [
+        "1/200 s",
+        "1/5 s",
+        "1/50 s",
+        "1/25 s"
+    ],
+    image: "img/CCTV/AES_szybkie_wolne.png",
+    correct: "1/200 s"
+},
+
+{
+    category: "CCTV",
+    question: "Podczas serwisu systemu dozoru w tunelu, instalator analizuje ograniczenia funkcji AES. Z jakiego powodu czas naświetlania przetwornika nie może być ustawiony jako dowolnie długi?",
+    answers: [
+        "Czas naświetlania nie może być dłuższy niż czas trwania klatki",
+        "Dłuższy czas naświetlania powoduje przegrzanie elektroniki kamery",
+        "Przepisy BHP zabraniają stosowania czasów dłuższych niż 1/5 s",
+        "Zasilacz buforowy 12V nie dostarczy energii przy długim otwarciu migawki"
+    ],
+    image: "img/CCTV/AES_szybkie_wolne.png",
+    correct: "Czas naświetlania nie może być dłuższy niż czas trwania klatki"
+},
+
+{
+    category: "CCTV",
+    question: "Na stanowisku operatora w biurowcu, inżynier porównuje dwa zdjęcia testowe (lewe i prawe). Samochód na obu porusza się z prędkością 40km/h. Który parametr czasu naświetlania (S) widoczny na ilustracjach określa się mianem 'AES wolne'?",
+    answers: [
+        "1/5 s",
+        "1/200 s",
+        "1/500 s",
+        "1/100 s"
+    ],
+    image: "img/CCTV/AES_szybkie_wolne.png",
+    correct: "1/5 s"
+},
+
+{
+    category: "CCTV",
+    question: "Inżynier wyjaśnia nowemu pracownikowi zasadę działania automatycznej migawki (AES). Według dostarczonej grafiki, jaka jest główna właściwość tej funkcji, która pozwala na lepszą pracę w trudnych warunkach oświetleniowych?",
+    answers: [
+        "Możliwość wydłużania czasu otwarcia migawki",
+        "Automatyczna zmiana jasności obiektywu (liczba F)",
+        "Elektroniczne wzmocnienie szumów w ciemnych obszarach",
+        "Mechaniczne przesunięcie przetwornika względem soczewki"
+    ],
+    image: "img/CCTV/AES_szybkie_wolne.png",
+    correct: "Możliwość wydłużania czasu otwarcia migawki"
+},
+
+{
+    category: "CCTV",
+    question: "Podczas montażu kamery na elewacji hurtowni przy użyciu kołków rozporowych 8mm, inżynier tłumaczy klientowi różnicę w ostrości pojazdów. Dlaczego na ilustracji po lewej (S=1/200 s) samochód jest wyraźny, mimo że porusza się z prędkością V=40km/h?",
+    answers: [
+        "Krótki czas otwarcia migawki pozwala na wydłużenie czasu naświetlania",
+        "Krótki czas otwarcia migawki zapobiega przemieszczeniu się obiektu w trakcie klatki",
+        "Zastosowano większą liczbę aperturową F niż w przypadku AES wolne",
+        "Kamera automatycznie zmniejszyła rozdzielczość, by przyspieszyć zapis"
+    ],
+    image: "img/CCTV/AES_szybkie_wolne.png",
+    correct: "Krótki czas otwarcia migawki zapobiega przemieszczeniu się obiektu w trakcie klatki"
+},
+
+{
+    category: "CCTV",
+    question: "Właściciel warsztatu samochodowego zauważył, że na nagraniu z prawej strony (S=1/5 s) koła i karoseria auta są rozmyte. Zgodnie z opisem funkcji Automatycznej migawki (AES), z jakiego konkretnego faktu wynika to 'rozmazanie'?",
+    answers: [
+        "Z faktu, że obiekt jest zapisany na całej swej drodze w ciągu trwania danej klatki",
+        "Z faktu, że czas naświetlania jest krótszy niż czas trwania klatki",
+        "Z faktu, że w korytkach PCV 20mm wystąpiły spadki napięcia zasilania",
+        "Z faktu, że przy prędkości 40km/h system AGC automatycznie wyłącza migawkę"
+    ],
+    image: "img/CCTV/AES_szybkie_wolne.png",
+    correct: "Z faktu, że obiekt jest zapisany na całej swej drodze w ciągu trwania danej klatki"
+},
+
+{
+    category: "CCTV",
+    question: "Instalator prowadzi system dozoru w miejscu o słabym oświetleniu sztucznym. Zgodnie z notatkami, jaką funkcję należy aktywować, aby umożliwić wydłużenie czasu naświetlania przetwornika w celu uzyskania jaśniejszego obrazu?",
+    answers: [
+        "Automatyczna migawka (AES)",
+        "Stała ogniskowa (Fixed lens)",
+        "Mocowanie typu CS z pierścieniem",
+        "Manualna przysłona (no-IRIS)"
+    ],
+    image: "img/CCTV/AES_szybkie_wolne.png",
+    correct: "Automatyczna migawka (AES)"
+},
+
+{
+    category: "CCTV",
+    question: "Inżynier analizuje parametry wyświetlane na ilustracji nr 2 (AES wolne). Samochód porusza się z prędkością V=40km/h, a czas naświetlania wynosi S=1/5 s. Co jest 'istotnym ograniczeniem' dla tego parametru według dołączonego opisu technicznego?",
+    answers: [
+        "Szybkość pracy kamery (czas naświetlania nie może być dłuższy niż czas trwania klatki)",
+        "Kolor obudowy kamery (powoduje odbicia światła przy długim naświetlaniu)",
+        "Wysokość montażu (powyżej 4 metrów migawka musi być zawsze szybka)",
+        "Rodzaj nośnika danych (magnetowidy nie obsługują funkcji AES wolne)"
+    ],
+    image: "img/CCTV/AES_szybkie_wolne.png",
+    correct: "Szybkość pracy kamery (czas naświetlania nie może być dłuższy niż czas trwania klatki)"
+},
+
+{
+    category: "CCTV",
+    question: "Podczas serwisu kamer w biurowcu, technik porównuje oba zdjęcia samochodów. Samochód poruszający się z prędkością 40km/h na zdjęciu po lewej ma czas S=1/200 s, a na zdjęciu po prawej S=1/5 s. Które z tych ustawień jest opisane jako 'bardzo przydatne w obszarach o niewielkim naświetleniu'?",
+    answers: [
+        "Ustawienie po prawej (S=1/5 s), ponieważ dłuższy czas naświetlania daje jaśniejszy obraz",
+        "Ustawienie po lewej (S=1/200 s), ponieważ pozwala na idealne rozpoznanie tablic",
+        "Oba ustawienia są identycznie przydatne w ciemnościach przy prędkości 40km/h",
+        "Żadne, ponieważ w ciemnościach migawka musi być zawsze wyłączona"
+    ],
+    image: "img/CCTV/AES_szybkie_wolne.png",
+    correct: "Ustawienie po prawej (S=1/5 s), ponieważ dłuższy czas naświetlania daje jaśniejszy obraz"
+},
+
+{
+    category: "CCTV",
+    question: "Inżynier przygotowuje zadanie testowe dla nowych monterów. Na podstawie grafiki AES, co dzieje się z obrazem, gdy czas otwarcia migawki zostaje wydłużony (np. z 1/200 s do 1/5 s)?",
+    answers: [
+        "Obraz staje się jaśniejszy, ale ruchome obiekty ulegają rozmazaniu",
+        "Obraz staje się ciemniejszy, ale ruchome obiekty stają się ostrzejsze",
+        "Kąt widzenia kamery wzrasta o 180 stopni względem osi optycznej",
+        "Wzmacniane są wyłącznie szumy, bez wpływu na jasność przetwornika"
+    ],
+    image: "img/CCTV/AES_szybkie_wolne.png",
+    correct: "Obraz staje się jaśniejszy, ale ruchome obiekty ulegają rozmazaniu"
+},
+
+{
+    category: "CCTV",
+    question: "Podczas wizji lokalnej w banku, inżynier planuje montaż kamery na wysokości 3,5 metra przy użyciu kołków 8mm. Aby precyzyjnie dobrać pole widzenia, musi wyliczyć kąt widzenia kamery. Jakie dwa kluczowe dane są niezbędne do wykonania tego obliczenia ?",
+    answers: [
+        "Rozmiar przetwornika i wartość ogniskowej",
+        "Długość kabla koncentrycznego i liczba aperturowa",
+        "Wysokość montażu i kolor obudowy kamery",
+        "Pojemność dysku w rejestratorze i rozdzielczość monitora"
+    ],
+    image: "",
+    correct: "Rozmiar przetwornika i wartość ogniskowej"
+},
+
+{
+    category: "CCTV",
+    question: "W systemie monitoringu hurtowni, gdzie kable prowadzone są w korytkach PCV 20mm, zastosowano obiektyw o bardzo krótkiej ogniskowej względem przekątnej przetwornika. Jak, według podziału obiektywów ze względu na kąt widzenia, nazywamy taki komponent optyczny?",
+    answers: [
+        "Szerokokątny",
+        "Wąskokątny",
+        "Standardowy",
+        "Teleobiektyw (Zoom)"
+    ],
+    image: "",
+    correct: "Szerokokątny"
+},
+
+{
+    category: "CCTV",
+    question: "Podczas serwisu kamer zewnętrznych typu dzień/noc, inżynier zauważył, że przy silnym słońcu obraz jest prześwietlony. Zgodnie z notatkami, jaki rodzaj przysłony jest dedykowany do pracy w takich warunkach, aby automatycznie regulować dostęp światła do przetwornika?",
+    answers: [
+        "Automatyczna przysłona Auto-IRIS",
+        "Przysłona ręczna (Manual)",
+        "Obiektyw bez przysłony (no-IRIS)",
+        "Stała przysłona mechaniczna"
+    ],
+    image: "",
+    correct: "Automatyczna przysłona Auto-IRIS"
+},
+
+{
+    category: "CCTV",
+    question: "W biurowcu zamontowano kamery z obiektywami o ogniskowej 4.0mm na uchwytach sufitowych. Instalator musi wyjaśnić klientowi pojęcie ogniskowej. Jak brzmi jej techniczna definicja zawarta w Twoich materiałach?",
+    answers: [
+        "Odległość, w jakiej w centrum optycznym powstaje obraz obiektu położonego w nieskończoności",
+        "Szybkość, z jaką migawka AES otwiera się w warunkach nocnych",
+        "Maksymalna odległość kamery od rejestratora przy użyciu skrętki szarej",
+        "Wartość określająca rzeczywistą zdolność soczewki do wzmacniania szumów AGC"
+    ],
+    image: "",
+    correct: "Odległość, w jakiej w centrum optycznym powstaje obraz obiektu położonego w nieskończoności"
+},
+
+{
+    category: "CCTV",
+    question: "Inżynier projektuje system dozoru dla długiego, wąskiego korytarza w magazynie. Zgodnie z zasadą, że im dłuższa ogniskowa, tym mniejszy kąt widzenia, który z wymienionych obiektywów o stałej ogniskowej będzie najbardziej odpowiedni do tego zadania?",
+    answers: [
+        "12,0mm",
+        "3,6mm",
+        "4,0mm",
+        "2,8mm"
+    ],
+    image: "",
+    correct: "12,0mm"
+},
+
+{
+    category: "CCTV",
+    question: "Podczas regulacji ostrości w warsztacie samochodowym, technik dąży do tego, aby jak najwięcej elementów na obrazie (od 2 metrów do nieskończoności) było wyraźnych. Jak nazywa się ten parametr, który zwiększa się wraz z przymykaniem przysłony?",
+    answers: [
+        "Głębia ostrości",
+        "Liczba transmisyjna T",
+        "Format ekranu LCD",
+        "Wzmocnienie sygnału AGC"
+    ],
+    image: "",
+    correct: "Głębia ostrości"
+},
+
+{
+    category: "CCTV",
+    question: "Przy wyborze obiektywu do profesjonalnej kamery, inżynier analizuje parametr jasności. Co dzieje się z ilością światła przechodzącego przez obiektyw, gdy rośnie wartość liczby aperturowej F?",
+    answers: [
+        "Ilość światła maleje",
+        "Ilość światła rośnie",
+        "Ilość światła pozostaje bez zmian",
+        "Ilość światła zależy wtedy tylko od koloru kabla"
+    ],
+    image: "",
+    correct: "Ilość światła maleje"
+},
+
+{
+    category: "CCTV",
+    question: "Podczas wizji lokalnej w biurowcu, inżynier musi dobrać optykę do kamery zamontowanej w rogu dużego open-space'u na wysokości 2,8 metra. Aby uzyskać jak największy kąt widzenia i objąć całe pomieszczenie, jaką wartość ogniskowej powinien wybrać instalator?",
+    answers: [
+        "Małą wartość ogniskowej (np. 2,8mm)",
+        "Dużą wartość ogniskowej (np. 12mm)",
+        "Ogniskową równą dokładnie przekątnej przetwornika",
+        "Ogniskową o wartości F=1.2"
+    ],
+    image: "",
+    correct: "Małą wartość ogniskowej (np. 2,8mm)"
+},
+
+{
+    category: "CCTV",
+    question: "Właściciel magazynu zgłosił potrzebę monitorowania wąskiego korytarza o długości 30 metrów. Kamery są montowane w korytkach PCV 20mm przy użyciu kołków 8mm. Zgodnie z zasadami optyki, jaki obiektyw będzie najskuteczniejszy do obserwacji korytarzy, aby uniknąć zbędnego kąta widzenia na ściany?",
+    answers: [
+        "Obiektyw o długiej ogniskowej",
+        "Obiektyw o małej ogniskowej",
+        "Obiektyw typu rybie oko (fish-eye)",
+        "Obiektyw o stałej jasności transmisyjnej T"
+    ],
+    image: "",
+    correct: "Obiektyw o długiej ogniskowej"
+},
+
+{
+    category: "CCTV",
+    question: "Podczas konfiguracji parametrów optycznych kamery, inżynier analizuje zależność kąta widzenia od podzespołów urządzenia. Jakie dwa kluczowe parametry techniczne pozwalają na precyzyjne wyliczenie kąta widzenia kamery?",
+    answers: [
+        "Rozmiar przetwornika i wartość ogniskowej",
+        "Wartość liczby F i długość kabla sygnałowego",
+        "Rozdzielczość monitora i typ mocowania (C/CS)",
+        "Czas otwarcia migawki AES i wzmocnienie AGC"
+    ],
+    image: "",
+    correct: "Rozmiar przetwornika i wartość ogniskowej"
+},
+
+{
+    category: "CCTV",
+    question: "Instalator montuje kamerę w warsztacie samochodowym na uchwycie ściennym. Zauważa, że po zamontowaniu obiektywu o długiej ogniskowej, kąt widzenia kamery drastycznie zmalał. Czy to zjawisko jest zgodne z notatkami technicznymi?",
+    answers: [
+        "Tak, im dłuższa ogniskowa obiektywu, tym kąt widzenia kamery jest mniejszy",
+        "Nie, im dłuższa ogniskowa, tym kąt widzenia powinien być większy",
+        "Nie, długość ogniskowej nie ma wpływu na kąt widzenia kamery",
+        "Tak, ale tylko pod warunkiem użycia kabli w kolorze białym"
+    ],
+    image: "",
+    correct: "Tak, im dłuższa ogniskowa obiektywu, tym kąt widzenia kamery jest mniejszy"
+},
+
+{
+    category: "CCTV",
+    question: "W systemie dozoru szkoły podstawowej, inżynier musi wymienić obiektywy, aby uzyskać szeroki plan na salę gimnastyczną. Na podstawie dostępnych notatek, jakie właściwości obiektywu sprawiają, że kamera posiada duży kąt widzenia?",
+    answers: [
+        "Mała wartość ogniskowej obiektywu",
+        "Bardzo duża wartość ogniskowej (np. 50mm)",
+        "Zastosowanie mocowania typu C zamiast CS",
+        "Ustawienie migawki AES na tryb wolny (1/5 s)"
+    ],
+    image: "",
+    correct: "Mała wartość ogniskowej obiektywu"
+},
+
+{
+    category: "CCTV",
+    question: "Podczas serwisu kamery zamontowanej na parkingu zewnętrznym, instalator zauważył, że obraz w słoneczne dni jest całkowicie biały (oślepiony). Zgodnie z Twoimi notatkami, jaki rodzaj przysłony powinien być zastosowany w tym urządzeniu, aby niwelować wpływ promieni słonecznych?",
+    answers: [
+        "Przysłona automatyczna",
+        "Przysłona ręczna",
+        "Obiektyw typu no-IRIS",
+        "Migawka mechaniczna AES"
+    ],
+    image: "",
+    correct: "Przysłona automatyczna"
+},
+
+{
+    category: "CCTV",
+    question: "Wewnątrz hali magazynowej inżynier montuje kamerę w korytkach PCV 20mm. Wyjaśnia pomocnikowi, że przysłona to regulowany otwór na drodze strumienia światła. Co jest głównym zadaniem tego elementu w torze optycznym kamery?",
+    answers: [
+        "Zmienianie ilości światła padającego na przetwornik obrazu",
+        "Elektroniczne wzmacnianie sygnału wideo (AGC)",
+        "Zmiana kąta widzenia kamery z szerokokątnego na wąski",
+        "Synchronizacja zapisu audio i wideo na dysku twardym"
+    ],
+    image: "",
+    correct: "Zmienianie ilości światła padającego na przetwornik obrazu"
+},
+
+{
+    category: "CCTV",
+    question: "Instalator dobiera obiektyw do kamery, która będzie pracować w stabilnych warunkach oświetleniowych wewnątrz biura. W notatkach wspomniano o dwóch głównych sposobach regulacji otworu przysłony. Jakie to sposoby?",
+    answers: [
+        "Automatyczna lub ręczna",
+        "Cyfrowa lub analogowa",
+        "Stała lub zmiennoogniskowa",
+        "Sieciowa (IP) lub koncentryczna"
+    ],
+    image: "",
+    correct: "Automatyczna lub ręczna"
+},
+
+{
+    category: "CCTV",
+    question: "Podczas modernizacji systemu dozoru na elewacji budynku, inżynier decyduje się na obiektywy z przysłoną automatyczną. Dlaczego ten typ regulacji jest zazwyczaj stosowany w kamerach umieszczanych na zewnątrz obiektu?",
+    answers: [
+        "Ponieważ niweluje oślepienie promieniami słonecznymi",
+        "Ponieważ pozwala na stosowanie kabli w szarym kolorze",
+        "Ponieważ automatycznie zwiększa rozdzielczość przetwornika",
+        "Ponieważ blokuje dostęp osobom niepowołanym do obiektywu"
+    ],
+    image: "",
+    correct: "Ponieważ niweluje oślepienie promieniami słonecznymi"
+},
+
+{
+    category: "CCTV",
+    question: "W specyfikacji technicznej kamery zamontowanej na wysokości 4 metrów przy użyciu kołków 8mm widnieje opis elementu pełniącego funkcję regulowanego otworu. Na co dokładnie pada strumień światła po przejściu przez ten otwór?",
+    answers: [
+        "Na powierzchnię światłoczułą przetwornika obrazu",
+        "Na złącze BNC z tyłu obudowy kamery",
+        "Na twardy dysk w rejestratorze cyfrowym",
+        "Na soczewkę wyjściową monitora LCD"
+    ],
+    image: "",
+    correct: "Na powierzchnię światłoczułą przetwornika obrazu"
+},
+
+{
+    category: "CCTV",
+    question: "Podczas projektowania systemu dozoru w ciemnej hali magazynowej, inżynier musi wybrać obiektyw, który zapewni jak najlepszą widoczność przy słabym oświetleniu. Która z poniższych wartości liczby aperturowej F sprawi, że obiektyw będzie najjaśniejszy?",
+    answers: [
+        "F1.2",
+        "F2.0",
+        "F5.6",
+        "F11"
+    ],
+    image: "",
+    correct: "F1.2"
+},
+
+{
+    category: "CCTV",
+    question: "Instalator montuje kamerę na wysokości 3 metrów przy użyciu kołków 8mm i analizuje specyfikację obiektywu, w której podano dwie wartości liczby F. Co, zgodnie z Twoimi notatkami, oznaczają te dwie wartości?",
+    answers: [
+        "Pierwsza to maksymalne otwarcie przysłony, druga to minimalne",
+        "Pierwsza to ogniskowa szeroka, druga to ogniskowa tele",
+        "Pierwsza to jasność w dzień, druga to jasność w nocy",
+        "Pierwsza to wzmocnienie AGC, druga to migawka AES"
+    ],
+    image: "",
+    correct: "Pierwsza to maksymalne otwarcie przysłony, druga to minimalne"
+},
+
+{
+    category: "CCTV",
+    question: "W trakcie szkolenia dla serwisantów, inżynier omawia zdolność przepuszczania światła przez obiektyw wyrażaną w skali F. Co dzieje się z ilością światła przechodzącego przez soczewki wraz ze wzrostem liczby F?",
+    answers: [
+        "Ilość światła maleje",
+        "Ilość światła rośnie",
+        "Ilość światła pozostaje stała, zmienia się tylko kąt widzenia",
+        "Ilość światła zależy wtedy wyłącznie od czułości AGC"
+    ],
+    image: "",
+    correct: "Ilość światła maleje"
+},
+
+{
+    category: "CCTV",
+    question: "Technik wymienia obiektyw w kamerze zamontowanej w korytku PCV 20mm. Zauważył, że nowy obiektyw ma mniejszą wartość liczby F niż poprzedni. Jaki będzie tego skutek dla przetwornika obrazu?",
+    answers: [
+        "Na powierzchnię przetwornika padnie więcej światła",
+        "Na powierzchnię przetwornika padnie mniej światła",
+        "Obraz stanie się ciemniejszy, ale bardziej szczegółowy",
+        "Przetwornik automatycznie przełączy się w tryb czarno-biały"
+    ],
+    image: "",
+    correct: "Na powierzchnię przetwornika padnie więcej światła"
+},
+
+{
+    category: "CCTV",
+    question: "Inżynier definiuje parametr jasności obiektywu w dokumentacji powykonawczej. Jak poprawnie nazywa się wartość określająca zdolność przepuszczania światła przez obiektyw, o której mowa w notatkach?",
+    answers: [
+        "Liczba aperturowa F",
+        "Ogniskowa obiektywu",
+        "Głębia ostrości",
+        "Format przetwornika"
+    ],
+    image: "",
+    correct: "Liczba aperturowa F"
+},
+
+{
+    category: "CCTV",
+    question: "Podczas zaawansowanego audytu optyki w systemie dozoru, inżynier analizuje wskaźnik określający rzeczywistą zdolność obiektywu do przepuszczania światła. Jak, zgodnie z Twoimi notatkami, nazywa się ten parametr?",
+    answers: [
+        "Liczba transmisyjna T",
+        "Liczba aperturowa F",
+        "Ogniskowa obiektywu",
+        "Współczynnik AGC"
+    ],
+    image: "",
+    correct: "Liczba transmisyjna T"
+},
+
+{
+    category: "CCTV",
+    question: "Instalator montuje wysokiej klasy obiektyw na kamerze w korytku PCV 20mm. Zauważa, że specyfikacja zawiera skalę T. Co umożliwia ten parametr w odróżnieniu od standardowej skali F?",
+    answers: [
+        "Bezwzględną ocenę jasności obiektywu",
+        "Zmianę kąta widzenia bez zmiany ogniskowej",
+        "Automatyczną regulację czasu naświetlania AES",
+        "Zwiększenie głębi ostrości przy otwartej przysłonie"
+    ],
+    image: "",
+    correct: "Bezwzględną ocenę jasności obiektywu"
+},
+
+{
+    category: "CCTV",
+    question: "Inżynier wyjaśnia serwisantom, że przy określaniu jakości obiektywu za pomocą liczby transmisyjnej T brane są pod uwagę dodatkowe czynniki fizyczne. Jakie parametry uwzględnia ta skala według Twoich materiałów?",
+    answers: [
+        "Materiał, z jakiego wykonano soczewki oraz rodzaj przepuszczanego światła",
+        "Wysokość montażu kamery oraz typ zastosowanych kołków 8mm",
+        "Kolor obudowy kamery oraz długość kabla sygnałowego",
+        "Prędkość poruszających się obiektów (V=40km/h)"
+    ],
+    image: "",
+    correct: "Materiał, z jakiego wykonano soczewki oraz rodzaj przepuszczanego światła"
+},
+
+{
+    category: "CCTV",
+    question: "Technik analizuje dwa obiektywy o tej samej liczbie F, ale różnej liczbie transmisyjnej T. Który parametr, zgodnie z notatkami technicznymi, będzie lepszym wskaźnikiem rzeczywistej jakości i jasności soczewek?",
+    answers: [
+        "Liczba transmisyjna T, ponieważ uwzględnia np. materiał soczewek",
+        "Liczba aperturowa F, ponieważ określa tylko geometrię otworu",
+        "Ogniskowa, ponieważ determinuje odległość od nieskończoności",
+        "Żaden, ponieważ jasność zależy tylko od ustawienia funkcji AGC"
+    ],
+    image: "",
+    correct: "Liczba transmisyjna T, ponieważ uwzględnia np. materiał soczewek"
+},
+
+{
+    category: "CCTV",
+    question: "W profesjonalnym systemie dozoru inżynier stosuje obiektywy o znanej skali T. Do czego służy ten wskaźnik w kontekście przepływu strumienia światła przez układ optyczny?",
+    answers: [
+        "Do określenia rzeczywistej zdolności obiektywu do przepuszczania światła",
+        "Do mechanicznego blokowania przysłony w trybie Auto-IRIS",
+        "Do wyliczania kąta widzenia dla przetworników megapikselowych",
+        "Do synchronizacji czasu naświetlania z czasem trwania klatki"
+    ],
+    image: "",
+    correct: "Do określenia rzeczywistej zdolności obiektywu do przepuszczania światła"
+},
+
+{
+    category: "CCTV",
+    question: "Podczas zaawansowanego audytu optyki w certyfikowanym systemie dozoru, inżynier analizuje parametry obiektywów pod kątem rzeczywistej sprawności świetlnej układu. Który parametr pozwala na bezwzględną ocenę jasności obiektywu, biorąc pod uwagę materiał wykonania soczewek oraz rodzaj przepuszczanego światła?",
+    answers: [
+        "Liczba transmisyjna T",
+        "Liczba aperturowa F",
+        "Ogniskowa obiektywu",
+        "Współczynnik kompensacji BLC"
+    ],
+    image: "",
+    correct: "Liczba transmisyjna T"
+},
+
+{
+    category: "CCTV",
+    question: "W trakcie modernizacji monitoringu w laboratorium optycznym, instalator dobiera podzespoły o najwyższej przepuszczalności światła. Który wskaźnik techniczny określa rzeczywistą zdolność obiektywu do przepuszczania strumienia świetlnego przez jego strukturę, wykraczając poza czysto geometryczną jasność?",
+    answers: [
+        "Skala aperturowa F-stop",
+        "Liczba transmisyjna T",
+        "Wartość czułości AGC",
+        "Kąt widzenia przetwornika"
+    ],
+    image: "",
+    correct: "Liczba transmisyjna T"
+},
+
+{
+    category: "CCTV",
+    question: "Projektant systemów zabezpieczeń przygotowuje specyfikację dla obiektu o krytycznym znaczeniu, gdzie wymagana jest precyzyjna ocena jakości optyki. Przy analizie sprawności obiektywu uwzględnia on materiał soczewek i wpływ rodzaju światła na transmisję. Jaką nazwę nosi parametr określający te właściwości?",
+    answers: [
+        "Liczba aperturowa F",
+        "Głębia ostrości",
+        "Liczba transmisyjna T",
+        "Stała ogniskowa"
+    ],
+    image: "",
+    correct: "Liczba transmisyjna T"
+},
+
+{
+    category: "CCTV",
+    question: "W trakcie audytu bezpieczeństwa w zakładzie produkcyjnym, inżynier analizuje parametry optyczne kamer w celu optymalizacji identyfikacji osób. Który parametr należy zmodyfikować, aby zwiększyć zakres odległości, w którym wszystkie obiekty w kadrze – od planu bliskiego po tło – pozostają ostre?",
+    answers: [
+        "Głębia ostrości",
+        "Współczynnik transmisji T",
+        "Prędkość migawki AES",
+        "Wzmocnienie sygnału AGC"
+    ],
+    image: "",
+    correct: "Głębia ostrości"
+},
+
+{
+    category: "CCTV",
+    question: "Podczas montażu kamery na długim korytarzu magazynowym, instalator dąży do uzyskania ostrości sięgającej nieskończoności. Jakie działania techniczne w obrębie układu optycznego pozwolą na zwiększenie głębi ostrości zgodnie z zasadami optyki?",
+    answers: [
+        "Przymknięcie przysłony oraz skrócenie ogniskowej",
+        "Otwarcie przysłony oraz wydłużenie ogniskowej",
+        "Zwiększenie wzmocnienia AGC i wydłużenie czasu AES",
+        "Zmiana mocowania obiektywu z typu CS na typ C"
+    ],
+    image: "",
+    correct: "Przymknięcie przysłony oraz skrócenie ogniskowej"
+},
+
+{
+    category: "CCTV",
+    question: "W systemie monitoringu bankowego inżynier chce celowo uzyskać małą głębię ostrości, aby wyodrębnić twarz osoby przy okienku od rozmytego tła otoczenia. Jakie ustawienie parametrów obiektywu jest pożądane w takiej sytuacji?",
+    answers: [
+        "Szerokie otwarcie przysłony przy długiej ogniskowej",
+        "Maksymalne przymknięcie przysłony przy krótkiej ogniskowej",
+        "Zastosowanie obiektywu o stałej ogniskowej 2.8mm",
+        "Wyłączenie funkcji automatycznej migawki AES"
+    ],
+    image: "",
+    correct: "Szerokie otwarcie przysłony przy długiej ogniskowej"
+},
+
+{
+    category: "CCTV",
+    question: "Technik konfiguruje kamerę zewnętrzną i dąży do tego, aby obiekty leżące dalej niż pewna minimalna odległość były widziane ostro. Jak nazywa się stan, w którym zakres ostrości obrazu jest maksymalny i obejmuje większość elementów widocznych w kadrze?",
+    answers: [
+        "Duża głębia ostrości",
+        "Mała liczba aperturowa F",
+        "Wąski kąt widzenia",
+        "Wysoka jasność transmisyjna T"
+    ],
+    image: "",
+    correct: "Duża głębia ostrości"
+},
+
+{
+    category: "CCTV",
+    question: "Podczas projektowania systemu dozoru wizyjnego w słabo oświetlonym garażu podziemnym, inżynier musi wybrać obiektyw o najwyższej sprawności świetlnej. Która z poniższych wartości liczby aperturowej F zapewni największą ilość światła padającego na powierzchnię przetwornika obrazu?",
+    answers: [
+        "F1.2",
+        "F2.0",
+        "F4.0",
+        "F5.6"
+    ],
+    image: "",
+    correct: "F1.2"
+},
+
+{
+    category: "CCTV",
+    question: "W trakcie audytu technicznego modernizowanej instalacji na elewacji budynku, instalator analizuje specyfikację obiektywu o zmiennej przysłonie. Dokumentacja podaje dwie wartości liczby F (np. F1.4 - F360). Co określa pierwsza z tych wartości w kontekście parametrów optycznych układu?",
+    answers: [
+        "Minimalne otwarcie przysłony",
+        "Maksymalne otwarcie przysłony",
+        "Stałą ogniskową obiektywu",
+        "Głębię ostrości w metrach"
+    ],
+    image: "",
+    correct: "Maksymalne otwarcie przysłony"
+},
+
+{
+    category: "CCTV",
+    question: "Podczas konfiguracji kamery w hali logistycznej o zmiennych warunkach oświetleniowych, technik zauważa pogorszenie jakości obrazu po przymknięciu przysłony. Zgodnie z fizyką optyki stosowanej w CCTV, jak zmienia się ilość światła przechodzącego przez obiektyw wraz ze wzrostem liczby F?",
+    answers: [
+        "Ilość światła rośnie proporcjonalnie",
+        "Ilość światła pozostaje bez zmian",
+        "Ilość światła maleje",
+        "Ilość światła zależy wyłącznie od wzmocnienia AGC"
+    ],
+    image: "",
+    correct: "Ilość światła maleje"
+},
+
+{
+    category: "CCTV",
+    question: "W systemie monitoringu miejskiego inżynier decyduje się na wymianę obiektywów na 'jaśniejsze' modele, aby poprawić widoczność w nocy bez użycia dodatkowych oświetlaczy. Jaką właściwość techniczną obiektywu opisuje parametr określany jako mała wartość liczby F?",
+    answers: [
+        "Zdolność do generowania szerokiego kąta widzenia",
+        "Możliwość przepuszczania większej ilości światła na przetwornik",
+        "Zwiększoną odporność soczewek na zaparowanie",
+        "Rzeczywistą liczbę transmisyjną T materiału soczewki"
+    ],
+    image: "",
+    correct: "Możliwość przepuszczania większej ilości światła na przetwornik"
+},
+
+{
+    category: "CCTV",
+    question: "W trakcie audytu optyki w hali logistycznej, inżynier analizuje parametry obiektywu, którego długość ogniskowej jest znacznie mniejsza od przekątnej zastosowanego przetwornika obrazu. Do której grupy obiektywów, biorąc pod uwagę kąt widzenia, należy zaklasyfikować ten podzespół?",
+    answers: [
+        "Szerokokątne",
+        "Wąskokątne",
+        "Standardowe",
+        "Teleobiektywy"
+    ],
+    image: "",
+    correct: "Szerokokątny"
+},
+
+{
+    category: "CCTV",
+    question: "Podczas modernizacji systemu dozoru zewnętrznego na parkingu strzeżonym, instalator montuje kamery typu dzień/noc. Który rodzaj przysłony jest dedykowany do pracy w takich warunkach, aby zapewnić poprawną regulację strumienia świetlnego przy zmiennym oświetleniu naturalnym?",
+    answers: [
+        "Automatyczna przysłona Auto-IRIS",
+        "Przysłona ręczna",
+        "Brak przysłony (no-IRIS)",
+        "Stała przysłona mechaniczna"
+    ],
+    image: "",
+    correct: "Automatyczna przysłona Auto-IRIS"
+},
+
+{
+    category: "CCTV",
+    question: "Projektant systemu zabezpieczeń w obiekcie o wysokim rygorze ochrony planuje użycie kamer, które pozwalają na korektę pola widzenia bez konieczności fizycznego dostępu do urządzenia na wysokości. Który typ obiektywu, wyposażony w zdalną regulację ogniskowej, powinien zostać uwzględniony w kosztorysie?",
+    answers: [
+        "Moto-zoom",
+        "Varifocal (zmienna ogniskowa)",
+        "Obiektyw stałoogniskowy",
+        "Obiektyw standardowy"
+    ],
+    image: "",
+    correct: "Moto-zoom"
+},
+
+{
+    category: "CCTV",
+    question: "Technik konfiguruje pole widzenia kamery wewnątrz małego biura, wykorzystując obiektyw o parametrach 3,5-8mm, co pozwala mu na swobodny wybór kadru podczas montażu. Jak fachowo nazywa się taki rodzaj obiektywu ze względu na charakterystykę jego ogniskowej?",
+    answers: [
+        "Zmienna ogniskowa (Varifocal)",
+        "Stała ogniskowa",
+        "Ogniskowa standardowa",
+        "Ogniskowa wąskokątna"
+    ],
+    image: "",
+    correct: "Zmienna ogniskowa (Varifocal)"
+},
+
+{
+    category: "CCTV",
+    question: "Podczas weryfikacji sprzętu przed instalacją w prostym systemie domowym, inżynier zauważa obiektywy oznaczone jako no-IRIS. Jaką funkcjonalność posiadają te elementy w zakresie kontroli strumienia światła?",
+    answers: [
+        "Nie posiadają przysłony",
+        "Posiadają przysłonę sterowaną napięciowo",
+        "Posiadają przysłonę ustawianą pokrętłem przez instalatora",
+        "Posiadają przysłonę zintegrowaną z modułem moto-zoom"
+    ],
+    image: "",
+    correct: "Nie posiadają przysłony"
+},
+
+{
+    category: "CCTV",
+    question: "W systemie dozoru miejskiego do obserwacji odległych detali na skrzyżowaniu wybrano obiektyw, którego ogniskowa jest większa od przekątnej przetwornika obrazu. Zgodnie z klasyfikacją techniczną, jak definiujemy kąt widzenia takiej kamery?",
+    answers: [
+        "Wąskokątny",
+        "Szerokokątny",
+        "Standardowy",
+        "Panoramiczny"
+    ],
+    image: "",
+    correct: "Wąskokątny"
+},
+
+{
+    category: "CCTV",
+    question: "Podczas modernizacji archiwalnego systemu dozoru w muzeum, inżynier natrafia na urządzenie zapisujące obraz na kasetach, oferujące czas nagrania w zakresie od 24 do 960 godzin. Jakie urządzenie, stanowiące obecnie najstarsze i niewycofane już z produkcji rozwiązanie techniczne, opisuje ten stan faktyczny?",
+    answers: [
+        "Magnetowid",
+        "Rejestrator cyfrowy DVR",
+        "Karta VCR",
+        "Serwer wizyjny NVR"
+    ],
+    image: "",
+    correct: "Magnetowid"
+},
+
+{
+    category: "CCTV",
+    question: "W małym punkcie handlowym inwestor zdecydował się na ekonomiczne rozwiązanie polegające na instalacji podzespołu wewnątrz komputera stacjonarnego, umożliwiającego zapis strumienia wideo bezpośrednio na systemowym twardym dysku. Jak nazywa się to rozwiązanie, którego czas retencji danych jest ograniczony wyłącznie pojemnością zainstalowanego dysku?",
+    answers: [
+        "Karta VCR",
+        "Multipleksor analogowy",
+        "Rejestrator cyfrowy",
+        "Magnetowid poklatkowy"
+    ],
+    image: "",
+    correct: "Karta VCR"
+},
+
+{
+    category: "CCTV",
+    question: "Podczas audytu bezpieczeństwa w obiekcie infrastruktury krytycznej, inżynier rekomenduje rezygnację z zapisu na bazie komputera PC ze względu na ryzyko sabotażu i niestabilność systemów operacyjnych. Jakie profesjonalne urządzenie, będące połączeniem wielokanałowego multipleksera i zespołu twardych dysków, powinno zostać zastosowane w celu zapewnienia wysokiej ochrony danych?",
+    answers: [
+        "Rejestrator cyfrowy",
+        "Karta VCR",
+        "Magnetowid",
+        "Przełącznik sekwencyjny"
+    ],
+    image: "",
+    correct: "Rejestrator cyfrowy"
+},
+
+{
+    category: "CCTV",
+    question: "Inżynier projektuje system monitoringu dla placówki dyplomatycznej, gdzie kluczowym wymaganiem jest ograniczenie dostępu do nagrań dla osób niepowołanych. Który typ urządzenia rejestrującego oferuje fabryczne zabezpieczenia w postaci kodów dostępu oraz obudów chronionych mechanicznie, przy jednoczesnej możliwości zapisu dużej ilości materiału?",
+    answers: [
+        "Rejestrator cyfrowy",
+        "Magnetowid",
+        "Standardowa karta VCR",
+        "Multipleksor bezdyskowy"
+    ],
+    image: "",
+    correct: "Rejestrator cyfrowy"
+},
+
+{
+    category: "CCTV",
+    question: "W specyfikacji technicznej systemu zabezpieczeń opisano urządzenie pełniące funkcję zapisu obrazu na nośniku danych, które konstrukcyjnie integruje w sobie moduł wielokanałowego multipleksera. Jaką rolę w systemie telewizji dozorowej pełni to urządzenie zgodnie z jego definicją techniczną?",
+    answers: [
+        "Służy do zapisu obrazu z kamer na nośniku danych",
+        "Służy wyłącznie do przesyłania obrazu przez internet",
+        "Służy do zasilania kamer metodą PoE",
+        "Służy do mechanicznego sterowania ruchem kamer obrotowych"
+    ],
+    image: "",
+    correct: "Służy do zapisu obrazu z kamer na nośniku danych"
+},
+
+{
+    category: "CCTV",
+    question: "Podczas modernizacji systemu dozoru w rozległym centrum handlowym, inwestor wymaga zastosowania kamer megapikselowych. Z powodów technicznych inżynier musi zrezygnować ze standardowych rejestratorów DVR na rzecz urządzeń sieciowych (NVR). Co jest głównym fizycznym i systemowym ograniczeniem technologii DVR w tym przypadku?",
+    answers: [
+        "Maksymalna rozdzielczość rejestracji dla DVR to D1 (720 x 576 w PAL), co uniemożliwia zapis obrazu z kamer megapikselowych",
+        "Rejestratory DVR zapisują materiał wyłącznie na kasetach, ograniczając czas retencji do 960 godzin",
+        "Urządzenia DVR są pozbawione wyjść VGA i HDMI, co uniemożliwia podgląd na nowoczesnych ścianach wizyjnych",
+        "Rejestratory DVR są podatne na błędy systemów operacyjnych Windows i sabotaż sieciowy"
+    ],
+    image: "",
+    correct: "Maksymalna rozdzielczość rejestracji dla DVR to D1 (720 x 576 w PAL), co uniemożliwia zapis obrazu z kamer megapikselowych"
+},
+
+{
+    category: "CCTV",
+    question: "W zakładzie przemysłowym planowana jest wieloetapowa wymiana wysłużonych kamer analogowych na nowoczesne kamery IP. Jakie profesjonalne urządzenie rejestrujące, standardowo wyposażone w wyjścia wideo o wysokiej rozdzielczości, pozwoli instalatorom na jednoczesną obsługę obu tych technologii w okresie przejściowym?",
+    answers: [
+        "Rejestrator hybrydowy",
+        "Karta przechwytująca VCR",
+        "Rejestrator mobilny",
+        "Magnetowid poklatkowy"
+    ],
+    image: "",
+    correct: "Rejestrator hybrydowy"
+},
+
+{
+    category: "CCTV",
+    question: "Przy projektowaniu systemu monitoringu dla floty autobusów miejskich, specyfikacja przetargowa wymaga zastosowania sprzętu odpornego na zmienne środowisko, łączącego wąski strumień transmisji z gwarancją synchronizacji audio i wideo. Który typ rejestratora jest dedykowany do montażu w takich warunkach operacyjnych?",
+    answers: [
+        "Rejestrator mobilny",
+        "Sieciowy rejestrator wideo (NVR)",
+        "Wielokanałowy rejestrator hybrydowy",
+        "Stacja robocza z zainstalowaną kartą VCR"
+    ],
+    image: "",
+    correct: "Rejestrator mobilny"
+},
+
+{
+    category: "CCTV",
+    question: "Inżynier projektuje architekturę systemu CCTV na terenie kampusu uniwersyteckiego. Aby zminimalizować koszty okablowania, wyeliminowano konieczność prowadzenia przewodu koncentrycznego między każdą kamerą a serwerownią. Jakie niezależne urządzenie, zarządzające sprzętem za pomocą adresacji IP, pozwala na tak elastyczną budowę topologii?",
+    answers: [
+        "Sieciowy rejestrator wideo (NVR)",
+        "Cyfrowy rejestrator wideo (DVR)",
+        "Zintegrowany moduł kart VCR",
+        "Analogowy multiplekser wideo"
+    ],
+    image: "",
+    correct: "Sieciowy rejestrator wideo (NVR)"
+},
+
+{
+    category: "CCTV",
+    question: "Podczas audytu bezpieczeństwa w obiekcie infrastruktury krytycznej, inżynier nakazuje pilny demontaż systemów zapisu opartych na komputerach PC z kartami VCR. Jakie krytyczne luki w bezpieczeństwie, które rozwiązuje autonomiczny rejestrator cyfrowy z wymiennymi dyskami, są głównym powodem tej decyzji?",
+    answers: [
+        "Ryzyko sabotażu (dostęp przez użytkowników lub internet) oraz możliwość utraty danych przez niestabilne systemy operacyjne",
+        "Ograniczenie czasu nagrywania do maksymalnie 24 godzin przy rozdzielczości megapikselowej",
+        "Konieczność stosowania kabli koncentrycznych, które są łatwe do przecięcia na zewnątrz budynku",
+        "Brak sprzętowego wsparcia dla wyjść VGA i HDMI na standardowych płytach głównych"
+    ],
+    image: "",
+    correct: "Ryzyko sabotażu (dostęp przez użytkowników lub internet) oraz możliwość utraty danych przez niestabilne systemy operacyjne"
+},
+
+{
+    category: "CCTV",
+    question: "W stacji monitorowania agencji ochrony, instalator uruchamia wysoce niezawodne i stabilne urządzenie 32-kanałowe, którego zadaniem jest rejestracja oraz bezpośrednie wyświetlanie obrazu na ścianie monitorów CCTV. Jak tradycyjnie klasyfikuje się tego typu profesjonalny sprzęt do systemów telewizji przemysłowej?",
+    answers: [
+        "Cyfrowy rejestrator wideo (DVR)",
+        "Sieciowy rejestrator wideo (NVR)",
+        "Rejestrator mobilny z modułem 3G/4G",
+        "Macierz dyskowa VCR"
+    ],
+    image: "",
+    correct: "Cyfrowy rejestrator wideo (DVR)"
+},
+
+{
+    category: "CCTV",
+    question: "W systemie rozpoznawania tablic rejestracyjnych (LPR) pracującym w porze nocnej, instalator zauważa rozmycie szybko poruszających się pojazdów. Zwiększenie szybkości automatycznej migawki (AES) np. do 1/1000 s eliminuje to rozmycie, ale powoduje inny, niepożądany efekt optyczny. Jaka jest bezpośrednia, fizyczna konsekwencja drastycznego skrócenia czasu otwarcia migawki dla wygenerowanego obrazu?",
+    answers: [
+        "Spadek jasności obrazu wymagający zastosowania silniejszych oświetlaczy",
+        "Znaczne zawężenie kąta widzenia obiektywu w osi poziomej",
+        "Wydłużenie czasu trwania pojedynczej klatki wideo powyżej normy",
+        "Automatyczna zmiana ogniskowej układu optycznego na szerszą"
+    ],
+    image: "",
+    correct: "Spadek jasności obrazu wymagający zastosowania silniejszych oświetlaczy"
+},
+
+{
+    category: "CCTV",
+    question: "Podczas konfiguracji punktu biometrycznej kontroli dostępu, inżynier dąży do uzyskania bardzo ostrego obrazu twarzy pracownika z jednoczesnym silnym rozmyciem tła. Celowe uzyskanie tak małej głębi ostrości pozwala systemom analitycznym na łatwiejsze wyodrębnienie obiektu. Jakie działania w obrębie obiektywu ułatwią osiągnięcie tego założenia?",
+    answers: [
+        "Maksymalne otwarcie przysłony oraz wydłużenie ogniskowej",
+        "Silne przymknięcie przysłony oraz skrócenie ogniskowej",
+        "Zastosowanie obiektywu o stałej, bardzo krótkiej ogniskowej 2.8mm",
+        "Ustawienie obiektywu typu no-IRIS w środowisku o wysokim nasłonecznieniu"
+    ],
+    image: "",
+    correct: "Maksymalne otwarcie przysłony oraz wydłużenie ogniskowej"
+},
+
+{
+    category: "CCTV",
+    question: "W trakcie projektowania monitoringu wizyjnego dla nowej hali produkcyjnej, projektant dobiera optykę, celowo stosując obiektywy, których ogniskowa jest znacznie mniejsza od przekątnej przetwornika w zastosowanych kamerach. Jaki jest główny, wynikający z praw optyki, cel architektoniczny takiego doboru komponentów?",
+    answers: [
+        "Uzyskanie szerokokątnego pola widzenia dla obserwacji dużych pomieszczeń",
+        "Skupienie obrazu na mikroskopijnych detalach linii produkcyjnej",
+        "Wyeliminowanie zjawiska aberracji chromatycznej na krawędziach obrazu",
+        "Zwiększenie maksymalnego czasu naświetlania matrycy przy AES wolnym"
+    ],
+    image: "",
+    correct: "Uzyskanie szerokokątnego pola widzenia dla obserwacji dużych pomieszczeń"
+},
+
+{
+    category: "CCTV",
+    question: "Architekt sieci CCTV dla rozległego kompleksu logistycznego odrzuca topologię opartą na analogowych rejestratorach DVR. Głównym argumentem jest konieczność rozmieszczenia punktów kamerowych w odległościach przekraczających kilkaset metrów od serwerowni. Jaka cecha sieciowych rejestratorów wideo (NVR) rozwiązuje ten problem komunikacyjny?",
+    answers: [
+        "Możliwość budowania systemu opartego na urządzeniach w dowolnej odległości dzięki infrastrukturze IP",
+        "Zapis sygnału wideo o rozdzielczości D1 z pominięciem kompresji sprzętowej",
+        "Zdolność do transmisji sygnału zasilania i wideo w paśmie fal radiowych UKF",
+        "Wbudowany wielokanałowy multiplekser kompensujący spadki napięcia na koncentryku"
+    ],
+    image: "",
+    correct: "Możliwość budowania systemu opartego na urządzeniach w dowolnej odległości dzięki infrastrukturze IP"
+},
+
+{
+    category: "CCTV",
+    question: "Przewoźnik kolejowy zleca wdrożenie systemu dozoru wewnątrz taboru pasażerskiego. Specyfikacja techniczna rygorystycznie wymaga zastosowania urządzeń nagrywających zdolnych do pracy przy ciągłych drganiach, zapewniających wąski strumień transmisji dla sieci LTE oraz gwarantujących ścisłą synchronizację strumieni audio i wideo. Która klasa urządzeń spełnia te kryteria?",
+    answers: [
+        "Rejestratory mobilne",
+        "Serwery archiwizacyjne z modułem kart VCR",
+        "Standardowe, hybrydowe rejestratory biurowe",
+        "Magnetowidy o wydłużonym czasie zapisu do 960h"
+    ],
+    image: "",
+    correct: "Rejestratory mobilne"
+},
+
+{
+    category: "CCTV",
+    question: "W trakcie odbiorów technicznych na obiekcie, inspektor weryfikuje specyfikację zainstalowanych kamer. Dwa testowane obiektywy posiadają identyczną ogniskową, lecz różnią się parametrem zdefiniowanym jako zdolność przepuszczania światła (np. F1.2 w stosunku do F2.8). Jak prawidłowo i fachowo nazywa się ta wartość określająca wprost jasność optyczną sprzętu?",
+    answers: [
+        "Liczba aperturowa F",
+        "Liczba transmisyjna T",
+        "Poziom czułości matrycy (Lux)",
+        "Głębia ostrości widzenia"
+    ],
+    image: "",
+    correct: "Liczba aperturowa F"
+},
+
+{
+    category: "CCTV",
+    question: "Podczas rozbudowy dyspozytorni w systemie monitoringu osiedla, instalator musi zapewnić ciągły podgląd na żywo z nowoczesnych kamer IP oraz z istniejących kamer analogowych. Jakie urządzenie nagrywające posiada konstrukcyjnie wbudowane interfejsy do obsługi obu tych standardów oraz natywne wyjścia wideo takie jak VGA czy HDMI?",
+    answers: [
+        "Rejestrator hybrydowy",
+        "Sieciowy rejestrator NVR",
+        "Przełącznik sekwencyjny",
+        "Dedykowana karta wideo VCR"
+    ],
+    image: "",
+    correct: "Rejestrator hybrydowy"
+},
+
+{
+    category: "CCTV",
+    question: "Inżynier projektuje system dozoru dla biura przepustek, gdzie priorytetem jest uzyskanie obrazu o charakterystyce zbliżonej do perspektywy ludzkiego oka. Zgodnie z zasadami optyki, jaką relację między długością ogniskowej a przekątną przetwornika obrazu musi posiadać wybrany obiektyw, aby zaklasyfikować go jako standardowy?",
+    answers: [
+        "Ogniskowa musi być podobna do przekątnej przetwornika",
+        "Ogniskowa musi być znacznie mniejsza od przekątnej przetwornika",
+        "Ogniskowa musi być co najmniej trzykrotnie większa od przekątnej",
+        "Długość ogniskowej nie może przekraczać 2.8mm niezależnie od przetwornika"
+    ],
+    image: "",
+    correct: "Ogniskowa musi być podobna do przekątnej przetwornika"
+},
+
+{
+    category: "CCTV",
+    question: "Podczas modernizacji systemu zabezpieczeń w zakładzie karnym, technik wymienia stare rozwiązanie oparte na kasetach na profesjonalny rejestrator cyfrowy. Jaką kluczową zaletę konstrukcyjną, zwiększającą odporność na sabotaż mechaniczny i nieautoryzowany dostęp, posiada rejestrator cyfrowy w porównaniu do systemów opartych na kartach VCR?",
+    answers: [
+        "Posiada obudowy zabezpieczane mechanicznie oraz systemy kodów dostępu",
+        "Umożliwia zapis wyłącznie na wymiennych kasetach o pojemności 960h",
+        "Wykorzystuje niestabilne systemy operacyjne klasy konsumenckiej",
+        "Wymaga prowadzenia osobnego kabla zasilającego do każdego kanału wideo"
+    ],
+    image: "",
+    correct: "Posiada obudowy zabezpieczane mechanicznie oraz systemy kodów dostępu"
+},
+
+{
+    category: "CCTV",
+    question: "W trakcie audytu optyki kamery zainstalowanej na bramie wjazdowej, instalator zauważa, że tło za szlabanem jest ostre, ale same tablice rejestracyjne podjeżdżających aut są rozmyte. Aby zwiększyć głębię ostrości i objąć nią większy zakres odległości bez wymiany obiektywu, jakie działanie powinien podjąć technik?",
+    answers: [
+        "Przymknąć przysłonę obiektywu",
+        "Wydłużyć ogniskową obiektywu (zoom)",
+        "Zwiększyć czas naświetlania migawki AES do 1/5 s",
+        "Otworzyć maksymalnie przysłonę w celu doświetlenia matrycy"
+    ],
+    image: "",
+    correct: "Przymknąć przysłonę obiektywu"
+},
+
+{
+    category: "CCTV",
+    question: "Projektant systemu dozoru dla sieci stacji paliw analizuje strukturę połączeń. Zauważa, że w jednym z obiektów kamery są rozproszone na dużym obszarze, co uniemożliwia prowadzenie kabla koncentrycznego do każdego punktu. Jakie urządzenie zarządzające, po podłączeniu kamer do lokalnej sieci, pozwoli na konfigurację systemu poprzez nadanie odpowiednich adresów IP?",
+    answers: [
+        "Sieciowy rejestrator wideo (NVR)",
+        "Cyfrowy rejestrator wideo (DVR)",
+        "Analogowy multiplekser 16-kanałowy",
+        "Magnetowid poklatkowy z kartą VCR"
+    ],
+    image: "",
+    correct: "Sieciowy rejestrator wideo (NVR)"
+},
+
+{
+    category: "CCTV",
+    question: "Podczas serwisu kamery zewnętrznej typu dzień/noc, inżynier stwierdza uszkodzenie układu regulacji strumienia światła. Który element obiektywu, będący regulowanym otworem na drodze strumienia światła, odpowiada za ochronę przetwornika przed oślepieniem promieniami słonecznymi?",
+    answers: [
+        "Przysłona",
+        "Ogniskowa",
+        "Soczewka skupiająca",
+        "Złącze BNC"
+    ],
+    image: "",
+    correct: "Przysłona"
+},
+
+{
+    category: "CCTV",
+    question: "W specyfikacji technicznej obiektywu o zmiennej ogniskowej (Varifocal) 3,5-8mm, inżynier znajduje informację o liczbie aperturowej F1.4. Jak zmieni się sprawność optyczna układu, jeśli ten obiektyw zostanie zastąpiony modelem o wartości F4.0?",
+    answers: [
+        "Ilość światła przechodzącego przez obiektyw zmaleje, obraz będzie ciemniejszy",
+        "Ilość światła przechodzącego przez obiektyw wzrośnie, obraz będzie jaśniejszy",
+        "Zwiększy się kąt widzenia kamery bez zmiany ogniskowej",
+        "Obiektyw stanie się bardziej odporny na drgania mechaniczne w pojazdach"
+    ],
+    image: "",
+    correct: "Ilość światła przechodzącego przez obiektyw zmaleje, obraz będzie ciemniejszy"
+},
+
+{
+    category: "CCTV",
+    question: "Technik montuje kamerę wewnątrz korytka PCV 20mm w bardzo ciemnym pomieszczeniu gospodarczym. Aby uzyskać akceptowalny poziom jasności obrazu, decyduje się na ustawienie funkcji AES w tryb wolny (1/5 s). Na jakie ryzyko techniczne naraża w ten sposób jakość zapisu w przypadku pojawienia się w kadrze poruszającego się intruza?",
+    answers: [
+        "Obiekt zostanie zapisany jako rozmazany na całej swej drodze",
+        "Kamera automatycznie przełączy się w tryb standardowej rozdzielczości D1",
+        "Nastąpi fizyczne uszkodzenie przetwornika przez zbyt długie naświetlanie",
+        "Kąt widzenia obiektywu ulegnie gwałtownemu zawężeniu"
+    ],
+    image: "",
+    correct: "Obiekt zostanie zapisany jako rozmazany na całej swej drodze"
+},
+
+
+
 ////////////////////////////////////////////////////////////////////////////////////pytania otwarte///////////////////////////////////////////////////
+
 {
     category: "CCTV",
     question: "Wyjaśnij, czym różni się kamera stałoogniskowa od kamery z obiektywem typu moto-zoom.",
