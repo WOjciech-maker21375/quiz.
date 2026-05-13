@@ -17,7 +17,7 @@ const categoryMap = {
 "instalacje elektryczne":["ie","elektryk","instalacje","elektryczne","instalacje elektryczne","instlaje elektryczne"],
 "elektronika":["elektronika","elektronika","elektronik","uklady","układy","elektrony","el","a","e"],
 "fizyka":["fiz","fizyka","fizunia"],
-"CCTV":["CCTV","instlacje dozorowe","telewizja dozorowa","monitoring","ip camera","ochrona mienia", "wizja", "systemy dozoru", "kamery przemysłowe", "hikvision", "monitoring wizyjny", "telewizja przemysłowa", "telewizja przemyslowa", "instlacjedozorowe"],
+"CCTV":["CCTV","instlacje dozorowe","monitoring", "kamery", "telewizja dozorowa", "kamera", "podgląd", "rejestrator", "ip camera","ochrona mienia", "wizja", "systemy dozoru", "kamery przemysłowe", "hikvision","monitoring wizyjny", "telewizja przemysłowa","instlacjedozorowe"],
 "SAT": ["sat", "satelita", "tvsat", "anteny", "telewizja satelitarna"],
 "Matematyka":["matematyka", "matematusia", "mat", "Mat", "Matma"]
 };
