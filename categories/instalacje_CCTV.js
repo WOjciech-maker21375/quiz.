@@ -67,7 +67,7 @@ correct:"Telewizja dozorowa (telewizja w obwodzie zamkniętym)."
     "Odłączenie przewodu sygnałowego od kamery, odłączenie zasilania od kamery, zdemontowanie uszkodzonej kamery i zamontowanie nowej, podłączenie zasilania do kamery, podłączenie przewodu sygnałowego do kamery. ", 
     "Odłączenie zasilania od kamery, odłączenie przewodu sygnałowego od kamery, zdemontowanie uszkodzonej kamery i zamontowanie nowej, podłączenie przewodu sygnałowego do kamery, podłączenie zasilania do kamery.", 
     "Odłączenie zasilania od kamery, zdemontowanie kamery, odłączenie przewodu sygnałowego od uszkodzonej kamery i podłączenie do nowej, zamontowanie kamery, podłączenie zasilania do kamery.", 
-    "Odłączenie zasilania od rejestratora, odłączenie przewodu sygnałowego od kamery, zdemontowanie uszkodzonej kamery i zamontowanie nowej, podłączenie przewodu sygnałowego do kamery, podłączenie zasilania do rejestratora.  dodaj mi to pytanie w tym stylu."
+    "Odłączenie zasilania od rejestratora, odłączenie przewodu sygnałowego od kamery, zdemontowanie uszkodzonej kamery i zamontowanie nowej, podłączenie przewodu sygnałowego do kamery, podłączenie zasilania do rejestratora."
   ],
   correct: "Odłączenie zasilania od kamery, odłączenie przewodu sygnałowego od kamery, zdemontowanie uszkodzonej kamery i zamontowanie nowej, podłączenie przewodu sygnałowego do kamery, podłączenie zasilania do kamery."
 },
@@ -417,7 +417,7 @@ answers:[
 "Liczbę obsługiwanych użytkowników.",
 "Maksymalny zoom cyfrowy."
 ],
-correct:"Najhighestszą odporność na uderzenia mechaniczne (wandaloodporność)."
+correct:"Najwyższą odporność na uderzenia mechaniczne (wandaloodporność)."
 },
 
 {
@@ -957,7 +957,7 @@ answers:[
 "Rozmiar matrycy nie ma znaczenia dla jakości.",
 "Większa matryca zawsze wymaga mniejszego napięcia."
 ],
-correct:"Im message matryca, tym lepsza jakość (więcej pikseli)."
+correct:"Im większa matryca, tym lepsza jakość (więcej pikseli)."
 },
 
 {
@@ -7970,7 +7970,7 @@ correct:"Współpracę elementów systemu."
     "Odłączenie przewodu sygnałowego od kamery, odłączenie zasilania od kamery, zdemontowanie uszkodzonej kamery i zamontowanie nowej, podłączenie zasilania do kamery, podłączenie przewodu sygnałowego do kamery. ", 
     "Odłączenie zasilania od kamery, odłączenie przewodu sygnałowego od kamery, zdemontowanie uszkodzonej kamery i zamontowanie nowej, podłączenie przewodu sygnałowego do kamery, podłączenie zasilania do kamery.", 
     "Odłączenie zasilania od kamery, zdemontowanie kamery, odłączenie przewodu sygnałowego od uszkodzonej kamery i podłączenie do nowej, zamontowanie kamery, podłączenie zasilania do kamery.", 
-    "Odłączenie zasilania od rejestratora, odłączenie przewodu sygnałowego od kamery, zdemontowanie uszkodzonej kamery i zamontowanie nowej, podłączenie przewodu sygnałowego do kamery, podłączenie zasilania do rejestratora.  dodaj mi to pytanie w tym stylu."
+    "Odłączenie zasilania od rejestratora, odłączenie przewodu sygnałowego od kamery, zdemontowanie uszkodzonej kamery i zamontowanie nowej, podłączenie przewodu sygnałowego do kamery, podłączenie zasilania do rejestratora."
   ],
   correct: "Odłączenie zasilania od kamery, odłączenie przewodu sygnałowego od kamery, zdemontowanie uszkodzonej kamery i zamontowanie nowej, podłączenie przewodu sygnałowego do kamery, podłączenie zasilania do kamery."
 },
@@ -9855,7 +9855,7 @@ correct:"Współpracę elementów systemu."
   category: "CCTV",
   question: "literą (A) zaznaczono ",
   image: "img/CCTV/waska_glembia_ostrosci.png", // Tutaj podajesz link lub nazwę pliku
-  answers: ["odległość ostrzenia", "odległość eliminacji złego oświetlenia", "głębie ostości", "długość martwego punktu"],
+  answers: ["odległość ostrzenia", "odległość eliminacji złego oświetlenia", "głębię ostości", "długość martwego punktu"],
   correct: "odległość ostrzenia"
 },
 
