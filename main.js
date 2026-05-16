@@ -861,8 +861,8 @@ function generatePDFs() {
                 if (!isOpen) {
                     let ans = q.savedOrder;
                     res += `<table class="options">
-                        <tr><td>A) [ ] ${ans[0]}</td><td>B) [ ] ${ans[1]}</td></tr>
-                        <tr><td>C) [ ] ${ans[2]}</td><td>D) [ ] ${ans[3] || "---"}</td></tr>
+                        <tr><td>A)  ${ans[0]}</td><td>B)  ${ans[1]}</td></tr>
+                        <tr><td>C)  ${ans[2]}</td><td>D)  ${ans[3] || "---"}</td></tr>
                     </table>`;
                 } else {
                     res += `<div class="open-line"></div><div class="open-line"></div><div class="open-line"></div>`;
